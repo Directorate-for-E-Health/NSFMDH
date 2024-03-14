@@ -1,0 +1,210 @@
+= Importfil 1-d Statistikk [[importfil_1d]]
+
+Importfil 1d-Statistikk brukes til å presentere enkel statistikk for et utvalg av datakildens variabler.
+Statistikk som metadata har som formål å si noe om registerings-/ kodingskvaliteten og gi en pekepinn om antall forekomster. Statistikken egner
+seg ikke for analyse som sådan..
+En egen property, StatistikkType, på Kildemetadata angir om statistikken er årsbasert eller akkumulert. Årsbasert statistikk rapporteres på
+grunnlag av hele avsluttede årganger. Alle akkumuleringer og beregninger er basert på ett kalenderår. Akkumulert statistikk brukes der
+grunnlagsdataene ikke har naturlig inndeling i år, for eksempel helseundersøkelser. Alle akkumuleringer og beregninger er da basert på alle
+innsamlede data totalt. Legg merke til at statistikk rapporteres pr. datasamling.
+Statistikk rapporteres ulikt for kategoriske variabler og kontinuerlige variabler. For kategoriske variabler, gjøres det kun en opptelling innenfor
+hver kategori/kodeverdi samt antall variabler som mangler verdi. For kontinuerlige variabler, gjøres opptelling av antall rapporterte og antall
+manglende forekomster, samt enkle standardiserte statistiske beregninger. For funksjonene median og standardavvik skal bare gyldige verdier
+inngå i grunnlaget, og beregningen skjer ut fra ett år eller akkumulert i henhold til StatistikkType som nevnt over.
+Det må gjøres en vurdering av hvilke variabler det er naturlig å rapportere statistikk for. Kontinuerlige variable må inneholde data som
+representerer én rad i datasamlingen.
+Filen er basert på HealthTerm 11+N importformat og har følgende spesifikasjoner.
+I denne versjonen av denne spesifikasjonen er det ikke obligatorisk å produsere statistikk. 
+
+[cols="30s,70d"]
+|===
+| Gruppering | Statistikk
+| Nr | 1
+| Property | Code
+| Status | Obligatorisk
+| Beskrivelse | Unik navnestreng for et statistikk-concept. Store bokstaver, uten mellomrom og æ, ø, å. Prefiks S for statistikk, underscore, årstall, kortnavn på datakilden, punktum, datasamling, punktum, variabelnavn, punktum KodeverkLokalID, f.eks. S_NPR_2017.BUP.KJONN.1
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Statistikk
+| Nr | 2
+| Property | ParentCode
+| Status | Obligatorisk
+| Beskrivelse | Forkortelse av datakildens navn med prefiks S for statistikk som toppnode f.eks. S_NPR. «ParentCode» for toppnoden skal være lik kortnavnet på datakilden. For å splitte underliggende datasamlinger på årssett brukes i tillegg et årstall etterfulgt av kortnavnet på datasamlingen, f.eks. S_NPR_2017.BUP. For kilder med akkumulert statistikk, brukes årstall for det året statistikken er produsert.
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Statistikk
+| Nr | 3
+| Property | Hierarchy
+| Status | Valgfri
+| Beskrivelse | Skal være tom for STATISTIKK
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Statistikk
+| Nr | 4
+| Property | PreferredTerm
+| Status | Obligatorisk
+| Beskrivelse | Kort beskrivende navn på den enkelte variabel, f.eks. Kjønn. «PreferredTerm» på toppnoden skal ha navn lik STATISTIKK med store bokstaver.
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Statistikk
+| Nr | 5
+| Property | ConceptType
+| Status | Valgfri
+| Beskrivelse | Skal være tom for STATISTIKK
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Statistikk
+| Nr | 6
+| Property | PresentationOrder
+| Status | Valgfri
+| Beskrivelse | Brukes dersom man ønsker å presentere statistikken på verdier/koder i en egendefinert rekkefølge som f.eks. avviker fra en alfabetisk. Gyldige verdier er positive heltall og statistikken presenteres i stigende rekkefølge basert på disse tallene.
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Statistikk
+| Nr | 7
+| Property | ValidFrom
+| Status | Obligatorisk
+| Beskrivelse | Brukes for å angi fra når statistikken er gyldig. Forutsetning for å kunne tilrettelegge for søk på statistikk på en gitt dato eller endringer i en valgt tidsperiode f.eks. utvikling over flere år. Format: YYYYMMDD
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Statistikk
+| Nr | 8
+| Property | ValidTo
+| Status | Valgfri
+| Beskrivelse | Brukes for å angi til når statistikken er gyldig. Forutsetning for å kunne tilrettelegge for søk på statistikk på en gitt dato eller endringer i en valgt tidsperiode f.eks. utvikling over flere år. Årsbasert statistikk skal ikke ha overlappende gyldighetsdatoer. ValidTo kan brukes ved innlesing av statistikk for tidligere årganger av årsbasert statistikk. Denne skal ellers være tom. Settes av metadataforvalter hos Helsedataservice. Format: YYYYMMDD
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Statistikk
+| Nr | 9
+| Property | Synonym
+| Status | Valgfri
+| Beskrivelse | Skal være tom for STATISTIKK
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Statistikk
+| Nr | 10
+| Property | PatientFriendlyTerm
+| Status | Valgfri
+| Beskrivelse | Skal være tom for STATISTIKK
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Statistikk
+| Nr | 11
+| Property | ClinicalFriendlyTerm
+| Status | Valgfri
+| Beskrivelse | Skal være tom for STATISTIKK
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Statistikk
+| Nr | 12
+| Property | Kommentar
+| Status | Valgfri
+| Beskrivelse | En mer utførlig beskrivelse av statistikken ved behov.
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Statistikk
+| Nr | 13
+| Property | SisteOppdaterteAarssett
+| Status | Obligatorisk
+| Beskrivelse | Året statistikken gjelder for. Brukes for enklere å kunne filtrere på årssett. Kompletterer «ValidFrom» og «ValidTo».
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Statistikk
+| Nr | 14
+| Property | GyldigeTilfeller
+| Status | Obligatorisk
+| Beskrivelse | Antall rapportert inn totalt
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Statistikk
+| Nr | 15
+| Property | ManglendeTilfeller
+| Status | Anbefalt
+| Beskrivelse | Antall som mangler innrapportering («NULL-forekomster i datagrunnlaget»)
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Statistikk
+| Nr | 16
+| Property | Desimaler
+| Status | Valgfri
+| Beskrivelse | Antall desimaler avrundet til
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Statistikk
+| Nr | 17
+| Property | Prosentandel
+| Status | Valgfri
+| Beskrivelse | Dersom beregnet i kilden
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Statistikk
+| Nr | 18
+| Property | MIN
+| Status | Valgfri
+| Beskrivelse | Minimum
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Statistikk
+| Nr | 19
+| Property | MAX
+| Status | Valgfri
+| Beskrivelse | Maksimum
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Statistikk
+| Nr | 20
+| Property | AVG
+| Status | Valgfri
+| Beskrivelse | Gjennomsnitt
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Statistikk
+| Nr | 21
+| Property | STD
+| Status | Valgfri
+| Beskrivelse | Standardavvik. Det er registerets populasjon/innsamlende data som avgjør om dette er standard avvik for populasjon eller innsamlede data.
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Statistikk
+| Nr | 22
+| Property | MED
+| Status | Valgfri
+| Beskrivelse | Median
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Statistikk
+| Nr | 23
+| Property | KodeverkLokalID
+| Status | Valgfri
+| Beskrivelse | Lokal ID for kodeverket og koden, f.eks. 1 eller 2 for hhv Mann og Kvinne.
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Statistikk
+| Nr | 24-N
+| Property | Mulige tilleggsproperties
+| Status | Valgfri
+| Beskrivelse | Gir mulighet for å legge til ytterligere properties ved behov.
+|===

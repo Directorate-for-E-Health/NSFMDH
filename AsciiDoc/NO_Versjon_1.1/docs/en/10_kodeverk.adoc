@@ -1,0 +1,36 @@
+= Administrative og helsefaglige kodeverk [[administrative_og_helsefaglige_kodeverk]]
+
+Med administrative kodeverk menes her kodeverkene som per i dag finnes på volven.no.
+Disse omfatter blant annet kodeverkene som anvendes i NPR og KPR, og er tildelt en unik
+og persistent identifikator (OID).
+Disse kodeverkene er også tilgjengelige i Nasjonal variabelkatalog, og skal refereres til ved
+egne mappingfiler. Target code i mappingfilen vil være samme OID som brukes i Volven.
+Eksempler på OID’er er 3101 for Kjønn og 3402 for kommunenummer.
+I de tilfellene der en datakilde benytter seg av et av de helsefaglige kodeverkene i Tabell 11,
+så skal det mappes til respektive «Kortnavn» som definert i Tabell 14, og kodeverket skal
+ikke følge med i Importfil 2-Kildekodeverk.
+
+
+Tabell 14: Helsefaglige kodeverk
+[options="header"]
+|===
+|Kortnavn |Beskrivelse
+|ICD-8 |Den internasjonale statistiske klassifikasjonen av sykdommer og beslektede
+helseproblemer. Versjon 8
+|ICD-9 |Den internasjonale statistiske klassifikasjonen av sykdommer og beslektede
+helseproblemer. Versjon 9
+|ICD-10| Den internasjonale statistiske klassifikasjonen av sykdommer og beslektede
+helseproblemer. Versjon 10
+|ICD-11| Den internasjonale statistiske klassifikasjonen av sykdommer og beslektede
+helseproblemer. Versjon 11
+|NCMP-NCSP-NCRP |Norsk klinisk prosedyrekodeverk
+|ICPC-2 |Den internasjonale klassifikasjonen for primærhelsetjenesten. Inkluderer
+ICPC-2B.
+|ATC |Anatomisk Terapeutisk Kjemisk legemiddelregister
+|DRG |Diagnoserelaterte grupper, pasientklassifiseringssystem
+|ICF| Internasjonal klassifikasjon av funksjon, funksjonshemming og helse
+|NLK| Norsk Laboratoriekodeverk
+|LOINC| Logical Observation Identifiers Names and Codes
+|NORPAT| Norsk patologikodeverk
+|PHBU| Multiaksial klassifikasjon i psykisk helsevern for barn og unge
+|SNOMED CT| Systematized Nomenclature of Medicine

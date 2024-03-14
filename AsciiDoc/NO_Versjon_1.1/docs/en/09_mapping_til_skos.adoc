@@ -1,0 +1,432 @@
+= Mapping av properties i VARIABELMETADATAfilen til SKOS-AP-NO og SKOS-EN [[mapping_til_skos]]
+
+Arbeidet med å mappe variabelmetadata mot henholdsvis den internasjonale versjonen av SKOS og Digitaliseringsdirektoratets norske versjon
+SKOS-AP-NO er et pågående arbeid.
+Mappingen er viktig for å kunne utveksle og dele metadata om variabler på tvers av sektorer og landegrenser, samt for å opparbeide en felles
+forståelse av hva en variabel betyr.
+Mappingen er også en forutsetning for å kunne etablere maskinell validering av kvaliteten på metadataene.
+Der det i tabellen er brukt «E-helse:Extension» eller «?» har vi foreløpig ikke funnet en god match, eller er usikre på mappingen, mellom
+propertiene i denne spesifikasjonen og SKOS.
+
+[cols="30s,70d"]
+|===
+| Gruppering | Administrative formål
+| Nr | 1
+| Property |Code
+| Status |Obligatorisk
+| Beskrivelse | Unik navnestreng for en variabel som også benyttes for
+å koble metadata med data. Tillatte tegn er store
+bokstaver og tall, uten mellomrom og æ, ø, å.
+Prefiks V for variabel, underscore, kortnavn på
+datakilden, punktum, og samme variabelnavn som i
+kilden, f.eks. V_DAR.ALDER_AAR.
+| SKOS-AP-NO |Begrep: identifikator
+| SKOS Engelsk | dct:identifier
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Administrative formål
+| Nr |2
+| Property | ParentCode
+| Status |Obligatorisk
+| Beskrivelse |Forkortelse for kildenavn med prefiks V for Variabel og underscore, f.eks. V_DAR. «««ParentCode»»» for toppnoden skal være lik kortnavnet på datakilden, f.eks.DAR.
+| SKOS-AP-NO |E-helse: Extension
+| SKOS Engelsk |
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | HealthTerm
+| Nr |3
+| Property |Hierarchy
+| Status |Valgfri
+| Beskrivelse | Kort beskrivende navn på den enkelte variabel, f.eks. Kjønn. PreferredTerm på toppnoden skal ha navn lik «««VARIABELMETADATA»»» med store bokstaver
+| SKOS-AP-NO | Begrep: anbefaltTerm (NB)
+| SKOS Engelsk | skosxl:prefLabel(NB)
+|===
+[cols="30s,70d"]
+|===
+| Gruppering |Tittel og beskrivelse
+| Nr | 4
+| Property | PreferredTerm
+| Status | Obligatorisk
+| Beskrivelse | Kort beskrivende navn på den enkelte variabel, f.eks. Kjønn. PreferredTerm på toppnoden skal ha navn lik «VARIABELMETADATA» med store bokstaver.
+| SKOS-AP-NO | Begrep: anbefaltTerm (NB)
+| SKOS Engelsk | skosxl:prefLabel (NB)
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | HealthTerm
+| Nr | 5
+| Property | ConceptType
+| Status | Valgfri
+| Beskrivelse | Skal være tom. E-helse: Extension
+| SKOS-AP-NO | E-helse: Extension
+| SKOS Engelsk |
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Administrative formål
+| Nr | 6
+| Property | PresentationOrder
+| Status | Valgfri
+| Beskrivelse | Brukes dersom man ønsker å presentere variablene i en egendefinert rekkefølge som avviker fra en alfabetisk. Gyldige verdier er positive heltall og variablene presenteres i stigende rekkefølge basert på disse tallene.
+| SKOS-AP-NO | E-helse: Extension
+| SKOS Engelsk |
+|===
+[cols="30s,70d"]
+|===
+| Gruppering |Administrative formål
+| Nr | 7
+| Property | ValidFrom
+| Status | Obligatorisk
+| Beskrivelse | Brukes for å angi fra når en variabel er gyldig. Settes ved første import. Forutsetning for å kunne tilrettelegge for søk på gyldige variabler på en gitt dato eller endringer på en variabel i en tidsperiode. Format: YYYYMMDD.
+| SKOS-AP-NO | Begrep: gyldighetsperiode.gyldigFraOgMed
+| SKOS Engelsk | dct:temporal
+|===
+[cols="30s,70d"]
+|===
+| Gruppering |Administrative formål
+| Nr | 8
+| Property | ValidTo
+| Status | Valgfri
+| Beskrivelse | Brukes for å angi at en variabel ble ugyldig fra en gitt dato. Format: YYYYMMDD.
+| SKOS-AP-NO | Begrep: gyldighetsperiode.gyldigTilOgMed
+| SKOS Engelsk | dct:temporal
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Tittel og beskrivelse
+| Nr | 9
+| Property | Synonym
+| Status | Valgfri
+| Beskrivelse | Brukes dersom man ønsker å legge til synonymer til et variabelnavn.
+| SKOS-AP-NO | Begrep: tillattTerm
+| SKOS Engelsk | skosxl:prefLabel
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Tittel og beskrivelse
+| Nr | 10
+| Property | PatientFriendlyTerm
+| Status | Valgfri
+| Beskrivelse | Pasientvennlig navn på variabelen.
+| SKOS-AP-NO | Begrep: tillattTerm
+| SKOS Engelsk | skosxl:prefLabel
+|===
+[cols="30s,70d"]
+|===
+| Gruppering |Tittel og beskrivelse
+| Nr | 11
+| Property | ClinicalFriendlyTerm
+| Status | Valgfri
+| Beskrivelse | Helsefaglig begrep på variabelen.
+| SKOS-AP-NO | Begrep: tillattTerm
+| SKOS Engelsk | skosxl:prefLabel
+|===
+[cols="30s,70d"]
+|===
+| Gruppering |Tittel og beskrivelse
+| Nr | 12
+| Property | NavnEngelsk
+| Status | Anbefalt
+| Beskrivelse | Engelsk navn på variabelen.
+| SKOS-AP-NO | Begrep: anbefaltTerm (EN)
+| SKOS Engelsk | skosxl:prefLabel (EN)
+|===
+[cols="30s,70d"]
+|===
+| Gruppering |Tittel og beskrivelse
+| Nr | 13
+| Property | Beskrivelse
+| Status | Obligatorisk
+| Beskrivelse | Utførlig beskrivelse av variabelen. Se eksempler på helsedata.no.
+| SKOS-AP-NO | Begrep: definisjon (NB)
+| SKOS Engelsk | skosno:definisjon (NB)
+|===
+[cols="30s,70d"]
+|===
+| Gruppering |Tittel og beskrivelse
+| Nr | 14
+| Property | BeskrivelseEngelsk
+| Status | Anbefalt
+| Beskrivelse | Utførlig beskrivelse av variabelen på engelsk
+| SKOS-AP-NO | Begrep:definisjon (EN)
+| SKOS Engelsk | skosno:definisjon (EN)
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Opphav
+| Nr | 15
+| Property | Opprinnelse
+| Status | Obligatorisk
+| Beskrivelse | Om variabelen er hentet direkte fra helsetjenesten, er beregnet, avledet eller kodet. Standardisert vokabular: 1 = Beregnet, 2 = Avledet, 3 = Kodet, 4 = Direkte fra fagsystem/EPJ, 5 = Direkte fra skjema, 6 = Annet.
+| SKOS-AP-NO | E-helse: Extension
+| SKOS Engelsk |
+|===
+[cols="30s,70d"]
+|===
+| Gruppering |Opphav
+| Nr | 16
+| Property | OpprinnelseUtledning
+| Status | Valgfri
+| Beskrivelse | Hvordan beregnede, avledede og kodete variabler er utledet.
+| SKOS-AP-NO | E-helse: Extension
+| SKOS Engelsk |
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Innhold og kvalitet
+| Nr | 17
+| Property | Kommentar
+| Status | Valgfri
+| Beskrivelse | Kommentar til variabelen. F.eks. når variabelen gikk over fra å være basert på ICD-9 til ICD-10.
+| SKOS-AP-NO | E-helse: Extension (NB)
+| SKOS Engelsk |
+|===
+[cols="30s,70d"]
+|===
+| Gruppering |Innhold og kvalitet
+| Nr | 18
+| Property | KommentarEngelsk
+| Status | Valgfri
+| Beskrivelse | Engelsk oversettelse av Kommentar.
+| SKOS-AP-NO | E-helse: Extension (EN)
+| SKOS Engelsk |
+|===
+[cols="30s,70d"]
+|===
+| Gruppering |Innhold og kvalitet
+| Nr | 19
+| Property | Kvalitetsnote
+| Status | Anbefalt
+| Beskrivelse | Overordnet tekstlig beskrivelse av kvaliteten på datagrunnlaget.
+| SKOS-AP-NO | (Datasett: Kvalitetsnote (NB))
+| SKOS Engelsk |
+|===
+[cols="30s,70d"]
+|===
+| Gruppering |Innhold og kvalitet
+| Nr | 20
+| Property | KvalitetsnoteEngelsk
+| Status | Anbefalt
+| Beskrivelse | Engelsk oversettelse av Kvalitetsnote.
+| SKOS-AP-NO | (Datasett: Kvalitetsnote (EN))
+| SKOS Engelsk |
+|===
+[cols="30s,70d"]
+|===
+| Gruppering |Innhold og kvalitet
+| Nr | 21
+| Property | MaaleType
+| Status | Valgfri
+| Beskrivelse | Hva variabelen måler. F.eks. tid, alder, vekt og puls.
+| SKOS-AP-NO | E-helse: Extension
+| SKOS Engelsk |
+|===
+[cols="30s,70d"]
+|===
+| Gruppering |Innhold og kvalitet
+| Nr | 22
+| Property | MaaleEnhet
+| Status | Valgfri
+| Beskrivelse | Hvilken måleenhet variabelen er basert på. F.eks. år, mnd., kg, gram, slag/minutt.
+| SKOS-AP-NO | E-helse: Extension
+| SKOS Engelsk |
+|===
+[cols="30s,70d"]
+|===
+| Gruppering |Innhold og kvalitet
+| Nr | 23
+| Property | DataType
+| Status | Obligatorisk
+| Beskrivelse | Datatype som spesifisert i FHIR Primitive Types. Standardisert vokabular: 1 = String, 2 = Integer, 3 = Decimal, osv.
+| SKOS-AP-NO | E-helse: Extension
+| SKOS Engelsk |
+|===
+[cols="30s,70d"]
+|===
+| Gruppering |Innhold og kvalitet
+| Nr | 24
+| Property | Lengde
+| Status | Valgfri
+| Beskrivelse | Maksimal lengde på variabelen i antall tegn/siffer.
+| SKOS-AP-NO | E-helse: Extension
+| SKOS Engelsk |
+|===
+[cols="30s,70d"]
+|===
+| Gruppering |Innhold og kvalitet
+| Nr | 25
+| Property | Presisjon
+| Status | Valgfri
+| Beskrivelse | Maksimalt antall desimaler.
+| SKOS-AP-NO | E-helse: Extension
+| SKOS Engelsk |
+|===
+[cols="30s,70d"]
+|===
+| Gruppering |Innhold og kvalitet
+| Nr | 26
+| Property | GrenseLav
+| Status | Valgfri
+| Beskrivelse | Nedre grenseverdi (minimumsverdi). Indikerer at lavere verdier med stor sannsynlighet er feil.
+| SKOS-AP-NO | E-helse: Extension
+| SKOS Engelsk |
+|===
+[cols="30s,70d"]
+|===
+| Gruppering |Innhold og kvalitet
+| Nr | 27
+| Property | GrenseHoy
+| Status | Valgfri
+| Beskrivelse | Øvre grenseverdi (maksimumsverdi). Indikerer at høyere verdier med stor sannsynlighet er feil.
+| SKOS-AP-NO | E-helse: Extension
+| SKOS Engelsk |
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Juridisk informasjon
+| Nr | 28
+| Property | Identifiseringsgrad
+| Status | Valgfri
+| Beskrivelse | Dataforvalters klassifisering av bidrag til risiko for identifisering av individ. Standardisert vokabular: 1 = Ikke vurdert, 2 = Ingen, osv.
+| SKOS-AP-NO | E-helse: Extension
+| SKOS Engelsk |
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Skjema
+| Nr | 29
+| Property | Ledetekst
+| Status | Valgfri
+| Beskrivelse | Teksten som står i spørreskjema eller innrapporteringsskjema ved hver variabel.
+| SKOS-AP-NO | E-helse: Extension
+| SKOS Engelsk |
+|===
+[cols="30s,70d"]
+|===
+| Gruppering |Skjema
+| Nr | 30
+| Property | LedetekstEngelsk
+| Status | Valgfri
+| Beskrivelse | Engelsk ledetekst for variabelen.
+| SKOS-AP-NO | E-helse: Extension
+| SKOS Engelsk |
+|===
+[cols="30s,70d"]
+|===
+| Gruppering |Skjema
+| Nr | 31
+| Property | SpoersmaalNummer
+| Status | Valgfri
+| Beskrivelse | Spørsmålsnummer i spørreskjema eller innrapporteringsskjema.
+| SKOS-AP-NO | E-helse: Extension
+| SKOS Engelsk |
+|===
+[cols="30s,70d"]
+|===
+| Gruppering |Skjema
+| Nr | 32
+| Property | SkjemaVersjon
+| Status | Valgfri
+| Beskrivelse | Vise hvilke(n) versjon(er) av spørreskjema eller innrapporteringsskjema denne variabelen finnes i.
+| SKOS-AP-NO | E-helse: Extension
+| SKOS Engelsk |
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Administrative formål
+| Nr | 33
+| Property | AnbefaltForDigitaltInnsyn
+| Status | Obligatorisk*
+| Beskrivelse | Anbefaling fra forvalter av datakilden om hvorvidt variabelen bør inngå i et digitalt, automatisert innsyn. Standardisert vokabular: 1 = Ja, 2 = Valgfri.
+| SKOS-AP-NO | E-helse: Extension
+| SKOS Engelsk |
+|===
+[cols="30s,70d"]
+|===
+| Gruppering |Administrative formål
+| Nr | 34
+| Property | TabellvennligNavn
+| Status | Valgfri
+| Beskrivelse | Alternativ kolonneoverskrift for eksport eller utskrift av data.
+| SKOS-AP-NO | E-helse: Extension
+| SKOS Engelsk |
+|===
+[cols="30s,70d"]
+|===
+| Gruppering |Administrative formål
+| Nr | 35
+| Property | TabellvennligNavnEngelsk
+| Status | Valgfri
+| Beskrivelse | Alternativ kolonneoverskrift for eksport eller utskrift av data for engelskspråklige.
+| SKOS-AP-NO | E-helse: Extension
+| SKOS Engelsk |
+|===
+[cols="30s,70d"]
+|===
+| Gruppering |Administrative formål
+| Nr | 36
+| Property | DatabaseReferanse
+| Status | Obligatorisk
+| Beskrivelse | API-streng/URL/SourceID/TechName/unikt navn på klasse og/eller attributt i datakildens egen database.
+| SKOS-AP-NO | E-helse: Extension
+| SKOS Engelsk |
+|===
+[cols="30s,70d"]
+|===
+| Gruppering |Administrative formål
+| Nr | 37
+| Property | Erstatter
+| Status | Anbefalt
+| Beskrivelse | Code som er erstattet av denne variabelen.
+| SKOS-AP-NO | Begrep: erstatter
+| SKOS Engelsk | dct:replaces
+|===
+[cols="30s,70d"]
+|===
+| Gruppering |Administrative formål
+| Nr | 38
+| Property | ErstattesAv
+| Status | Valgfri
+| Beskrivelse | Code til variabelen som evt. erstatter denne variabelen.
+| SKOS-AP-NO | Begrep:erstattesAv
+| SKOS Engelsk | dct:replacedBy
+|===
+[cols="30s,70d"]
+|===
+| Gruppering |Administrative formål
+| Nr | 39
+| Property | StartdatoHistorikk
+| Status | Valgfri
+| Beskrivelse | Dato for start reell historikk. Hvis angitt er dette den første datoen man har historikk på metadata.
+Dette for å dokumentere at det kan være periode der variabelen er i bruk, men at man ikke kjenner hvilke
+endringer som er gjort. Hvis ikke angitt, regnes ValidFrom som start på historikk
+| SKOS-AP-NO | E-helse:Extension
+| SKOS Engelsk |
+|===
+[cols="30s,70d"]
+|===
+| Gruppering |Administrative formål
+| Nr | 40
+| Property | Synlig
+| Status | Obligatorisk
+| Beskrivelse | Definerer om variabelen skal presenteres på helsedata.no. Variabler som ikke er synlige vil heller ikke kunne inngå i en variabelliste som legges ved søknad om tilgang til helsedata via felles søknadsskjema på
+helsedata.no.
+Standardisert vokabular:
+1 = Ja
+2 = Valgfri
+| SKOS-AP-NO | E-helse:Extension
+| SKOS Engelsk |
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Tillegg
+| Nr | 41-N
+| Property | Mulige tilleggsproperties
+| Status | Valgfri
+| Beskrivelse | Gir mulighet for å legge til ytterligere properties som f.eks. registerspesifikke tilleggsproperties, properties for «««harmoniseringsarbeid»»», properties for kategoriseringsformål, properties med referanser til begrepskataloger, terminologier, standarder etc.
+Skal også gi mulighet for generelle eller registerspesifikke filtrerings mekanismer.
+| SKOS-AP-NO | 
+| SKOS Engelsk |
+|===

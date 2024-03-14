@@ -1,0 +1,493 @@
+= Mapping av properties i KILDEMETADATA-filen til DCAT-AP-NO og DCAT-EN [[mapping_til_dcat]]
+
+Arbeidet med å mappe kildemetadata mot henholdsvis den internasjonale versjonen av DCAT og Digitaliseringsdirektoratets norske versjon
+DCAT-AP-NO er et pågående arbeid.
+Mappingen er viktig for å kunne utveksle og dele metadata om datasett på tvers av sektorer og landegrenser, samt for å opparbeide en felles
+forståelse av innholdet.
+Mappingen er også en forutsetning for å kunne etablere maskinell validering av kvaliteten på metadataene.
+Der det i tabellen er brukt «E-helse:Extension» , «?» eller (…) har vi foreløpig ikke funnet en god match, eller er usikre på mappingen, mellom
+propertiene i denne spesifikasjonen og DCAT.
+
+*Overføres til Felles datakatalog, https://data.norge.no/
+
+[cols="30s,70d"]
+|===
+| Gruppering | Administrative formål
+| Nr | 1
+| Property | Code
+| Status | Obligatorisk
+| Beskrivelse | Unik navnestreng. Tillatte tegn er store bokstaver og tall, uten mellomrom og æ, ø, å. Datakilde: Prefiks K for kilde, underscore, kortnavn på datakilden. F.eks. K_HUNT. Delkilde: Prefiks K for kilde, underscore, kortnavn på datakilden, punktum, og navn på delkilde. F.eks. K_HUNT.HUNT1. Datasamling: Prefiks K for kilde, underscore, kortnavn på datakilden, punktum, og navn på datasamling. F.eks. K_HUNT.HUNT1_QUESTIONAIRE1. 
+|DCAT-AP-NO |Datasett: identifikator *
+|DCAT-EN (DQV-EN)| dct:identifier
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Administrative formål
+| Nr | 2
+| Property | ParentCode
+| Status | Obligatorisk
+| Beskrivelse | Datakilde: Skal være lik kortnavnet på datakilden, f.eks. HUNT. Delkilde: Skal være lik Code for tilhørende datakilde, f.eks. K_HUNT. Datasamling: Skal være lik Code for tilhørende datakilde. Hvis datasamlingen tilhører en delkilde, skal delkildens Code benyttes, f.eks. K_HUNT.HUNT1. 
+|DCAT-AP-NO |Datasett: er del av 
+|DCAT-EN (DQV-EN)|dct:isPartOf
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | HealthTerm
+| Nr | 3
+| Property | Hierarchy
+| Status | Valgfri
+| Beskrivelse | Skal være tom for KILDEMETADATA. 
+|DCAT-EN (DQV-EN)|Ehelse:Extension Tittel og beskrivelse
+|DCAT-EN (DQV-EN)|
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Tittel og beskrivelse
+| Nr | 4
+| Property | PreferredTerm
+| Status | Obligatorisk
+| Beskrivelse | Kort beskrivende navn på datakilden, delkilden eller datasamlingen. F.eks. «Den norske mor, far og barn undersøkelsen», «MOBA Hovedskjema» eller «Spørreskjema1» for henholdsvis datakilde, delkilde og datasamling. 
+|DCAT-AP-NO  |Datasett: tittel (NB) * 
+|DCAT-EN (DQV-EN) |dct:title (NB)
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | HealthTerm
+| Nr | 5
+| Property | ConceptType
+| Status | Valgfri
+| Beskrivelse | Skal være tom for KILDEMETADATA. 
+|DCAT-AP-NO  | Ehelse:Extension
+|DCAT-EN (DQV-EN) |
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Administrative formål
+| Nr | 6
+| Property | PresentationOrder
+| Status | Valgfri
+| Beskrivelse | Datakilde: Skal være tom. Delkilde, datasamling: Brukes dersom man ønsker å presentere delkildene eller datasamlingene i en egendefinert rekkefølge som avviker fra alfabetisk. Gyldige verdier er positive heltall og delkildene eller datasamlingene presenteres i stigende rekkefølge basert på disse tallene. 
+|DCAT-AP-NO  | Ehelse:Extension
+|DCAT-EN (DQV-EN) |
+|===
+[cols="30s,70d"]
+|===
+| Gruppering |Administrative formål
+| Nr | 7
+| Property | ValidFrom
+| Status | Obligatorisk
+| Beskrivelse | Brukes for å angi fra når en datakilde, delkilde eller datasamling er gyldig. Settes ved første import. Format: YYYYMMDD. 
+|DCAT-AP-NO  | Ehelse:Extension
+|DCAT-EN (DQV-EN) |
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Administrative formål
+| Nr | 8
+| Property | ValidTo
+| Status | Valgfri
+| Beskrivelse | Skal være tom for KILDEMETADATA. 
+|DCAT-AP-NO  | Ehelse:Extension
+|DCAT-EN (DQV-EN) |
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Tittel og beskrivelse
+| Nr | 9
+| Property | Synonym
+| Status | Valgfri
+| Beskrivelse | Skal være tom for KILDEMETADATA (inntil videre). 
+|DCAT-AP-NO  | Ehelse:Extension
+|DCAT-EN (DQV-EN) |
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Tittel og beskrivelse
+| Nr | 10
+| Property | PatientFriendlyTerm
+| Status | Valgfri
+| Beskrivelse | Skal være tom for KILDEMETADATA (inntil videre). 
+|DCAT-AP-NO  | Ehelse:Extension
+|DCAT-EN (DQV-EN) |
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Tittel og beskrivelse
+| Nr | 11
+| Property | ClinicalFriendlyTerm
+| Status | Valgfri
+| Beskrivelse | Skal være tom for KILDEMETADATA (inntil videre). 
+|DCAT-AP-NO  | Ehelse:Extension
+|DCAT-EN (DQV-EN) |
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Tittel og beskrivelse
+| Nr | 12
+| Property | KortNavn
+| Status | Valgfri
+| Beskrivelse | Forkortelse av navnet på datakilden, delkilden eller datasamlingen. F.eks. MOBA eller NPR.
+|DCAT-AP-NO  |  (Datasett: tittel)
+|DCAT-EN (DQV-EN) | (dct:title)
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Tittel og beskrivelse
+| Nr | 13
+| Property | NavnEngelsk
+| Status | Anbefales
+| Beskrivelse | Engelsk navn på datakilden, delkilden eller datasamlingen.  
+|DCAT-AP-NO  | Datasett: tittel (EN) *
+|DCAT-EN (DQV-EN) |dct:title (EN) *
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Tittel og beskrivelse
+| Nr | 14
+| Property | Beskrivelse
+| Status | Obligatorisk
+| Beskrivelse | En utførlig beskrivelse. Skal være forståelig også for innbyggere. Se eksempler på helsedata.no.
+|DCAT-AP-NO  |  Datasett: beskrivelse (NB) * 
+|DCAT-EN (DQV-EN) |dct:description (NB) *
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Tittel og beskrivelse
+| Nr | 15
+| Property | BeskrivelseEngelsk
+| Status | Anbefales
+| Beskrivelse | En utførlig beskrivelse på engelsk. Skal være forståelig også for innbyggere.
+|DCAT-AP-NO  |  Datasett: beskrivelse (EN) *
+|DCAT-EN (DQV-EN) |dct:description (EN) *
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Tittel og beskrivelse
+| Nr | 16
+| Property | AnbefalteBruksomraader
+| Status | Obligatorisk
+| Beskrivelse | En beskrivelse av hvilke typer formål (eksempelvis forskning, analyse, styringsdata, beredskap osv) og faglige temaer (eksempelvis kreft, hjerte og kar, kirurgi osv), en datakilde, delkilde og/eller datasamling er egent for
+|DCAT-AP-NO  |  Ehelse:Extension
+|DCAT-EN (DQV-EN) |
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Tittel og beskrivelse
+| Nr | 17
+| Property | Emneord
+| Status | Valgfri
+| Beskrivelse |Beskrivende emneord (tag). Skilles ved å bruke «;». F.eks. Emneord;Nytt emneord;
+|DCAT-AP-NO  |  Datasett: emneord
+|DCAT-EN (DQV-EN) |dcat:keyword
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Opphav og ferskhet
+| Nr | 18
+| Property | Opprettet
+| Status | Obligatorisk
+| Beskrivelse | Året datakilden, delkilden eller datasamlingen ble opprettet og begynte å samle inn data. Format: YYYY. 
+| DCAT-AP-NO |Ehelse:Extension
+| DCAT-EN (DQV-EN) |
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Opphav og ferskhet
+| Nr | 19
+| Property | SistOppdatert
+| Status | Obligatorisk
+| Beskrivelse | Dato for siste oppdatering av KILDEMETADATA. Format: YYYYMMDD.  
+| DCAT-AP-NO |Datasett: endringsdato
+| DCAT-EN (DQV-EN) |dct:modified
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Opphav og ferskhet
+| Nr | 20
+| Property | Frekvens
+| Status | Valgfri
+| Beskrivelse | Datakilde, delkilde: Skal være tom. Datasamling: Oppdateringsfrekvens brukes for å beskrive hvor ofte datagrunnlaget oppdateres på Helseanalyseplattformen. Standardisert vokabular: 1 = Sjeldnere enn årlig, 2 = Årlig, 3 = Halvårlig, 4 = Tertialvis, 5 = Kvartalsvis, 6 = Månedlig, 7 = Ukentlig, 8 = Daglig, 9 = Hyppigere enn daglig.  
+| DCAT-AP-NO |Datasett: frekvens *
+| DCAT-EN (DQV-EN) |dct:accrualPeriodicity *
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Opphav og ferskhet
+| Nr | 21
+| Property | Innsamlingsmetode
+| Status | Valgfri
+| Beskrivelse | Kort beskrivelse av metode for innsamling av data. 
+| DCAT-AP-NO |Datasett: ble generert ved
+| DCAT-EN (DQV-EN) | prov:wasGeneratedBy
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Innhold og kvalitet
+| Nr | 22
+| Property | Kildetype
+| Status | Obligatorisk
+| Beskrivelse | Kategorisering av datakilden. Standardisert vokabular: 1 = Sentralt helseregister, 2 = Nasjonalt medisinsk kvalitetsregister, 3 = Annet medisinsk kvalitetsregister, 4 = Befolkningsbasert helseundersøkelse, 5 = Biobank, 6 = Annen datakilde. 
+| DCAT-AP-NO |Aktør: utgivertype
+| DCAT-EN (DQV-EN) |  foaf:name
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Innhold og kvalitet
+| Nr | 23
+| Property | InklusjonsOgEksklusjonskriterier
+| Status | Obligatorisk
+| Beskrivelse | En faglig overordnet beskrivelse av hvilke kriterier som stilles for at en person skal være registrert i datakilden, delkilden eller datasamlingen. Dette tilsvarer en beskrivelse av populasjonen som inngår i datakilden, delkilden eller datasamlingen. 
+| DCAT-AP-NO |Ehelse:Extension
+| DCAT-EN (DQV-EN) |
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Innhold og kvalitet
+| Nr | 24
+| Property | GeografiskAvgrensning
+| Status | Valgfri
+| Beskrivelse | Beskrivelse av opptaksområdet for innbyggerne som inngår i datakilden, delkilden eller datasamlingen. 
+| DCAT-AP-NO | Datasett: dekningsområde * 
+| DCAT-EN (DQV-EN) |dct:spatial *
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Innhold og kvalitet
+| Nr | 25
+| Property | Tilslutningsgrad
+| Status | Valgfri
+| Beskrivelse | Andel enheter av totalt antall relevante enheter som rapporterer inn til datakilden, delkilden eller datasamlingen. Oppgis som desimaltall på formatet «0,875». 
+| DCAT-AP-NO | Kompletthet (completeness)? 
+| DCAT-EN (DQV-EN) |dqv:dimension
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Innhold og kvalitet
+| Nr | 26
+| Property | BeregningTilslutningsgrad
+| Status | Valgfri
+| Beskrivelse | Hvordan tilslutningsgraden er beregnet. 
+| DCAT-AP-NO |Kompletthet (completeness)? 
+| DCAT-EN (DQV-EN) |dqv:dimension
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Innhold og kvalitet
+| Nr | 27
+| Property | Dekningsgrad
+| Status | Obligatorisk
+| Beskrivelse | Dekningsgraden angir i hvilken grad de pasienter eller hendelser som skal registreres faktisk blir registrert. Oppgis som desimaltall på formatet «0,875». 
+| DCAT-AP-NO | Kompletthet (completeness)? 
+| DCAT-EN (DQV-EN) |dqv:dimension
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Innhold og kvalitet
+| Nr | 28
+| Property | BeregningDekningsgrad
+| Status | Valgfri
+| Beskrivelse | Hvordan dekningsgrad er beregnet. 
+| DCAT-AP-NO |Kompletthet (completeness)? 
+| DCAT-EN (DQV-EN) |dqv:dimension
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Innhold og kvalitet
+| Nr | 29
+| Property | Kvalitetsnote
+| Status | Anbefales
+| Beskrivelse | Overordnet tekstlig beskrivelse av kvaliteten på datagrunnlaget.
+| DCAT-AP-NO | Datasett: Kvalitetsnote (*) 
+| DCAT-EN (DQV-EN) | dqv:qualityAnnotation
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Rettsgrunnlag
+| Nr | 30
+| Property | Formaal
+| Status | Obligatorisk
+| Beskrivelse | Kort beskrivelse av formålet datakilden er opprettet for. Dersom mulig, en kopi av formålet slik det står skrevet i forskrift. 
+| DCAT-AP-NO |Datasett: Følger (dcatno:objective? Finnes kun i veileder) 
+| DCAT-EN (DQV-EN) | cpsv:follows
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Rettsgrunnlag
+| Nr | 31
+| Property | Lovverk
+| Status | Obligatorisk
+| Beskrivelse | En eller flere URL-er til lovverk på lovdata.no. Flere URL-er skilles ved å bruke «;». 
+| DCAT-AP-NO |Datasett: Følger 
+| DCAT-EN (DQV-EN) |cpsv:follows
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Rettsgrunnlag
+| Nr | 32
+| Property | Forskrift
+| Status | Valgfri
+| Beskrivelse | En eller flere URL-er til forskrift på lovdata.no. Flere URL-er skilles ved å bruke «;».
+| DCAT-AP-NO | Datasett: Følger 
+| DCAT-EN (DQV-EN) |cpsv:follows
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Rettsgrunnlag
+| Nr | 33
+| Property | HjemmelTilgjengeliggjoering
+| Status | Valgfri
+| Beskrivelse | URL til paragraf med hjemmel for tilgjengeliggjøring. 
+| DCAT-AP-NO |Datasett: Følger 
+| DCAT-EN (DQV-EN) |cpsv:follows
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Rettsgrunnlag
+| Nr | 34
+| Property | Dataansvarlig
+| Status | Obligatorisk
+| Beskrivelse | Navn på virksomheten eller enheten som eier og har det juridiske dataansvaret for datakilden, delkilden eller 
+datasamlingen. 
+| DCAT-AP-NO |Datasett: kontaktpunkt 
+| DCAT-EN (DQV-EN) |dcat:contactPoint
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Rettsgrunnlag
+| Nr | 35
+| Property | Databehandler
+| Status | Obligatorisk
+| Beskrivelse | Navn på virksomheten eller enheten som faktisk behandler datakilden. Er det samme som Dataansvarlig med mindre denne har satt ut databehandlingen til ekstern tredjepart.
+| DCAT-AP-NO | Datasett: kontaktpunkt 
+| DCAT-EN (DQV-EN) |dcat:contactPoint
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Rettsgrunnlag
+| Nr | 36
+| Property | GradAvPersonidentifikasjon
+| Status | Valgfri
+| Beskrivelse | Høyeste grad av identifisering det er mulig å søke om fra denne datakilden, delkilden eller datasamlingen. Standardisert vokabular: 1 = Direkte personidentifiserbare opplysninger, 2 = Indirekte personidentifiserbare opplysninger, 3 = Anonyme opplysninger. 
+| DCAT-AP-NO |E-helse: Extension
+| DCAT-EN (DQV-EN) |
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Rettsgrunnlag
+| Nr | 37
+| Property | JuridiskNote
+| Status | Valgfri
+| Beskrivelse | Relevant juridisk informasjon som ikke dekkes av andre properties. F.eks. informasjon om reservasjonsrett eller hvilke andre kilder data kan sammenstilles med. 
+| DCAT-AP-NO | Datasett: Følger
+| DCAT-EN (DQV-EN) | cpsv:follows
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Kontaktinformasjon
+| Nr | 38
+| Property | Hjemmeside
+| Status | Obligatorisk
+| Beskrivelse | URL til hjemmeside.  
+| DCAT-AP-NO |Datasett: kontaktpunkt
+| DCAT-EN (DQV-EN) |dcat:contactPoint
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Kontaktinformasjon
+| Nr | 39
+| Property | Epost
+| Status | Obligatorisk
+| Beskrivelse | E-postadresse for henvendelser om datakilden, delkilden eller datasamlingen. 
+| DCAT-AP-NO |Datasett: kontaktpunkt *
+| DCAT-EN (DQV-EN) | dcat:contactPoint *
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Kontaktinformasjon
+| Nr | 40
+| Property | Telefonnummer
+| Status | Valgfri
+| Beskrivelse | Telefonnummer for henvendelser om datakilden, delkilden eller datasamlingen.
+| DCAT-AP-NO | Datasett: kontaktpunkt * 
+| DCAT-EN (DQV-EN) |dcat:contactPoint *
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Kontaktinformasjon
+| Nr | 41
+| Property | OrgnrDataansvarlig
+| Status | Valgfri
+| Beskrivelse | Organisasjonsnummer til dataansvarlig. 
+| DCAT-AP-NO | Datasett: kontaktpunkt
+| DCAT-EN (DQV-EN) |dcat:contactPoint
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Kontaktinformasjon
+| Nr | 42
+| Property | HERidDatakilde
+| Status | Valgfri
+| Beskrivelse | Datakilde: Unik identifikator som tildeles av NHN, Brukes for identifisering av datakilden innenfor helsenettet. Kan brukes til spørringer. Delkilde, datasamling: Skal være tom. 
+| DCAT-AP-NO |E-helse: Extension
+| DCAT-EN (DQV-EN) | dcat:contactPoint
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Kontaktinformasjon
+| Nr | 43
+| Property | HERidDataansvarlig
+| Status | Valgfri
+| Beskrivelse | Unik identifikator som tildeles av NHN, Brukes for identifisering av datakilden innenfor helsenettet. Kan brukes til spørringer.
+| DCAT-AP-NO | E-helse: Extension
+| DCAT-EN (DQV-EN) |
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Administrative formål
+| Nr | 44
+| Property | Kildemetadatatype
+| Status | Obligatorisk
+| Beskrivelse | Angir hvilken type kildemetadata som beskrives. Standardisert vokabular: 1 = Datakilde, 2 = Delkilde, 3 = Datasamling. 
+| DCAT-AP-NO |E-helse: Extension
+| DCAT-EN (DQV-EN) |
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Administrative formål
+| Nr | 45
+| Property | ErISamsvarMed
+| Status | Valgfri
+| Beskrivelse | Referanse til evt. standard(er), spesifikasjon(er) etc. som datakilden, delkilden eller datasamlingen er i henhold til, f.eks. DCAT-AP-NO. Skilles ved å bruke «;». F.eks. Standard 1;Standard 2;
+| DCAT-AP-NO | Datasett: i samsvar med
+| DCAT-EN (DQV-EN) | dqv:conformsTo
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Administrative formål
+| Nr | 46
+| Property | StatistikkType
+| Status | Valgfri
+| Beskrivelse | Hvorvidt medfølgende statistikk er akkumulert eller årsbasert. Standardisert vokabular: 1 = Akkumulert, 2 = Årsbasert. 
+| DCAT-AP-NO |E-helse: Extension
+| DCAT-EN (DQV-EN) |
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Administrative formål
+| Nr | 47
+| Property | TelleEnhet
+| Status | Valgfri
+| Beskrivelse | Datasamling: Telleenhet for datasamlingen angitt ved en tekstlig beskrivelse, eks. pasient, opphold. Kilde, Delkilde: Skal være tom 
+| DCAT-AP-NO |E-helse: Extension
+| DCAT-EN (DQV-EN) |
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Tillegg
+| Nr | 48-N
+| Property | Mulige tilleggsproperties
+| Status |
+| Beskrivelse | Gir mulighet for å legge til ytterligere properties som f.eks. registerspesifikke tilleggsproperties, properties for kategoriseringsformål etc. Disse kan defineres etter hvert som ønsker og behov oppstår.
+| DCAT-AP-NO |
+| DCAT-EN (DQV-EN) |
+|===

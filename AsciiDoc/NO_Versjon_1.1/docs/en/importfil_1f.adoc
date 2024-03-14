@@ -1,0 +1,149 @@
+= Importfil 1f-Instrument [[importfil_1f]]
+
+Importfil 1f-Instrument brukes til å beskrive instrument med utgangspunkt i et sett standardiserte properties. Filen er basert på HealthTerm
+11+N importformat. 
+
+[cols="30s,70d"]
+|===
+| Gruppering | Instrument
+| Nr | 1
+| Property | Code
+| Status | Obligatorisk
+| Beskrivelse | Unik navnestreng for et instrument. Store bokstaver, uten mellomrom og æ, ø, å. Prefiks I for Instrument, underscore, kortnavn på datakilden, punktum, og samme ID som i kilden, f.eks. I_HUNT.AbbottAXSymx
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Instrument
+| Nr | 2
+| Property | ParentCode
+| Status | Obligatorisk
+| Beskrivelse | Forkortelse for kildenavn med prefiks I for Instrument og underscore, f.eks. I_HUNT. «ParentCode» for toppnoden skal være lik kortnavnet på datakilden, f.eks. HUNT.
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Instrument
+| Nr | 3
+| Property | Hierarchy
+| Status | Valgfri
+| Beskrivelse | Skal være tom for INSTRUMENT
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Instrument
+| Nr | 4
+| Property | PreferredTerm
+| Status | Obligatorisk
+| Beskrivelse | Kort beskrivende navn på det enkelte Instrumentet. PreferredTerm på toppnoden skal ha navn lik INSTRUMENT med store bokstaver.
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Instrument
+| Nr | 5
+| Property | ConceptType
+| Status | Valgfri
+| Beskrivelse | Skal være tom for INSTRUMENT
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Instrument
+| Nr | 6
+| Property | PresentationOrder
+| Status | Valgfri
+| Beskrivelse | Brukes dersom man ønsker å presentere instrumentene i en egendefinert rekkefølge som f.eks. avviker fra en alfabetisk. Gyldige verdier er positive heltall og instrumentene presenteres i stigende rekkefølge basert på disse tallene.
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Instrument
+| Nr | 7
+| Property | ValidFrom
+| Status | Obligatorisk
+| Beskrivelse | Brukes for å angi fra når et instrument er gyldig. Settes ved første import. Format: YYYYMMDD
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Instrument
+| Nr | 8
+| Property | ValidTo
+| Status | Valgfri
+| Beskrivelse | Skal være tom for INSTRUMENT
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Instrument
+| Nr | 9
+| Property | Synonym
+| Status | Valgfri
+| Beskrivelse | Brukes dersom man ønsker å legge til synonymer til et instrumentnavn. Krever en ny rad i importfilen dersom mer enn ett synonym.
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Instrument
+| Nr | 10
+| Property | PatientFriendlyTerm
+| Status | Valgfri
+| Beskrivelse | Skal være tom for INSTRUMENT
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Instrument
+| Nr | 11
+| Property | ClinicalFriendlyTerm
+| Status | Valgfri
+| Beskrivelse | Skal være tom for INSTRUMENT
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Instrument
+| Nr | 12
+| Property | Beskrivelse
+| Status | Obligatorisk
+| Beskrivelse | Utførlig beskrivelse av instrumentet.
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Instrument
+| Nr | 13
+| Property | NavnEngelsk
+| Status | Anbefalt
+| Beskrivelse | Engelsk oversettelse av PreferredTerm
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Instrument
+| Nr | 14
+| Property | BeskrivelseEngelsk
+| Status | Anbefalt
+| Beskrivelse | Engelsk oversettelse av beskrivelsen av Instrumentet.
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Instrument
+| Nr | 15
+| Property | Filter
+| Status | Valgfri
+| Beskrivelse | Definerer om instrumentet skal brukes til filtrering i Helsedata.no. Instrument er tenkt som en egen filtertype, og er ikke en del av klassen «Filter». Standardisert vokabular: 1 = Obligatorisk, 2 = Valgfri
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Instrument
+| Nr | 16
+| Property | Dokumentasjon
+| Status | Anbefalt
+| Beskrivelse | Lenke til opprinnelig dokumentasjon/referanser for instrumentet.
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Instrument
+| Nr | 17
+| Property | UnikIdentifikator
+| Status | Valgfri
+| Beskrivelse | Unik identifikator (DOI) til et instrument
+|===
+[cols="30s,70d"]
+|===
+| Gruppering | Instrument
+| Nr | 18-N
+| Property | Mulige tilleggsproperties
+| Status | Valgfri
+| Beskrivelse | Gir mulighet for å legge til ytterligere properties ved behov.
+|===

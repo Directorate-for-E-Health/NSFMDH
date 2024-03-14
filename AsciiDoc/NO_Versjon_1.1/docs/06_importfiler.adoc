@@ -1,0 +1,211 @@
+= Importfiler for metadata i Nasjonal variabelkatalog [[importfiler]]
+
+Dette kapittelet beskriver i detalj kravene til de ulike importfilene definert i Figur 5 og relaterer
+de ulike importfilene til klassene i den logiske informasjonsmodellen illustrert i Figur 1.
+
+// == Filtyper for importfiler [[filtyper-for-importfiler]]
+
+// Alle importfiler skal være i Excel-format (*.xlsx). Mapping-fil skal være i CSV-format (.csv)
+// med komma (‘,’) som separasjonstegn, ikke semikolon (‘;’). For csv-filen skal tegnsett følge
+// UTF-8. Disse kravene følger av systemkrav fra HealthTerm.
+
+== Navnestandard for importfiler [[navnestandard-for-importfiler]]
+
+For å sikre sporbarhet skal importfilene definert i Figur 5 gis et standardisert navn. Navnene kan kun inneholde store og små bokstaver (A-Z og a-z) og tall (0-9). Bindestrek (-) og understrek (_) brukes som vist i definisjonene under og skal ikke inngå i de delene av filnavnet som defineres fritt av datakilden.
+
+Filtypene 1a, 1b, 1c, 1d, 1e, 1f og 2 navngis i henhold til følgende standard: 
+`DATAKILDE_Importfiltype-Importfilnavn_Årssett*_Versjon*_Dato sendt (YYYYMMDD)`
+
+* *_Årssett_* er siste komplette årgang som er inkludert i datagrunnlaget
+* *_Versjon_* kan brukes for kilder som oppdateres og/eller endres flere ganger i året eller for å angi datakildens interne versjonsangivelse.
+
+*Eksempler*:
+
+* `DAR_1a-Kildemetadata_2018_v128_20190130`  (Importerer kildemetadata om Dødsårsaksregisteret som er gyldig for 2018)
+* `NPR_1b-Variabelmetadata_2017_v17.b_20180123` (Importerer variabler med metadata fra NPR gyldige for 2017)
+
+Filtype 4x navngis i henhold til følgende standard:
+`DATAKILDE_4x-Mapset_Mappetype_Årssett*_Versjon*_Dato sendt (YYYYMMDD)`
+
+*_FRA-TIL._* Mapset skal navngis på en slik måte at det framgår hva det mappes fra og hva det mappes til. 
+
+Følgende forkortelse skal brukes:
+
+* V for variabelmetadata
+* K for kildemetadata, delkilder og tilhørende datasamlinger
+* N for versjon
+* S for statistikk
+* I for Instrument
+* G for variabelgruppe
+* KK for kildekodeverk
+* AK for administrative kodeverk
+* HK for Helsefaglige kodeverk og andre masterkodeverk (definert i Tabell 14)
+* F for filter
+* For andre mappinger brukes en egendefinert logisk forkortelse
+
+Eksempler:
+
+* `KREG_3a_MAPSET_K-N_2018_V34d_20190402` (Filen mapper KILDEMETADATA og tilhørende datasamlinger i Kreftregisteret til
+VERSJON 2018)
+* `KREG_3b_MAPSET_N-V_ 2018_V34d_20190402` (Filen mapper fra VERSJON til de variablene i Kreftregisteret som inngikk i
+VERSJON 2018)
+* `KREG_3c_MAPSET_V-KK_2018_V34d_20190402` (Filen mapper variablene i Kreftregisteret til KILDEKODEVERK gyldige i 2018)
+* `KREG_3d_MAPSET_V-S_2018_V34d_20190402` (Filen mapper variablene i Kreftregisteret til STATISTIKK for i 2018)
+
+== Navngivning av nøkkelfeltet Code i importfilene [[navngivning-av-nøkkelfeltet-code-i-importfilene]]
+
+_Propertien_ `Code` er nøkkel for de forskjellige metadataobjektene. For at den skal kunne fungere som en unik og persistent ID skal den navngis på følgende måte:
+
+* Det er kun tillatt med store bokstaver fra (A-Z), heltall (0-9) og samt bindestrek. Underscore «_» og punktum «.» benyttes bare som skilletegn for nøklene som vist i eksemplene under.
+Underscore er tillatt i variabel.Kortnavn
+* Første tegn i nøklene kan ikke være ett siffer.
+* Nøklene prefikses med hva slags type objekt som gjelder, K for Kildemetadata, V for variabelmetadata osv. slik som beskrevet for importfiltypen mapset. Deretter «_» og kortnavn på datakilden. For objekttype datakilde er dette nok, som f.eks K_HUNT, K_DAR m.m. 
+
+De andre objekttypene skal i tillegg til type og kilde ha med egne navn og hierarki. Tabell 2 viser hvordan man kan navngi de forskjellige nøkler.
+
+
+Tabell 2: Navnstandard for bruk av code
+[options="header"]
+|===
+|Object code |Navngivning av kode
+|Datakilde |Eksempel: K_HUNT Hei Trulks
+|Delkilde |Eksempel: K_HUNT.HUNT1
+|Datasamling |Eksempel: K_HUNT.HUNT1_QUESTIONAIRE
+|Variabel |Eksempel: V_HUNT.AGE_YEAR
+|Versjon |Eksempel: N_HUNT.HUNT1_QUESTIONAIRE_2018 Prefix + «_» + datakilde.kortnavn + «.» + datasamling.KortNavn + «_»
++ versjonsnummer/id
+|Statistikk |Eksempel: S_HUNT_2017.HUNT1_QUESTIONAIRE.GENDER.1 Prefix + «_» + datakilde.kortnavn + «_» + årstall + «.» +
+datasamling.KortNavn + «.» + variabel.KortNavn + «.» + KodeverLokalid
+|Variabelgruppe |Eksempel: G_HUNT.EXPOSURE Prefix + «_» + datakilde.KortNavn + «.» + variabelgruppe.KortNavn
+|Kildekodeverk |Eksempel: KK_HUNT.GENDER.1 Prefix + «_» + datakilde. kortnavn + «.» + variabel.KortNavn + «.» + KodeverLokalid
+|Instrument |Eksempel: I_HUNT.AbbottAXSymx Prefix + «_» + datakilde.code + «.» + instrumentkilde.KortNavn
+|Filter |Som instrument
+|===
+
+
+== Format for importfiler [[format-for-importfiler]]
+
+Importfilene for metadata i HealthTerm er spesifisert i Tabell 5 til Tabell 13. Følgende begrep brukes for å definere importspesifikasjonen. 
+
+* *Concept* er det grunnleggende dataobjektet i HealthTerm. Variabler er derav et eksempel på et concept i modellen.
+* *Property* inneholder egenskaper ved, og metadata om, et concept – en variabel. De første 11 standard propertiene er systemspesifikke og begrepene tilsvarer de som vises i HealthTerm. Begrepene som anvendes på de resterende properties er definert i samarbeid med forvalterne av de aktuelle datakildene og med utgangspunkt i aktuelle standarder. Informasjonsinnholdet importeres som tekst, og har en maksimal lengde på 4000 tegn for hver property.
+* *Status* spesifiserer om informasjonsinnholdet er obligatorisk, anbefalt eller valgfritt.
+* *Beskrivelse* inneholder beskrivelser av informasjonen i kolonnene. Innholdet kan være definert som et Standardisert Vokabular. Et standardisert vokabular er en liste med lovlige svaralternativ og skal kun representeres ved kodeverdien i
+innrapporteringsfilen.
+
+Importfilene skal definere både struktur og innhold i datakilden. Strukturen etableres ved hjelp av mor-barn relasjoner mellom de ulike konseptene som importeres. Rot-noden i hele hierarkiet defineres ved hjelp av 1. linje i importfil 1a: Kildemetadata. Den identifiseres ved en unik kode for kilden, for eksempel DAR. Dette konseptet skal ikke ha noen verdi i ParentCode. Denne koden vil selv være ParentCode for Toppnodene i hver av klassene i kodesystemet. Klassene er Kildemetadata, Versjon, Variabelmetadata, Statistikk, Variabelgruppe og Instrument. Disse toppnodene vil defineres ved hjelp av 1. linje i de enkelte importfilene, med unntak av kildemetadata, der toppnoden defineres av 2. linje i importfil 1a. Toppnodene skal defineres som beskrevet i tabell 3. Code – feltet i toppnoden vil være ParentCode til alle de etterfølgende radene.
+
+
+Tabell 3: Hierarkisk oppbygging av importfilene
+[options="header"]
+|===
+|Filtype |Code |Parent Code |Hierarki |Preferred Term |Concept Type
+|1a: Kildemetadata |DAR | ||Dødsårsaksregisteret |GROUPING
+|1a: Kildemetadata |K_DAR |DAR ||KILDEMETADATA |REGULAR
+|1b: Variabelmetadata |V_DAR |DAR ||VARIABELMETADATA |GROUPING
+|1c: Versjon |N_DAR |DAR ||VERSJON |GROUPING
+|1d: Statistikk |S_DAR |DAR ||STATISTIKK |GROUPING
+|1d: Statistikk |S_DAR_2017.DAR |S_DAR ||DØDSÅRSAKSREGISTERET 2017 |GROUPING
+|1e: Variabelgruppe |G_DAR |DAR ||VARIABELGRUPPE |GROUPING
+|1f: Instrument |I_DAR |DAR ||INSTRUMENT |GROUPING
+|===
+
+*Importfil 1d: Statistikk* skal inneholde et ekstra nivå i hierarkiet. Nivået skal angi statistikkår og datasamling. Det er code-verdien på dette nivået som skal være ParentCode for alle underliggende statistikkverdi-rader.
+
+For *Importfil 2: Kildekodeverk* brukes det som kalles polyhierarki. Før importen etableres det en grunnstruktur i kodeverket. Denne inneholder en felles toppnode KK_KODEVERK, med tre grener. Alle, Eier og Kilde. Denne strukturen defineres som en del av
+systemadministrasjon før import. Innholdet i Importfil 2 skal utformes på grunnlag av denne strukturen. Det vil si at hver kode må gjentas for hver gren i hierarkiet.
+
+.Tabell 4: Polyhierarkisk oppbygging av Importfil 2: Kildekodeverk
+[options="header"]
+|===
+|Code |ParentCode |Hierarchy |PreferredTerm |ConceptType
+|KK_KODEVERK*| ||KILDEKODEVERK |GROUPING
+|KK_ALLE* |KK_KODEVERK| |ALLE| GROUPING
+|KK_EIER* |KK_KODEVERK|| EIER| GROUPING
+|KK_KILDE* |KK_KODEVERK ||KILDE |GROUPING
+|KK_<Eier>** |KK_EIER ||<Kortnavn> |GROUPING
+5+|Eksempel: Variabelen KJONN_K Tilhører datakilden KK_DAR (Dødsårsaksregisteret) har eieren KK_FHI og inngår også i strukturen «Alle»
+|KK_FHI |KK_EIER|| FHI| GROUPING
+|KK_DAR| KK_FHI|| DØDSÅRSAKSREGISTERET| GROUPING
+|KK_DAR |KK_KILDE|| DØDSÅRSAKSREGISTERET|
+|KK_DAR.KJONN_K |KK_ALLE|| Kjønn|
+|KK_DAR.KJONN_K |KK_DAR|||
+|===
+
+[source]
+--
+*Grunnstruktur som KILDEKODEVERK importeres inn i defineres som en del av systemadministrasjon før import.
+**Eiere defineres som en del av grunnstrukturen. Eksempel KK_FHI, KK_HDIR, KK_KREFT etc.
+--
+
+== Formatering av tekst [[formatering-av-tekst]]
+
+Properties med beskrivende tekst formatteres ved hjelp av Markdown syntaks. 
+
+NOTE: *Dette brukes kun i propertiene* +
+Beskrivelse, BeskrivelseEngelsk, Kommentar, KommentarEngelsk, InklusjonsOgEksklusjonskriterier, OpprinnelseUtledning og OpprinnelseUtledningEngelsk.
+
+Formatet støtter bare et utvalg formatteringskoder:
+
+== Bruk av markdown i tekst [[bruk-av-markdown-i-tekst]]
+
+[cols="30s,70d"]
+|===
+| Attribut | Linjeskift
+| Syntax | `<br>`
+| Eksempel på bruk | `Første linje tekst. <br> Andre linje tekst`
+| Eksempel utseende | Første linje tekst +
+Andre linje tekst
+|===
+
+[cols="30s,70d"]
+|===
+| Attribut | Avsnitt
+| Syntax | `<br><br>`
+| Eksempel på bruk | `Første linje tekst. <br><br> Nytt avsnitt`
+| Eksempel utseende | Første linje tekst +
+
+Nytt avsnitt
+|===
+
+[cols="30s,70d"]
+|===
+| Attribut | Bold tekst
+| Syntax |  `+**tekst**+`
+| Eksempel på bruk | `+**Uthevet tekst**+`
+| Eksempel utseende | *Uthevet tekst*
+|===
+
+[cols="30s,70d"]
+|===
+| Attribut | Link
+| Syntax |  [Tekst](url)
+| Eksempel på bruk | Se https://helsedata.no
+| Eksempel utseende | Se https://helsedata.no
+|===
+
+[cols="30s,70d"]
+|===
+| Attribut | Ordnet Punktliste
+| Syntax |  n. 
+| Eksempel på bruk | 1. Punkt 1 +
+2. Punkt 2 +
+3. Punkt 3
+| Eksempel utseende | 1. Punkt 1 +
+2. Punkt 2 +
+3. Punkt 3
+|===
+
+[cols="30s,70d"]
+|===
+| Attribut | Uordnet punktliste
+| Syntax |  * 
+| Eksempel på bruk | * Første +
+* Andre +
+* Tredje
+| Eksempel utseende | * Første +
+* Andre +
+* Tredje
+|===
+
+Utseende vil ikke være eksakt som i eksemplet over, men styres av stildefinisjonen for nettsiden helsedata.no
