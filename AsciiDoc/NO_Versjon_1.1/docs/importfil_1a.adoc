@@ -16,447 +16,298 @@ Enkelte properties har ulike verdier og beskrivelser for datakilde, delkilde og 
 verdiene og beskrivelsene for alle de tre kildemetadatatypene.
 
 == Format for importfil 1a-Kildemetadata
+[width="100%",cols="17%,5%,9%,11%,58%",options="header",]
+|===
+|*Tabell 6: Format for importfil 1a-Kildemetadata.* | | | |
+|_Gruppering_ |Nr |Property |Status |Beskrivelse
 
-[cols="30s,70d"]
-|===
-|Gruppering |Administrative formål
-| Nr | 1
-| Property | Code
-| Status | Obligatorisk
-| Beskrivelse |Unik navnestreng. Tillatte tegn er store bokstaver og tall, uten mellomrom og æ, ø, å. +
-*Datakilde*: Prefiks K for kilde, underscore, kortnavn på datakilden. F.eks. K_HUNT eller K_NPR. +
-*Delkilde*: Prefiks K for kilde, underscore, kortnavn på datakilden, punktum, og navn på delkilde. F.eks. K_HUNT.HUNT1, eller K_NPR.SOMATIKK. +
-*Datasamling*: Prefiks K for kilde, underscore, kortnavn på datakilden, punktum, og navn på datasamling. F.eks. K_HUNT.HUNT1_QUESTIONAIRE1, eller
-K_NPR.SOMATIKK_EPISODE.
-|===
+|_Administrative formål_ |*1* |*Code* |Obligatorisk a|
+Unik navnestreng. Tillatte tegn er store bokstaver og tall, uten
+mellomrom og æ, ø, å.
 
-[cols="30s,70d"]
-|===
-|Gruppering |Administrative formål
-| Nr | 2
-| Property | ParentCode
-| Status | Obligatorisk
-| Beskrivelse |*Datakilde*: Skal være lik kortnavnet på datakilden, f.eks. HUNT. +
-*Delkilde*: Skal være lik Code for tilhørende datakilde, f.eks. K_HUNT. +
-*Datasamling*: Skal være lik Code for tilhørende datakilde. Hvis datasamlingen tilhører
-en delkilde, skal delkildens Code benyttes, f.eks. K_HUNT.HUNT1.
-|===
+*Datakilde*: Prefiks K for kilde, underscore, kortnavn på datakilden.
+F.eks. K++_++HUNT eller K++_++NPR.
 
-[cols="30s,70d"]
-|===
-|Gruppering |HealthTerm
-| Nr | 3
-| Property | Hierarchy
-| Status | Valgfri
-| Beskrivelse | Skal være tom
-|===
+*Delkilde*: Prefiks K for kilde, underscore, kortnavn på datakilden,
+punktum, og navn på delkilde. F.eks. K++_++HUNT.HUNT1, eller
+K++_++NPR.SOMATIKK.
 
-[cols="30s,70d"]
-|===
-|Gruppering |Tittel og beskrivelse
-| Nr | 4
-| Property | PreferredTerm
-| Status | Obligatorisk
-| Beskrivelse |Kort beskrivende navn på datakilden, delkilden eller datasamlingen. +
-F.eks. «Den norske mor, far og barn undersøkelsen», «MOBA Hovedskjema» eller «Spørreskjema1» for henholdsvis datakilde, delkilde og datasamling
-|===
+*Datasamling*: Prefiks K for kilde, underscore, kortnavn på datakilden,
+punktum, og navn på datasamling. F.eks.
+K++_++HUNT.HUNT1++_++QUESTIONAIRE1, eller
+K++_++NPR.SOMATIKK++_++EPISODE.
 
-[cols="30s,70d"]
-|===
-| Gruppering | Tittel og beskrivelse
-| Nr | 9
-| Property | Synonym
-| Status | Valgfri
-| Beskrivelse | Skal være tom (inntil videre)
-|===
+| |*2* |*ParentCode* |Obligatorisk a|
+*Datakilde*: Skal være lik kortnavnet på datakilden, f.eks. HUNT.
 
-[cols="30s,70d"]
-|===
-| Gruppering | Tittel og beskrivelse
-| Nr | 10
-| Property | PatientFriendlyTerm
-| Status | Valgfri
-| Beskrivelse | Skal være tom (inntil videre)
-|===
+*Delkilde*: Skal være lik Code for tilhørende datakilde, f.eks.
+K++_++HUNT.
 
-[cols="30s,70d"]
-|===
-| Gruppering | Tittel og beskrivelse
-| Nr | 11
-| Property | ClinicalFriendlyTerm
-| Status | Valgfri
-| Beskrivelse | Skal være tom (inntil videre)
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Tittel og beskrivelse
-| Nr | 12
-| Property | KortNavn
-| Status | Anbefales
-| Beskrivelse | Forkortelse av navnet på datakilden, delkilden eller datasamlingen. F.eks. MOBA eller NPR.
-|===
+*Datasamling*: Skal være lik Code for tilhørende datakilde. Hvis
+datasamlingen tilhører en delkilde, skal delkildens Code benyttes,
+f.eks. K++_++HUNT.HUNT1.
 
-[cols="30s,70d"]
-|===
-| Gruppering | Tittel og beskrivelse
-| Nr | 13
-| Property | NavnEngelsk
-| Status | Anbefales
-| Beskrivelse | Engelsk navn på datakilden, delkilden eller datasamlingen.
-|===
+|_HealthTerm_ |*3* |*Hierarchy* |Valgfri |Skal være tom.
 
-[cols="30s,70d"]
-|===
-| Gruppering | Tittel og beskrivelse
-| Nr | 14
-| Property | Beskrivelse
-| Status | Obligatorisk
-| Beskrivelse | En utførlig beskrivelse. Skal være forståelig også for innbyggere. Se eksempler på helsedata.no
-|===
+|_Tittel og beskrivelse_ |*4* |*PreferredTerm* |Obligatorisk a|
+Kort beskrivende navn på datakilden, delkilden eller datasamlingen.
 
-[cols="30s,70d"]
-|===
-| Gruppering | Tittel og beskrivelse
-| Nr | 15
-| Property | BeskrivelseEngelsk
-| Status | Anbefales
-| Beskrivelse | En utførlig beskrivelse på engelsk. Skal være forståelig også for innbyggere.
-|===
+F.eks. «Den norske mor, far og barn undersøkelsen», «MOBA Hovedskjema»
+eller «Spørreskjema1» for henholdsvis datakilde, delkilde og
+datasamling.
 
-[cols="30s,70d"]
-|===
-| Gruppering | Tittel og beskrivelse
-| Nr | 16
-| Property | AnbefalteBruksomraader
-| Status | Obligatorisk
-| Beskrivelse | En beskrivelse av hvilke typer formål (eksempelvis forskning, analyse, styringsdata, beredskap osv) og faglige temaer (eksempelvis kreft, hjerte og kar, kirurgi osv) en datakilde, delkilde og/eller datasamling er egent for.
-|===
+|_HealthTerm_ |*5* |*ConceptType* |Valgfri |Skal være tom
 
-[cols="30s,70d"]
-|===
-| Gruppering | Tittel og beskrivelse
-| Nr | 17
-| Property | Emneord
-| Status | Valgfri
-| Beskrivelse | Beskrivende emneord (tag). Skilles ved å bruke «;». F.eks. Emneord;Nytt emneord;
-|===
+|_Administrative formål_ |*6* |*PresentationOrder* |Valgfri a|
+*Datakilde:* Skal være tom.
 
-[cols="30s,70d"]
-|===
-| Gruppering | Opphav og ferskhet
-| Nr | 18
-| Property | Opprettet
-| Status | Obligatorisk
-| Beskrivelse | Året datakilden, delkilden eller datasamlingen ble opprettet og begynte å samle inn data. Format: YYYY.
-|===
+*Delkilde, datasamling*: Brukes dersom man ønsker å presentere
+delkildene eller datasamlingene i en egendefinert rekkefølge som avviker
+fra alfabetisk. Gyldige verdier er positive heltall og delkildene eller
+datasamlingene presenteres i stigende rekkefølge basert på disse
+tallene.
 
-[cols="30s,70d"]
-|===
-| Gruppering | Administrative formål
-| Nr | 19
-| Property | SistOppdatert
-| Status | Obligatorisk
-| Beskrivelse | Dato for siste oppdatering av KILDEMETADATA. Format: YYYYMMDD
-|===
+| |*7* |*ValidFrom* |Obligatorisk a|
+Brukes for å angi fra når en datakilde, delkilde eller datasamling er
+gyldig. Settes ved første import.
 
-[cols="30s,70d"]
-|===
-| Gruppering | Administrative formål
-| Nr | 20
-| Property | Frekvens
-| Status | Valgfri
-| Beskrivelse | Datakilde, delkilde: Skal være tom. Datasamling: Oppdateringsfrekvens brukes for å beskrive hvor ofte datagrunnlaget oppdateres på Helseanalyseplattformen. Standardisert vokabular: +
-1 = Sjeldnere enn årlig, 2 = Årlig, 3 = Halvårlig, 4 = Tertialvis, 5 = Kvartalsvis, 6 = Månedlig, 7 = Ukentlig, 8 = Daglig, 9 = Hyppigere enn daglig
-|===
+Format: YYYYMMDD
 
-[cols="30s,70d"]
-|===
-| Gruppering | Administrative formål
-| Nr | 21
-| Property | Innsamlingsmetode
-| Status | Valgfri
-| Beskrivelse | Kort beskrivelse av metode for innsamling av data.
-|===
+| |*8* |*ValidTo* |Valgfri |Skal være tom
 
-[cols="30s,70d"]
-|===
-| Gruppering | Innhold og kvalitet
-| Nr | 22
-| Property | Kildetype
-| Status | Obligatorisk
-| Beskrivelse | Kategorisering av datakilden.
-Standardisert vokabular:
-1 = Sentralt helseregister2
-2 = Nasjonalt medisinsk kvalitetsregister
-3 = Annet medisinsk kvalitetsregister
-4 = Befolkningsbasert helseundersøkelse
-5 = Biobank
-6 = Annen datakilde
-|===
+|_Tittel og beskrivelse_ |*9* |*Synonym* |Valgfri |Skal være tom (inntil
+videre)
 
-[cols="30s,70d"]
-|===
-| Gruppering | Innhold og kvalitet
-| Nr | 23
-| Property | InklusjonsOgEksklusjonskriterier
-| Status | Obligatorisk
-| Beskrivelse | En faglig overordnet beskrivelse av hvilke kriterier som stilles for at en person skal være registrert i datakilden, delkilden eller datasamlingen. Dette tilsvarer en beskrivelse av populasjonen som inngår i datakilden, delkilden eller datasamlingen.
-|===
+| |*10* |*PatientFriendlyTerm* |Valgfri |Skal være tom (inntil videre)
 
-[cols="30s,70d"]
-|===
-| Gruppering | Innhold og kvalitet
-| Nr | 24
-| Property | GeografiskAvgrensning
-| Status | Valgfri
-| Beskrivelse | Beskrivelse av opptaksområdet for innbyggerne som inngår i datakilden, delkilden eller datasamlingen
-|===
+| |*11* |*ClinicalFriendlyTerm* |Valgfri |Skal være tom (inntil videre)
 
-[cols="30s,70d"]
-|===
-| Gruppering | Innhold og kvalitet
-| Nr | 25
-| Property | Tilslutningsgrad
-| Status | Valgfri
-| Beskrivelse | Andel enheter av totalt antall relevante enheter som rapporterer inn til datakilden, delkilden eller datasamlingen. Med enheter menes foretak, organisasjoner og virksomheter. Oppgis som desimaltall på formatet «0,875». (Kompletthet i form av dekningsgrad på institusjons- eller enhetsnivå)
-|===
+| |12 |KortNavn |Anbefales |Forkortelse av navnet på datakilden,
+delkilden eller datasamlingen. F.eks. MOBA eller NPR.
 
-[cols="30s,70d"]
-|===
-| Gruppering | Innhold og kvalitet
-| Nr | 26
-| Property | BeregningTilslutningsgrad
-| Status | Valgfri
-| Beskrivelse | Hvordan tilslutningsgraden er beregnet. F.eks. hva er nevneren i brøken?
-|===
-
-[cols="30s,70d"]
-|===
-| Gruppering | Innhold og kvalitet
-| Nr | 27
-| Property | Dekningsgrad
-| Status | Obligatorisk
-| Beskrivelse | *NB! Kun for Nasjonale kvalitetsregistre inntil videre.* +
-Dekningsgraden angir i hvilken grad de pasienter eller hendelser som skal registreres faktisk blir registrert. Dekningsgraden for et enkeltsykehus er et mål på hvor mange av de aktuelle pasientene som behandles ved sykehuset som blir registrert i kvalitetsregisteret, mens den samlede dekningsgraden for registeret er den aggregerte dekningsgraden for alle sykehusene som behandler pasienter i registerets målgruppe. Man kan for eksempel si at registeret har en samlet dekningsgrad på 80% og at spesifikt sykehus har en dekningsgrad på 85%.
-Andre helsedatkilder bruker propertien «Kvalitetsnote» for å beskrive kvaliteten på datagrunnlaget.
-Oppgis som desimaltall på formatet «0,875»
-|===
-
-[cols="30s,70d"]
-|===
-| Gruppering | Innhold og kvalitet
-| Nr | 28
-| Property | BeregningDekningsgrad
-| Status | Valgfri
-| Beskrivelse | Hvordan dekningsgrad er beregnet. F.eks. sammenstilt med data fra NPR, og evt. formel.
-|===
-
-
-[cols="30s,70d"]
-|===
-| Gruppering | Innhold og kvalitet
-| Nr | 29
-| Property | Kvalitetsnote
-| Status | Anbefales
-| Beskrivelse |Overordnet tekstlig beskrivelse av kvaliteten på datagrunnlaget
-|===
-
-[cols="30s,70d"]
-|===
-| Gruppering | Rettsgrunnlag
-| Nr | 30
-| Property | Formaal
-| Status | Obligatorisk
-| Beskrivelse | Kort beskrivelse av det juridiske formålet datakilden er opprettet for. Dersom mulig, en kopi av formålet slik det står skrevet i forskrift.
-|===
-
-[cols="30s,70d"]
-|===
-| Gruppering | Rettsgrunnlag
-| Nr | 31
-| Property | Lovverk
-| Status | Obligatorisk
-| Beskrivelse | En eller flere URL-er til lovverk på lovdata.no. F.eks. URL til Lov om helseregistre og
-behandling av helseopplysninger. Flere URL-er skilles ved å bruke «;».
-|===
-
-[cols="30s,70d"]
-|===
-| Gruppering | Rettsgrunnlag
-| Nr | 32
-| Property | Forskrift
-| Status | Valgfri
-| Beskrivelse | En eller flere URL-er til forskrift på lovdata.no. F.eks. URL til Forskrift om innsamling og behandling av helseopplysninger i Medisinsk fødselsregister. Flere URL-er skilles ved å
-bruke «;».
-|===
-
-[cols="30s,70d"]
-|===
-| Gruppering | Rettsgrunnlag
-| Nr | 33
-| Property | HjemmelTilgjengeliggjoring
-| Status | Valgfri
-| Beskrivelse | URL til paragraf med hjemmel for tilgjengeliggjøring.
-|===
-
-
-[cols="30s,70d"]
-|===
-| Gruppering | Rettsgrunnlag
-| Nr | 34
-| Property | Dataansvarlig
-| Status | Obligatorisk
-| Beskrivelse | Navn på virksomheten eller enheten som eier og har det juridiske dataansvaret for
-datakilden, delkilden eller datasamlingen
-|===
-
-[cols="30s,70d"]
-|===
-| Gruppering | Rettsgrunnlag
-| Nr | 35
-| Property | Databehandler
-| Status | Obligatorisk
-| Beskrivelse | Navn på virksomheten eller enheten som faktisk behandler datakilden. Er det samme som Dataansvarlig med mindre denne har satt ut databehandlingen til ekstern tredjepart.
-|===
-
-[cols="30s,70d"]
-|===
-| Gruppering | Rettsgrunnlag
-| Nr | 36
-| Property | GradAvPersonidentifikasjon
-| Status | Valgfri
-| Beskrivelse | Høyeste grad av identifisering det er mulig å søke om fra denne datakilden, delkilden
+| |13 |NavnEngelsk |Anbefales |Engelsk navn på datakilden, delkilden
 eller datasamlingen.
+
+| |14 |Beskrivelse |Obligatorisk |En utførlig beskrivelse. Skal være
+forståelig også for innbyggere. Se eksempler på helsedata.no
+
+| |15 |BeskrivelseEngelsk |Anbefales |En utførlig beskrivelse på
+engelsk. Skal være forståelig også for innbyggere.
+
+| |16 |AnbefalteBruksomraader |Obligatorisk |En beskrivelse av hvilke
+typer formål (eksempelvis forskning, analyse, styringsdata, beredskap
+osv) og faglige temaer (eksempelvis kreft, hjerte og kar, kirurgi osv),
+en datakilde, delkilde og/eller datasamling er egent for.
+
+| |17 |Emneord |Valgfri |Beskrivende emneord (tag). Skilles ved å bruke
+«;». F.eks. Emneord;Nytt emneord;
+
+|_Opphav og ferskhet_ |18 |Opprettet |Obligatorisk a|
+Året datakilden, delkilden eller datasamlingen ble opprettet og begynte
+å samle inn data.
+
+Format: YYYY.
+
+| |19 |SistOppdatert |Obligatorisk a|
+Dato for siste oppdatering av KILDEMETADATA
+
+Format: YYYYMMDD
+
+| |20 |Frekvens |Valgfri a|
+*Datakilde*, *delkilde*: Skal være tom.
+
+*Datasamling*: Oppdateringsfrekvens brukes for å beskrive hvor ofte
+datagrunnlaget oppdateres på Helseanalyseplattformen.
+
 Standardisert vokabular:
+
+____
+1 = Sjeldnere enn årlig
+
+2 = Årlig
+
+3 = Halvårlig
+
+4 = Tertialvis
+
+5 = Kvartalsvis
+
+6 = Månedlig
+
+7 = Ukentlig
+
+8 = Daglig
+
+9 = Hyppigere enn daglig
+____
+
+| |21 |Innsamlingsmetode |Valgfri |Kort beskrivelse av metode for
+innsamling av data.
+
+|_Innhold og kvalitet_ |22 |Kildetype |Obligatorisk a|
+Kategorisering av datakilden.
+
+Standardisert vokabular:
+
+____
+1 = Sentralt helseregisterfootnote:[Inkluderer lovbestemte helseregistre
+og andre sentrale helseregistre
+(https://www.fhi.no/div/datatilgang/om-sentrale-helseregistre/)]
+
+2 = Nasjonalt medisinsk kvalitetsregister
+
+3 = Annet medisinsk kvalitetsregister
+
+4 = Befolkningsbasert helseundersøkelse
+
+5 = Biobank
+
+6 = Annen datakilde
+____
+
+| |23 |InklusjonsOgEksklusjonskriterier |Obligatorisk |En faglig
+overordnet beskrivelse av hvilke kriterier som stilles for at en person
+skal være registrert i datakilden, delkilden eller datasamlingen. Dette
+tilsvarer en beskrivelse av populasjonen som inngår i datakilden,
+delkilden eller datasamlingen.
+
+| |24 |GeografiskAvgrensning |Valgfri |Beskrivelse av opptaksområdet for
+innbyggerne som inngår i datakilden, delkilden eller datasamlingen.
+
+| |25 |Tilslutningsgrad  |Valgfri |Andel enheter av totalt antall
+relevante enheter som rapporterer inn til datakilden, delkilden eller
+datasamlingen. Med enheter menes foretak, organisasjoner og
+virksomheter. Oppgis som desimaltall på formatet «0,875». (Kompletthet i
+form av dekningsgrad på institusjons- eller enhetsnivå)
+
+| |26 |BeregningTilslutningsgrad |Valgfri |Hvordan tilslutningsgraden er
+beregnet. F.eks. hva er nevneren i brøken?
+
+| |27 |Dekningsgrad |Obligatorisk a|
+*NB! Kun for Nasjonale kvalitetsregistre inntil videre.*
+
+Dekningsgraden angir i hvilken grad de pasienter eller hendelser som
+skal registreres faktisk blir registrert. Dekningsgraden for et
+enkeltsykehus er et mål på hvor mange av de aktuelle pasientene som
+behandles ved sykehuset som blir registrert i kvalitetsregisteret, mens
+den samlede *dekningsgraden for registeret er den aggregerte
+dekningsgraden for alle sykehusene som behandler pasienter i registerets
+målgruppe.* Man kan for eksempel si at registeret har en samlet
+dekningsgrad på 80% og at spesifikt sykehus har en dekningsgrad på 85%.
+
+Andre helsedatkilder bruker propertien «Kvalitetsnote» for å beskrive
+kvaliteten på datagrunnlaget.
+
+Oppgis som desimaltall på formatet «0,875».
+
+| |28 |BeregningDekningsgrad |Valgfri |Hvordan dekningsgrad er beregnet.
+F.eks. sammenstilt med data fra NPR, og evt. formel.
+
+| |29 |Kvalitetsnote |Anbefales |Overordnet tekstlig beskrivelse av
+kvaliteten på datagrunnlaget.
+
+|_Rettsgrunnlag_ |30 |Formaal |Obligatorisk |Kort beskrivelse av det
+juridiske formålet datakilden er opprettet for. Dersom mulig, en kopi av
+formålet slik det står skrevet i forskrift.
+
+| |31 |Lovverk |Obligatorisk |En eller flere URL-er til lovverk på
+lovdata.no. F.eks. URL til Lov om helseregistre og behandling av
+helseopplysninger. Flere URL-er skilles ved å bruke «;».
+
+| |32 |Forskrift |Valgfri |En eller flere URL-er til forskrift på
+lovdata.no. F.eks. URL til Forskrift om innsamling og behandling av
+helseopplysninger i Medisinsk fødselsregister. Flere URL-er skilles ved
+å bruke «;».
+
+| |33 |HjemmelTilgjengeliggjoring |Valgfri |URL til paragraf med hjemmel
+for tilgjengeliggjøring.
+
+| |34 |Dataansvarlig |Obligatorisk |Navn på virksomheten eller enheten
+som eier og har det juridiske dataansvaret for datakilden, delkilden
+eller datasamlingen.
+
+| |35 |Databehandler |Obligatorisk |Navn på virksomheten eller enheten
+som faktisk behandler datakilden. Er det samme som Dataansvarlig med
+mindre denne har satt ut databehandlingen til ekstern tredjepart.
+
+| |36 |GradAvPersonidentifikasjon |Valgfri a|
+Høyeste grad av identifisering det er mulig å søke om fra denne
+datakilden, delkilden eller datasamlingen. +
+ +
+Standardisert vokabular:
+
+____
 1 = Direkte personidentifiserbare opplysninger
+
 2 = Indirekte personidentifiserbare opplysninger
+
 3 = Anonyme opplysninger
-|===
+____
 
-[cols="30s,70d"]
-|===
-| Gruppering | Rettsgrunnlag
-| Nr | 37
-| Property | JuridiskNote
-| Status | Valgfri
-| Beskrivelse | Relevant juridisk informasjon som ikke dekkes av andre properties. F.eks. informasjon
-om reservasjonsrett eller hvilke andre kilder data kan sammenstilles med
-|===
+| |37 |JuridiskNote |Valgfri |Relevant juridisk informasjon som ikke
+dekkes av andre properties. F.eks. informasjon om reservasjonsrett eller
+hvilke andre kilder data kan sammenstilles med.
 
-[cols="30s,70d"]
-|===
-| Gruppering | Kontaktinformasjon
-| Nr | 38
-| Property | Hjemmeside
-| Status | Obligatorisk
-| Beskrivelse | URL til hjemmeside.
-|===
+|_Kontaktinformasjon_ |38 |Hjemmeside |Obligatorisk |URL til hjemmeside.
 
+| |39 |Epost |Obligatorisk |E-postadresse for henvendelser om
+datakilden, delkilden eller datasamlingen.
 
-[cols="30s,70d"]
-|===
-| Gruppering | Kontaktinformasjon
-| Nr | 39
-| Property | Epost
-| Status | Obligatorisk
-| Beskrivelse |E-postadresse for henvendelser om datakilden, delkilden eller datasamlingen.
-|===
+| |40 |Telefonnummer |Valgfri |Telefonnummer for henvendelser om
+datakilden, delkilden eller datasamlingen.
 
+| |41 |OrgnrDataansvarlig |Valgfri |Organisasjonsnummer til
+dataansvarlig.
 
-[cols="30s,70d"]
-|===
-| Gruppering | Kontaktinformasjon
-| Nr | 40
-| Property | Telefonnummer
-| Status | Obligatorisk
-| Beskrivelse | Telefonnummer for henvendelser om datakilden, delkilden eller datasamlingen.
-|===
+| |42 |HERidDatakilde   |Valgfri |*Datakilde*: Unik identifikator som
+tildeles av NHN, Brukes for identifisering av datakilden innenfor
+helsenettet. Kan brukes til spørringer.
 
+| |43 |HERidDataansvarlig |Valgfri |Unik identifikator som tildeles av
+NHN, Brukes for identifisering av datakilden innenfor helsenettet. Kan
+brukes til spørringer.
 
-[cols="30s,70d"]
-|===
-| Gruppering | Kontaktinformasjon
-| Nr | 41
-| Property | OrgnrDataansvarlig
-| Status | Valgfri
-| Beskrivelse | Organisasjonsnummer til dataansvarlig.
-|===
+|_Administrative formål_ |44 |Kildemetadatatype |Obligatorisk a|
+Angir hvilken type kildemetadata som beskrives.
 
-
-[cols="30s,70d"]
-|===
-| Gruppering | Kontaktinformasjon
-| Nr | 42
-| Property | HERidDatakilde
-| Status | Valgfri
-| Beskrivelse | *Datakilde*: Unik identifikator som tildeles av NHN, Brukes for identifisering av datakilden innenfor helsenettet. Kan brukes til spørringer
-|===
-
-[cols="30s,70d"]
-|===
-| Gruppering | Kontaktinformasjon
-| Nr | 43
-| Property | HERidDataansvarlig
-| Status | Valgfri
-| Beskrivelse | Unik identifikator som tildeles av NHN, Brukes for identifisering av datakilden innenfor helsenettet. Kan brukes til spørringer.
-|===
-
-[cols="30s,70d"]
-|===
-| Gruppering | Administrative formål
-| Nr | 44
-| Property | Kildemetadatatype
-| Status | Obligatorisk
-| Beskrivelse | Angir hvilken type kildemetadata som beskrives.
 Standardisert vokabular:
+
+____
 1 = Datakilde
+
 2 = Delkilde
+
 3 = Datasamling
-|===
+____
 
+| |45 |ErISamsvarMed  |Valgfri |Referanse til evt. standard(er),
+spesifikasjon(er) etc. som datakilden, delkilden eller datasamlingen er
+i henhold til, f.eks. DCAT-AP-NO. Skilles ved å bruke «;». F.eks.
+Standard 1;Standard 2;
 
-[cols="30s,70d"]
-|===
-| Gruppering | Administrative formål
-| Nr | 45
-| Property | ErISamsvarMed
-| Status | Valgfri
-| Beskrivelse | Referanse til evt. standard(er), spesifikasjon(er) etc. som datakilden, delkilden eller
-datasamlingen er i henhold til, f.eks. DCAT-AP-NO. Skilles ved å bruke «;». F.eks. Standard 1;Standard 2;
-|===
+| |46 |StatistikkType |Valgfri a|
+Hvorvidt medfølgende statistikk er akkumulert eller årsbasert.
+Akkumulert vil eksempelvis kunne være over flere år slik som for
+helseundersøkelser, mens årsbasert vil være innenfor et definert år slik
+som for DÅR.
 
-
-[cols="30s,70d"]
-|===
-| Gruppering | Administrative formål
-| Nr | 46
-| Property | StatistikkType
-| Status | Valgfri
-| Beskrivelse | Hvorvidt medfølgende statistikk er akkumulert eller årsbasert. Akkumulert vil
-eksempelvis kunne være over flere år slik som for helseundersøkelser, mens årsbasert
-vil være innenfor et definert år slik som for DÅR.
 Standardisert vokabular:
+
+____
 1 = Akkumulert
+
 2 = Årsbasert
-|===
+____
 
-[cols="30s,70d"]
-|===
-| Gruppering | Administrative formål
-| Nr | 47
-| Property | TelleEnhet
-| Status | Valgfri
-| Beskrivelse | Datasamling: Telleenhet for datasamlingen angitt ved en tekstlig beskrivelse, eks.
-pasient, episode eller sykehusopphold.
-|===
+| |47 |TelleEnhet |Valgfri |Datasamling: Telleenhet for datasamlingen
+angitt ved en tekstlig beskrivelse, eks. pasient, episode eller
+sykehusopphold.
 
-[cols="30s,70d"]
-|===
-| Gruppering | Tillegg
-| Nr | 48-N
-| Property | Muligetilleggsproperties
-| Status | Valgfri
-| Beskrivelse | Gir mulighet for å legge til ytterligere properties som f.eks. registerspesifikke
-tilleggsproperties, properties for kategoriseringsformål etc. Disse kan defineres etter hvert som ønsker og behov oppstår.
-|===
+|_Tillegg_ |48-N |Mulige tilleggsproperties |Valgfri a|
+Gir mulighet for å legge til ytterligere properties som f.eks.
+registerspesifikke tilleggsproperties, properties for
+kategoriseringsformål etc.
 
+Disse kan defineres etter hvert som ønsker og behov oppstår.
+
+|===
