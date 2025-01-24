@@ -1,20 +1,16 @@
 = Forord [[forord]]
 
-Kan vi redigere rett i fila.
-
-Dette dokumentet er utarbeidet av helsedataavdelingen i Direktoratet for e-helse og
+Dette dokumentet er utarbeidet av helsedataavdelingen i Folkehelseinstituttet FHI og
 beskriver hvordan metadata fra sentrale helseregistre, nasjonale medisinske kvalitetsregistre og befolkningsbaserte helseundersøkelser skal eksporteres til Nasjonal variabelkatalog, samt hvordan metadata forvaltes i Nasjonal variabelkatalog. 
 
 Målgruppen for dokumentet er dataforvaltere og tekniske utviklere i de nasjonale helsedatakildene. Spesifikasjonen setter føringer for hvordan helsedata til sekundære formål skal dokumenteres. Videre legger spesifikasjonen til rette for etableringen av en nasjonal Helseanalyseplattform ved å sikre at data som skal forvaltes på plattformen blir beskrevet på en lik måte og kan utveksles maskinelt. 
 
-Metadatamodellen i denne spesifikasjonen vil også danne grunnlaget for å kunne spesifisere dataprodukt som skal overføres til Helsanalyseplattformen. Spesifikasjonen bygger på arbeidet som ble igangsatt gjennom infrastrukturprosjektet Health Registries for Research der de sentrale helseregistrene etablerte en felles minimumsstandard for dokumentering av registervariabler [1]. 
+Spesifikasjonen bygger på arbeidet som ble igangsatt gjennom infrastrukturprosjektet Health Registries for Research der de sentrale helseregistrene etablerte en felles minimumsstandard for dokumentering av registervariabler [1]. Dette arbeidet ble videreført gjennom Helsedataprogrammet i Direktoratet for e-helse. Da ble minimumsstandarden videreutviklet til å inkludere dokumentering av metadata om både datakildene selv, tilhørende datasamlinger, versjoner og kodeverkene som anvendes. Spesifikasjonen er i denne versjonen også utvidet til å kunne dokumentere metadata om medisinske kvalitetsregistre og befolkningsbaserte helseundersøkelser. 
 
-Gjennom arbeidet i Helsedataprogrammet i Direktoratet for e-helse har minimumsstandarden blitt videreutviklet til å inkludere dokumentering av metadata om både datakildene selv, tilhørende datasamlinger, versjoner og kodeverkene som anvendes. Spesifikasjonen er i denne versjonen også utvidet til å kunne dokumentere metadata om medisinske kvalitetsregistre og befolkningsbaserte helseundersøkelser, samt fylle behov relatert til funksjonalitet i den nasjonale Helseanalyseplattformen. 
+Arbeidet har blitt forankret i tett dialog med berørte interessenter. Hovedbruksområder for metadata vil være i søknadsprosessen på helsedata.no og for eksport til den Europeiske helsedataportalen EHDS. 
 
-Arbeidet har blitt forankret i tett dialog med berørte interessenter. Hovedbruksområder for metadata vil være i søknadsprosessen på helsedata.no og for beskrivelse og tilrettelegging av data på Helseanalyseplattformen. 
+Spesifikasjonen vil etter hvert revideres for å favne ytterligere behov relatert til utvikling av den Nasjonale variabelkatalogen og for å kunne favne metadata fra flere helsedatakilder som f.eks. biobanker, prøvesamlinger og biodata samt tverrsektorielle og internasjonale behov. 
 
-Spesifikasjonen vil etter hvert revideres for å favne ytterligere behov relatert til utvikling av den Nasjonale variabelkatalogen og Helseanalyseplattformen, og for å kunne favne metadata fra flere helsedatakilder som f.eks. biobanker, samt tverrsektorielle og internasjonale behov. 
-
-Videre arbeid med begrepskoordinering på variabelnivå, bruk av kodeverk og utvikling av felles overordnede begreps- og/eller informasjonsmodeller vil foregå i nært samarbeid med registerforvaltere og relevante fagavdelinger i Direktoratet for E-helse. 
+Videre arbeid med begrepskoordinering på variabelnivå, bruk av kodeverk og utvikling av felles overordnede begreps- og/eller informasjonsmodeller vil foregå i nært samarbeid med registerforvaltere og relevante fagavdelinger i FHI og Helsedirektoratet. 
 
 Spesifikasjonen utvikles i tråd med https://www.go-fair.org/fair-principles/[FAIR-prinsippene] og de internasjonale standardene DCAT og SKOS, og gjennom anbefalinger innhentet gjennom samarbeide i Europeiske og Nordiske prosjekter og arbeidsgrupper.
