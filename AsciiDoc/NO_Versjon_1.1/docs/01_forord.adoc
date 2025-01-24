@@ -1,6 +1,6 @@
 = Forord [[forord]]
 
-
+Kan vi redigere rett i fila.
 
 Dette dokumentet er utarbeidet av helsedataavdelingen i Direktoratet for e-helse og
 beskriver hvordan metadata fra sentrale helseregistre, nasjonale medisinske kvalitetsregistre og befolkningsbaserte helseundersøkelser skal eksporteres til Nasjonal variabelkatalog, samt hvordan metadata forvaltes i Nasjonal variabelkatalog. 
