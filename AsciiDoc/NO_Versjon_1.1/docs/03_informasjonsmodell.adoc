@@ -90,10 +90,12 @@ En mer komplett oversikt over relevante fagbegrep er gjengitt i begrepslisten.
 Informasjonsmodellen benytter seg videre av UML-baserte ikoner og begrep. Disse er
 nærmere forklart i Tabell 1.
 
+image::images/class.jpg[]
+
 [options="header"]
 |===
 |Ikon |Definisjon |Beskrivelse
-| umlet.createNewDiagram | Klasse |En klasse er en logisk gruppering av entiteter som beskriver en gitt del av modellen. Klasser kjennetegnes ved at de brukes til å beskrive en gitt type objekter. Eksempler på plasser er Variabel som brukes til å definere alle variablene i gitt datakilde.
+| image::images/class.png[]| Klasse |En klasse er en logisk gruppering av entiteter som beskriver en gitt del av modellen. Klasser kjennetegnes ved at de brukes til å beskrive en gitt type objekter. Eksempler på plasser er Variabel som brukes til å definere alle variablene i gitt datakilde.
 | |Assosiativ relasjon |En assosiativ relasjon er den mest generelle formen for relasjon innenfor UML. I modellen under brukes assosiative relasjoner der det ikke er noen form for hierarkisk relasjon mellom klassene i form av en referer tilrelasjon.
 | |Aggregerende relasjon |En aggregerende relasjon uttrykker at deler settes sammen til en større helhet, i invers forstand ofte kalt en «part of» relasjon. I modellen under brukes aggregerende relasjoner der en klasse kan inneholde av 0, 1 eller flere instanser av en sub-klasse.
 || Komposisjonrelasjon |En komposisjon-relasjon uttrykker er en spesiell form for en aggregerende relasjon i de tilfellene der det er et strengt krav at en klasse må inneholde minst én instans av en gitt sub-klasse.

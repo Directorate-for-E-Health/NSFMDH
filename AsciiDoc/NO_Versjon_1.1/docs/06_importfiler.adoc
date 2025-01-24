@@ -68,7 +68,7 @@ Tabell 2: Navnstandard for bruk av code
 [options="header"]
 |===
 |Object code |Navngivning av kode
-|Datakilde |Eksempel: K_HUNT Hei Trulks
+|Datakilde |Eksempel: K_HUNT
 |Delkilde |Eksempel: K_HUNT.HUNT1
 |Datasamling |Eksempel: K_HUNT.HUNT1_QUESTIONAIRE
 |Variabel |Eksempel: V_HUNT.AGE_YEAR
