@@ -15,6 +15,7 @@ image::images/objektstruktur_for_helsedatakilder_i_healthterm.jpg[]
 3. Hvis det er behov kan datakilden og datasamlingene deles inn i en hierarkisk struktur av delkilder. Hver delkilde defineres da som «children» av datakilden og datasamlingene blir «children» av en delkilde istedenfor selve kilden.
 
 4. VARIABELMETADATA importeres som en Extension til Core Namespace (KILDEMETADATA). VARIABELMETADATA inneholder en oversikt over alle variabler i datakilden modellert som egne concepts med tilhørende properties. Variablene ligger som en flat liste under VARIABELMETADATA.
+
 5. STATISTIKK importeres som en Extension til Core Namespace. STATISTIKK inneholder statistisk informasjon om utvalgte variabler definert i VARIABELMETADATA fordelt per datasamling og VERSJON som variabelen inngår i.
 
 6. VERSJON importeres som en Extension til Core Namespace. VERSJON brukes for å koble hvilke variabler som inngår i hvilke versjoner av en datasamling, og for å vite når datagrunnlaget er oppdatert. 

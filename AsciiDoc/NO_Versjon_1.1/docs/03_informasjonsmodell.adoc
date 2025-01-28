@@ -112,15 +112,15 @@ Punktlisten under forklarer informasjonslisten illustrert i Figur 1.
 
 3. En datakilde eller delkilde inneholder én eller flere datasamlinger.
 
-4. For helsedatakilder som leverer dataprodukt til Helseanalyseplattformen, skal klassen datasamling benyttes til å dokumentere metadata om dataprodukt. Klassen delkilde kan brukes til å gruppere dataprodukt og dokumentere metadata om logiske grupperinger av dataprodukt.
+4. Klassen delkilde kan brukes til å gruppere dataprodukt og dokumentere metadata om logiske grupperinger av dataprodukt.
 
 5. En datakilde inneholder variabler som er definert ut fra et sett properties om variabelen. Samme variabel kan inngå i flere datasamlinger. Det vil si at Datakilden i praksis inneholder en pool av alle variabler for alle datasamlingene under denne kilden. Derfor må en variabel være unik innenfor en datakilde.
 
 6. Hver datasamling referer til en eller flere versjoner som definerer hvilke variabler som inngår i respektive versjoner av datasamlingen, og når datasamlingene er oppdaterte med nytt datagrunnlag.
 
-7. Hver versjon refererer til en eller flere variabler. Det skal finnes minst en versjon som viser hvilke variabler som kan utleveres fra en datasamling. I tillegg kan det defineres versjoner som henviser til versjon av innrapporteringsskjema. Versjon brukes med dette også til å spesifisere hvilke variabler som inngår i hvilke dataprodukt for datakilder som skal levere dataprodukt til Helseanalyseplattformen.
+7. Hver versjon refererer til en eller flere variabler. Det skal finnes minst en versjon som viser hvilke variabler som kan utleveres fra en datasamling. I tillegg kan det defineres versjoner som henviser til versjon av innrapporteringsskjema.
 
-8. Hver variabel kan referere til null, én eller flere variabelgrupper.
+8. Hver variabel kan referere én eller flere variabelgrupper. I spesielle tilfeller kan dette fravikes.
 
 9. Variabler kan referere til kodeverk. For kategoriske variabler (variabler med svaralternativ) utgjør dette kodeverket variabelens standardiserte vokabular der kodeverket inneholder koder som representerer alle mulige verdier (svaralternativ) en variabel kan ha.
 
