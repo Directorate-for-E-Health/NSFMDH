@@ -5,10 +5,11 @@ beskriver hvordan metadata fra sentrale helseregistre, nasjonale medisinske kval
 
 Målgruppen for dokumentet er dataforvaltere og tekniske utviklere i de nasjonale helsedatakildene. Spesifikasjonen setter føringer for hvordan helsedata til sekundære formål skal dokumenteres. Videre legger spesifikasjonen til rette for etableringen av en nasjonal Helseanalyseplattform ved å sikre at data som skal forvaltes på plattformen blir beskrevet på en lik måte og kan utveksles maskinelt. 
 
-Spesifikasjonen bygger på arbeidet som ble igangsatt gjennom infrastrukturprosjektet Health Registries for Research der de sentrale helseregistrene etablerte en felles minimumsstandard for dokumentering av registervariabler [1]. Dette arbeidet ble videreført gjennom Helsedataprogrammet i Direktoratet for e-helse. Da ble minimumsstandarden videreutviklet til å inkludere dokumentering av metadata om både datakildene selv, tilhørende datasamlinger, versjoner og kodeverkene som anvendes. Spesifikasjonen er i denne versjonen også utvidet til å kunne dokumentere metadata om medisinske kvalitetsregistre og befolkningsbaserte helseundersøkelser. 
+Spesifikasjonen bygger på arbeidet som ble igangsatt gjennom infrastrukturprosjektet Health Registries for Research der de sentrale helseregistrene etablerte en felles minimumsstandard for dokumentering av registervariabler [1]. Dette arbeidet ble videreført gjennom Helsedataprogrammet i Direktoratet for e-helse. Da ble minimumsstandarden videreutviklet til å inkludere dokumentering av metadata om både datakildene selv, tilhørende datasamlinger, versjoner og kodeverkene som anvendes. Senere ble spesifikasjonen utvidet til å kunne dokumentere metadata om medisinske kvalitetsregistre og befolkningsbaserte helseundersøkelser. 
 
-Arbeidet har blitt forankret i tett dialog med berørte interessenter. Hovedbruksområder for metadata vil være i søknadsprosessen på helsedata.no og for eksport til den Europeiske helsedataportalen EHDS. 
+Arbeidet har blitt forankret i tett dialog med berørte interessenter. 
 
+Hovedbruksområder for metadata vil være i søknadsprosessen på helsedata.no og for eksport til den Europeiske helsedataportalen EHDS. 
 Spesifikasjonen vil etter hvert revideres for å favne ytterligere behov relatert til utvikling av den Nasjonale variabelkatalogen og for å kunne favne metadata fra flere helsedatakilder som f.eks. biobanker, prøvesamlinger og biodata samt tverrsektorielle og internasjonale behov. 
 
 Videre arbeid med begrepskoordinering på variabelnivå, bruk av kodeverk og utvikling av felles overordnede begreps- og/eller informasjonsmodeller vil foregå i nært samarbeid med registerforvaltere og relevante fagavdelinger i FHI og Helsedirektoratet. 

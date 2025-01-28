@@ -17,71 +17,65 @@ kunne rapportere inn.
 For å forstå den logiske informasjonsmodellen i Figur 1 vil det være hensiktsmessig å ha
 kjennskap til et utvalg begrep:
 
-- Dataprodukt er ikke en klasse i modellen under, men en konseptuell betegnelse på
-måten data skal overføres fra en datakilde til Helseanalyseplattformen. På et
-konseptuelt nivå består dataprodukt av det faktiske datasettet, samt metadata om
-variabler, versjon og datasamling. Sammenhengen mellom metadata og datasett som
-overføres til Helseanalyseplattformen er forklart nærmere i Spesifikasjon for
-dataoverføring til Helseanalyseplattformen.
 
-- Datasett er ikke en klasse i informasjonsmodellen for metadata, men beskriver i
+- **Datasett** er ikke en klasse i informasjonsmodellen for metadata, men beskriver i
 stedet de faktiske helse- og personopplysningene som en versjon av en datasamling
 representerer. I Spesifikasjon for dataoverføring til Helseanalyseplattformen inngår
 Datasett i den logiske informasjonsmodellen for relasjon mellom data og metadata og
 betegner ett gitt sett med data som inngår i et dataprodukt som skal overføres til
 Helseanalyseplattformen.
 
-- Datakilde er definert som kildene til dataene. I denne versjonen av spesifikasjonen er
+- **Datakilde** er definert som kildene til dataene. I denne versjonen av spesifikasjonen er
 en datakilde ekvivalent med et helseregister, en helseundersøkelse eller et medisinsk
 kvalitetsregister.
 
-- Delkilde kan brukes dersom datakilden har ulike deler som må beskrives ut ifra en
+- **Delkilde** kan brukes dersom datakilden har ulike deler som må beskrives ut ifra en
 logisk, kronologisk, juridisk eller populasjonsbasert betraktning. HUNT1, 2, 3 og 4 er
 eksempel på delkilder. Denne kan ha flere nivåer. For datakilder som skal levere
 dataprodukt til Helseanalyseplattformen, kan klassen Delkilde også brukes for å lage
 logiske grupperinger av flere dataprodukt.
 
-- Datasamling er definert som et sub-register innenfor en datakilde, altså en
+- **Datasamling** er definert som et sub-register innenfor en datakilde, altså en
 delmengde av variablene i den aktuelle datakilden. Eksempler på datasamlinger kan
-være skjema i medisinske kvalitetsregistre. Klassen datasamling skal også brukes til
+være skjema i medisinske kvalitetsregistre. Klassen datasamling kan også brukes til
 å beskrive dataprodukter. 
 
-Nasjonal spesifikasjon for metadata om helsedata
-10
+- **Dataprodukt** er ikke en klasse i modellen under, men en konseptuell betegnelse på 
+måten data kan overføres fra en datakilde til et sikkert analyserom. På et 
+konseptuelt nivå består dataprodukt av det faktiske datasettet, samt metadata om 
+variabler, versjon og datasamling. 
 
-- Versjon er et teknisk hjelpemiddel som brukes til å definere hvilke variabler som
+- **Versjon** er et teknisk hjelpemiddel som brukes til å definere hvilke variabler som
 inngår i ulike årganger/versjoner av de ulike datasamlingene/dataproduktene i en
 datakilde.
 
-- Variabler er de informasjonsbærende elementene i datakilden og definerer hvilken
+- **Variabler** er de informasjonsbærende elementene i datakilden og definerer hvilken
 informasjon som finnes i de nasjonale helsedatakildene.
 
-- Variabelgruppe er en kategorisering av variabler. Strukturen kan bygges opp
+- **Variabelgruppe** er en kategorisering av variabler. Strukturen kan bygges opp
 hierarkisk. Variabelgruppe erstatter den nå utgåtte propertien LokaltTema, men vil
 også kunne brukes til å gruppere variabler på tvers av helsedatakilder.
 
-- Kodeverk representerer i denne sammenhengen et verdisett. Et kodeverk kan for
+- **Kodeverk** representerer i denne sammenhengen et verdisett. Et kodeverk kan for
 eksempel være et administrativt kodeverk, et helsefaglig kodeverk eller egendefinerte
 svaralternativer for en variabel.
 
-- Kode er i denne sammenheng det samme som et svaralternativ i et kodeverk
+- **Kode** er i denne sammenheng det samme som et svaralternativ i et kodeverk
 (verdisett). En kode består av en kodeverdi og en kodetekst.
 
-- Statistikk er definert som de statistiske egenskapene ved en årgang/versjon av en
+- **Statistikk** er definert som de statistiske egenskapene ved en årgang/versjon av en
 variabel. Statistikk som metadata har som formål å si noe om registerings-/
 kodingskvaliteten og gi en pekepinn om antall forekomster. Statistikken egner seg
 ikke for analyse som sådan.
 
-- Kodefrekvens er definert som antall gyldige tilfeller av et svaralternativ/utfall av en
+- **Kodefrekvens** er definert som antall gyldige tilfeller av et svaralternativ/utfall av en
 variabel.
 
-- Instrument kan benyttes i forbindelse med helseundersøkelser og medisinske
-kvalitetsregistre. Det er en betegnelse på en standardisert innsamlingsmetode for
+- **Instrument** kan benyttes i forbindelse med helseundersøkelser og medisinske kvalitetsregistre. Det er en betegnelse på en standardisert innsamlingsmetode for
 data. Dette kan være hele eller deler av et spørreskjema, eller et fysisk instrument for
 f.eks. måling av bentetthet, analyse av prøvemateriale etc.
 
-- Filter kan benyttes for å kategorisere variabler ved hjelp av kodeverk eller
-egenskaper som ikke er definert som generelle properties i denne spesifikasjonen.
+- **Filter** kan benyttes for å kategorisere variabler ved hjelp av kodeverk eller egenskaper som ikke er definert som generelle properties i denne spesifikasjonen.
 Et filterkodeverk kan f.eks. bestå av koder for Mor, Barn og Far, der en variabel som
 kun benyttes for Far, knyttes til filteregenskapen Far.
 

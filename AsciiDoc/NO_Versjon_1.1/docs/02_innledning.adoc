@@ -2,7 +2,9 @@
 
 *1.1 Bakgrunn*
 
-Arbeidet med å definere og innrapportere standardiserte metadata fra helseregistre ble initiert gjennom infrastrukturprosjektet Health Registries for Research (HRR) [1]. HRR ble avsluttet i 1. kvartal 2019 og Helsedataprogrammet i Direktoratet for e-helse videreførte dette arbeidet. Gjennom 2020 ble spesifikasjonen utvidet til å inkludere metadata fra nasjonale medisinske kvalitetsregistre og befolkingsbaserte helseundersøkelser. Nasjonal variabelkatalog ble etablert i løsningen HealthTerm i 2019. HealthTerm er levert av Rhapsody, tidligere CareCom AS og er anskaffet av Helsedirektoratet, Etableringen av variabelkatalogen er avgjørende for utviklingen av en god variabelutforsker på helsedata.no og inngår som en viktig komponent i utviklingen av en effektiv søknadstjeneste. 
+Arbeidet med å definere og innrapportere standardiserte metadata fra helseregistre ble initiert gjennom infrastrukturprosjektet Health Registries for Research (HRR) [1]. HRR ble avsluttet i 1. kvartal 2019 og Helsedataprogrammet i Direktoratet for e-helse videreførte dette arbeidet. Gjennom 2020 ble spesifikasjonen utvidet til å inkludere metadata fra nasjonale medisinske kvalitetsregistre og befolkingsbaserte helseundersøkelser. 
+Nasjonal variabelkatalog ble etablert i løsningen HealthTerm i 2019. HealthTerm er levert av Rhapsody, tidligere CareCom AS og er anskaffet av Helsedirektoratet.
+Etableringen av variabelkatalogen er avgjørende for utviklingen av en god variabelutforsker på helsedata.no og inngår som en viktig komponent i utviklingen av en effektiv søknadstjeneste. 
 
 Behovet for metadata om helsedatakilder og deres innhold (variabler), er tydelig forankret i Nasjonal e-helsestrategi 2017-2022 [2].
 
@@ -10,7 +12,6 @@ Behovet for metadata om helsedatakilder og deres innhold (variabler), er tydelig
 
 Spesifikasjonen skal bidra til å sikre at metadata om helsedatakilder dokumenteres og tilgjengeliggjøres på en standardisert og strukturert måte slik at de kan forståes og utveksles mellom aktører og systemer, også på tvers av landegrenser. Spesifikasjonen er tiltenkt å dekke informasjonsbehovet for bruk av data til sekundære formål som forskning, kvalitetsforbedring og annen analyse. Spesifikasjonen legger derfor føringer på hvilken informasjon som det er obligatorisk å innrapportere, hvilken som er anbefalt og hvilken som er valgfri. Metadata vil utveksles med helsedata.no for å understøtte søknadsprosessen i et felles søknadsskjema.  Metadata vil også utveksles med andre metadatakataloger som f.eks. Felles datakatalog og HealthData@EU, noe som krever en gradvis tilpasning til internasjonale standarder for utveksling og deling av metadata.
 
-Det er gjort flere utvidelser av metadatamodellen fra versjon 1.0 til versjon 1.1 av spesifikasjonen. Dette er gjort for å kunne beskrive datakilder som medisinske kvalitetsregistre og befolkningsbaserte helseundersøkelser på en mer presis måte, samt å gi mer relevant informasjon til brukerne av dataene. Enkelte av klassene i modellen er frivillig å ta i bruk. Videre har flere properties som var satt som valgfrie i forrige versjon blitt gjort om til obligatoriske eller anbefalte i denne. Dette er gjort ut fra en vurdering av hvilken informasjon som vil være mest nyttig for brukere av helsedataene, samt etter tilbakemeldinger fra forvaltere av de aktuelle helsedatakildene.
 
 *1.3 Omfang og avgrensninger*
 
