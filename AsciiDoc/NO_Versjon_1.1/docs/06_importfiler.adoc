@@ -11,7 +11,8 @@ de ulike importfilene til klassene i den logiske informasjonsmodellen illustrert
 
 == Navnestandard for importfiler [[navnestandard-for-importfiler]]
 
-For å sikre sporbarhet skal importfilene definert i Figur 5 gis et standardisert navn. Navnene kan kun inneholde store og små bokstaver (A-Z og a-z) og tall (0-9). Bindestrek (-) og understrek (_) brukes som vist i definisjonene under og skal ikke inngå i de delene av filnavnet som defineres fritt av datakilden.
+For å sikre sporbarhet skal importfilene definert i Figur 5 gis et standardisert navn. Navnene kan kun inneholde store og små bokstaver (A-Z og a-z) og tall (0-9). +
+Bindestrek (-) og understrek (_) brukes som vist i definisjonene under og skal ikke inngå i de delene av filnavnet som defineres fritt av datakilden.
 
 Filtypene 1a, 1b, 1c, 1d, 1e, 1f og 2 navngis i henhold til følgende standard: 
 `DATAKILDE_Importfiltype-Importfilnavn_Årssett*_Versjon*_Dato sendt (YYYYMMDD)`
@@ -45,12 +46,12 @@ Følgende forkortelse skal brukes:
 
 Eksempler:
 
-* `KREG_3a_MAPSET_K-N_2018_V34d_20190402` (Filen mapper KILDEMETADATA og tilhørende datasamlinger i Kreftregisteret til
+* `KREG_3a_MAPSET_K-N_2024_V34d_20190402` (Filen mapper KILDEMETADATA og tilhørende datasamlinger i Kreftregisteret til
 VERSJON 2018)
-* `KREG_3b_MAPSET_N-V_ 2018_V34d_20190402` (Filen mapper fra VERSJON til de variablene i Kreftregisteret som inngikk i
+* `KREG_3b_MAPSET_N-V_ 2024_V34d_20190402` (Filen mapper fra VERSJON til de variablene i Kreftregisteret som inngikk i
 VERSJON 2018)
-* `KREG_3c_MAPSET_V-KK_2018_V34d_20190402` (Filen mapper variablene i Kreftregisteret til KILDEKODEVERK gyldige i 2018)
-* `KREG_3d_MAPSET_V-S_2018_V34d_20190402` (Filen mapper variablene i Kreftregisteret til STATISTIKK for i 2018)
+* `KREG_3c_MAPSET_V-KK_2024_V34d_20190402` (Filen mapper variablene i Kreftregisteret til KILDEKODEVERK gyldige i 2018)
+* `KREG_3d_MAPSET_V-S_2024_V34d_20190402` (Filen mapper variablene i Kreftregisteret til STATISTIKK for i 2018)
 
 == Navngivning av nøkkelfeltet Code i importfilene [[navngivning-av-nøkkelfeltet-code-i-importfilene]]
 
@@ -74,7 +75,7 @@ Tabell 2: Navnstandard for bruk av code
 |Variabel |Eksempel: V_HUNT.AGE_YEAR
 |Versjon |Eksempel: N_HUNT.HUNT1_QUESTIONAIRE_2018 Prefix + «_» + datakilde.kortnavn + «.» + datasamling.KortNavn + «_»
 + versjonsnummer/id
-|Statistikk |Eksempel: S_HUNT_2017.HUNT1_QUESTIONAIRE.GENDER.1 Prefix + «_» + datakilde.kortnavn + «_» + årstall + «.» +
+|Statistikk |Eksempel: S_HUNT_2024.HUNT1_QUESTIONAIRE.GENDER.1 Prefix + «_» + datakilde.kortnavn + «_» + årstall + «.» +
 datasamling.KortNavn + «.» + variabel.KortNavn + «.» + KodeverLokalid
 |Variabelgruppe |Eksempel: G_HUNT.EXPOSURE Prefix + «_» + datakilde.KortNavn + «.» + variabelgruppe.KortNavn
 |Kildekodeverk |Eksempel: KK_HUNT.GENDER.1 Prefix + «_» + datakilde. kortnavn + «.» + variabel.KortNavn + «.» + KodeverLokalid
@@ -105,7 +106,7 @@ Tabell 3: Hierarkisk oppbygging av importfilene
 |1b: Variabelmetadata |V_DAR |DAR ||VARIABELMETADATA |GROUPING
 |1c: Versjon |N_DAR |DAR ||VERSJON |GROUPING
 |1d: Statistikk |S_DAR |DAR ||STATISTIKK |GROUPING
-|1d: Statistikk |S_DAR_2017.DAR |S_DAR ||DØDSÅRSAKSREGISTERET 2017 |GROUPING
+|1d: Statistikk |S_DAR_2024.DAR |S_DAR ||DØDSÅRSAKSREGISTERET 2017 |GROUPING
 |1e: Variabelgruppe |G_DAR |DAR ||VARIABELGRUPPE |GROUPING
 |1f: Instrument |I_DAR |DAR ||INSTRUMENT |GROUPING
 |===
@@ -203,7 +204,7 @@ Nytt avsnitt
 | Eksempel på bruk | * Første +
 * Andre +
 * Tredje
-| Eksempel utseende | * Første +
+| Eksempel utseende | * Første + 
 * Andre +
 * Tredje
 |===

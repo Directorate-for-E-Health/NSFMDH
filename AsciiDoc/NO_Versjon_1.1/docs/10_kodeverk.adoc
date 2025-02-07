@@ -1,10 +1,10 @@
 = Administrative og helsefaglige kodeverk [[administrative_og_helsefaglige_kodeverk]]
 
-Med administrative kodeverk menes her kodeverkene som per i dag finnes på volven.no.
+Med administrative kodeverk menes her kodeverkene som per i dag finnes på finnkode.no (Tidligere Volven)
 Disse omfatter blant annet kodeverkene som anvendes i NPR og KPR, og er tildelt en unik
 og persistent identifikator (OID).
 Disse kodeverkene er også tilgjengelige i Nasjonal variabelkatalog, og skal refereres til ved
-egne mappingfiler. Target code i mappingfilen vil være samme OID som brukes i Volven.
+egne mappingfiler. Target code i mappingfilen vil være samme OID som brukes i finnkode.no.
 Eksempler på OID’er er 3101 for Kjønn og 3402 for kommunenummer.
 I de tilfellene der en datakilde benytter seg av et av de helsefaglige kodeverkene i Tabell 11,
 så skal det mappes til respektive «Kortnavn» som definert i Tabell 14, og kodeverket skal

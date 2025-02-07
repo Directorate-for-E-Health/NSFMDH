@@ -48,11 +48,8 @@ helseregister, et nasjonalt medisinsk kvalitetsregister eller en
 befolkningsbasert helseundersøkelse.
 |Dataprodukt |Dataprodukt er en konseptualisering av måten data skal
 overføres fra nasjonale helsedatakilder til
-Helseanalyseplattformen. Konseptet dataprodukt består av et
+sikre analyserom. Konseptet dataprodukt består av et
 datasett, samt metadata om variabler, versjon og datasamling.
-Sammenhengen mellom metadata og datasett som overføres til
-Helseanalyseplattformen er forklart nærmere i Spesifikasjon for
-dataoverføring til Helseanalyseplattformen.
 |Datasamling |Datasamling er definert som et sub-register innenfor en
 datakilde, altså en delmengde av variablene i den aktuelle
 datakilden. Eksempler på datasamlinger kan være sektorer i
@@ -72,8 +69,7 @@ for de nasjonale kvalitetsregistrene som skal rapportere inn
 |Delkilde |Delkilde kan brukes dersom datakilden har ulike deler som må
 beskrives ut ifra en logisk, kronologisk, juridisk eller
 populasjonsbasert betraktning. HUNT1, 2, 3 og 4 er eksempel
-på delkilder. Denne kan ha flere nivåer. For datakilder som skal
-levere dataprodukt til Helseanalyseplattformen, kan klassen
+på delkilder. Denne kan ha flere nivåer. 
 Delkilde også brukes for å lage logiske grupperinger av flere
 dataprodukt.
 |Extension Namespace |Extension Namespace er et løsningsspesifikt begrep som
@@ -100,7 +96,7 @@ https://www.difi.no/artikkel/2016/09/begreperfellesinformasjonsmodeller
 innsamlingsmetode for data. Dette kan være hele eller deler av
 et spørreskjema, eller et fysisk instrument for f.eks. måling av
 bentetthet, analyse av prøvemateriale etc.
-Kategorisk variabel En kategorisk variabel er en variabel som kan ta på seg en av et
+|Kategorisk variabel |En kategorisk variabel er en variabel som kan ta på seg en av et
 begrenset, og vanligvis fast, antall mulige verdier, f.eks. en
 kodeverdi fra et kodeverk (Diagnose, kjønn, kommune etc.).
 Den består altså ikke av tallverdier, men av f.eks. kodeverdier
@@ -151,7 +147,7 @@ inn og utland.
 informasjonsmodell er modellert i henhold til hverandre og hvilke
 relasjoner som f.eks. finnes mellom klassene i
 informasjonsmodellen.
-|Polyhierarki Polyhieraki betyr at et begrep kan plasseres i flere hierarkier,
+|Polyhierarki |Polyhieraki betyr at et begrep kan plasseres i flere hierarkier,
 f.eks. kan et helseregister både plasseres i et
 organisasjonshierarki, et hierarki for type registre og et hierarki
 der registeret er kategorisert etter hvilken pasientgruppe det
