@@ -23,13 +23,14 @@ link:{lang-switch-link}[English version]
 
 *Status*: Siste versjon# +
 *Versjon*: Versjon 1.1 +
-*Oppdatert*: 11/2021  +
-*Utgitt av*: Direktoratet for e-helse +
-*Kontakt*: postmottak@ehelse.no +
-*Postadresse*: Postboks 6737 St. Olavs plass, 0130 OSLO +
-*Besøksadresse*: Verkstedveien 1, 0277 OSLO +
-*Telefon*: 21 49 50 70 +
-*Publikasjonen kan lastes ned på*: www.ehelse.no
+*Oppdatert*: 02/2025  +
+*Utgitt av*: Folkehelseinstituttet +
+*Kontakt*: service@helsedata.no +
+*Postadresse*: Postboks 222 Skøyen, 0213 OSLO  +
+*Besøksadresse*: Myrens verksted 6H
+0473 Oslo +
+*Telefon*: 21 07 81 60 +
+
 
 = Forord [[forord]]
 
