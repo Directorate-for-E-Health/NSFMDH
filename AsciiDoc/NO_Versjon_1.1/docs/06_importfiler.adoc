@@ -116,7 +116,7 @@ Tabell 3: Hierarkisk oppbygging av importfilene
 For *Importfil 2: Kildekodeverk* brukes det som kalles polyhierarki. Før importen etableres det en grunnstruktur i kodeverket. Denne inneholder en felles toppnode KK_KODEVERK, med tre grener. Alle, Eier og Kilde. Denne strukturen defineres som en del av
 systemadministrasjon før import. Innholdet i Importfil 2 skal utformes på grunnlag av denne strukturen. Det vil si at hver kode må gjentas for hver gren i hierarkiet.
 
-.Tabell 4: Polyhierarkisk oppbygging av Importfil 2: Kildekodeverk
+Tabell 4: Polyhierarkisk oppbygging av Importfil 2: Kildekodeverk
 [options="header"]
 |===
 |Code |ParentCode |Hierarchy |PreferredTerm |ConceptType
@@ -148,65 +148,56 @@ Beskrivelse, BeskrivelseEngelsk, Kommentar, KommentarEngelsk, InklusjonsOgEksklu
 
 Formatet støtter bare et utvalg formatteringskoder:
 
-== Bruk av markdown i tekst [[bruk-av-markdown-i-tekst]]
 
-[cols="30s,70d"]
+
+*Tabell 5: Bruk av markdown i tekst*
+[width="100%",cols="16%,12%,29%,43%",options="header",]
 |===
-| Attribut | Linjeskift
-| Syntax | `<br>`
-| Eksempel på bruk | `Første linje tekst. <br> Andre linje tekst`
-| Eksempel utseende | Første linje tekst +
+|*Atributt* |*Syntaks* |*Eksempel på bruk* |*Eksempel utseende ++*++*
+
+|Linjeskift |++<++br++>++ |Første linje tekst. ++<++br++>++ Andre linje
+tekst a|
+Første linje tekst
+
 Andre linje tekst
-|===
 
-[cols="30s,70d"]
-|===
-| Attribut | Avsnitt
-| Syntax | `<br><br>`
-| Eksempel på bruk | `Første linje tekst. <br><br> Nytt avsnitt`
-| Eksempel utseende | Første linje tekst +
+|Avsnitt |++<++br++><++br++>++ |Første linje tekst. ++<++br++><++br++>++
+Nytt avsnitt a|
+Første linje tekst
 
-Nytt avsnitt
-|===
+Nytt Avsnitt
 
-[cols="30s,70d"]
-|===
-| Attribut | Bold tekst
-| Syntax |  `+**tekst**+`
-| Eksempel på bruk | `+**Uthevet tekst**+`
-| Eksempel utseende | *Uthevet tekst*
-|===
+|Bold tekst |++**<++tekst++>**++ |++**++Uthevet tekst++**++ |*Uthevet
+tekst*
 
-[cols="30s,70d"]
-|===
-| Attribut | Link
-| Syntax |  [Tekst](url)
-| Eksempel på bruk | Se https://helsedata.no
-| Eksempel utseende | Se https://helsedata.no
-|===
+|Link |++[++Tekst++]++(url) |Se https://helsedata.no |Se
+https://helsedata.no
 
-[cols="30s,70d"]
-|===
-| Attribut | Ordnet Punktliste
-| Syntax |  n. 
-| Eksempel på bruk | 1. Punkt 1 +
-2. Punkt 2 +
-3. Punkt 3
-| Eksempel utseende | 1. Punkt 1 +
-2. Punkt 2 +
-3. Punkt 3
-|===
+|Ordnet Punktliste |n. a|
+{empty}1. Punkt 1
 
-[cols="30s,70d"]
-|===
-| Attribut | Uordnet punktliste
-| Syntax |  * 
-| Eksempel på bruk | * Første +
-* Andre +
+{empty}2. Punkt 2
+
+{empty}3. Punkt 3
+
+a|
+[arabic]
+. Punkt 1
+. Punkt 2
+. Punkt 3
+
+|Uordnet punktliste |++*++ a|
+++*++ Første
+
+++*++ Andre
+
+++*++ Tredje
+
+a|
+* Første
+* Andre
 * Tredje
-| Eksempel utseende | * Første + 
-* Andre +
-* Tredje
+
 |===
 
 Utseende vil ikke være eksakt som i eksemplet over, men styres av stildefinisjonen for nettsiden helsedata.no

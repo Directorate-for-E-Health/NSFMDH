@@ -4,131 +4,71 @@ Importfil 1e-Variabelgruppe brukes til å beskrive variabelgrupper med utgangspu
 HealthTerm 11+N importformat.
 Variabelgruppe erstatter den nå utgåtte propertien LokaltTema, men vil også kunne brukes til å gruppere variabler på tvers av helsedatakilder
 
-[cols="30s,70d"]
+*Tabell 10*: *Format for importfil 1e-Variabelgruppe* 
+[width="100%",cols="5%,12%,10%,73%",options="header",]
 |===
-| Gruppering | Variabelgruppe
-| Nr | 1
-| Property | Code
-| Status | Obligatorisk
-| Beskrivelse | Unik navnestreng for en variabelgruppe. Store bokstaver, uten mellomrom og æ, ø, å. Prefiks G for variabelGruppe, underscore, kortnavn på datakilden, punktum, og samme variabelnavn som i kilden, f.eks. G_HUNT.EXPOSURE
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Variabelgruppe
-| Nr | 2
-| Property | ParentCode
-| Status | Obligatorisk
-| Beskrivelse | Forkortelse for kildenavn med prefiks G for variabelGruppe og underscore, f.eks. G_HUNT. «ParentCode» for toppnoden skal være lik kortnavnet på datakilden, f.eks. HUNT. Eller referere til overliggende variabelgruppe i et hierarki.
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Variabelgruppe
-| Nr | 3
-| Property | Hierarchy
-| Status | Valgfri
-| Beskrivelse | Brukes ikke for variabelgrupper.
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Variabelgruppe
-| Nr | 4
-| Property | PreferredTerm
-| Status | Obligatorisk
-| Beskrivelse | Kort beskrivende navn på den enkelte variabelgruppe. PreferredTerm på toppnoden skal ha navn lik VARIABELGRUPPER med store bokstaver.
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Variabelgruppe
-| Nr | 5
-| Property | ConceptType
-| Status | Valgfri
-| Beskrivelse | Skal være tom for VARIABELGRUPPE
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Variabelgruppe
-| Nr | 6
-| Property | PresentationOrder
-| Status | Valgfri
-| Beskrivelse | Brukes dersom man ønsker å presentere variabelgruppene i en egendefinert rekkefølge som f.eks. avviker fra en alfabetisk. Gyldige verdier er positive heltall og variabelgruppene presenteres i stigende rekkefølge basert på disse tallene.
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Variabelgruppe
-| Nr | 7
-| Property | ValidFrom
-| Status | Obligatorisk
-| Beskrivelse | Brukes for å angi fra når en variabelgruppe er gyldig. Format: YYYYMMDD
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Variabelgruppe
-| Nr | 8
-| Property | ValidTo
-| Status | Valgfri
-| Beskrivelse | Skal være tom for VARIABELGRUPPE
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Variabelgruppe
-| Nr | 9
-| Property | Synonym
-| Status | Valgfri
-| Beskrivelse | Brukes dersom man ønsker å legge til synonymer til en variabelgruppe. Krever en ny rad i importfilen dersom mer enn ett synonym.
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Variabelgruppe
-| Nr | 10
-| Property | PatientFriendlyTerm
-| Status | Valgfri
-| Beskrivelse | Pasientvennlig navn på variabelgruppen
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Variabelgruppe
-| Nr | 11
-| Property | ClinicalFriendlyTerm
-| Status | Valgfri
-| Beskrivelse | Helsefaglig begrep på variabelgruppen
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Variabelgruppe
-| Nr | 12
-| Property | Beskrivelse
-| Status | Obligatorisk
-| Beskrivelse | Utførlig beskrivelse av variabelgruppen.
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Variabelgruppe
-| Nr | 13
-| Property | NavnEngelsk
-| Status | Anbefalt
-| Beskrivelse | Engelsk oversettelse av PreferredTerm
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Variabelgruppe
-| Nr | 14
-| Property | BeskrivelseEngelsk
-| Status | Anbefalt
-| Beskrivelse | Engelsk oversettelse av beskrivelsen av variabelgruppen.
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Variabelgruppe
-| Nr | 15
-| Property | Filter
-| Status | Valgfri
-| Beskrivelse | Definerer om variabelgruppen skal brukes til filtrering i Helsedata.no. Variabelgruppe er tenkt som en egen filtertype, og er ikke en del av klassen «Filter». Standardisert vokabular: 1 = Obligatorisk, 2 = Valgfri
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Variabelgruppe
-| Nr | 16-N
-| Property | Mulige tilleggsproperties
-| Status | Valgfri
-| Beskrivelse | Gir mulighet for å legge til ytterligere properties ved behov.
+|Nr |Property |Status |Beskrivelse
+
+|1 |Code |Obligatorisk |Unik navnestreng for en variabelgruppe. Store
+bokstaver, uten mellomrom og æ, ø, å. Prefiks G for variabelGruppe,
+underscore, kortnavn på datakilden, punktum, og samme variabelnavn som i
+kilden, f.eks. G++_++HUNT.EXPOSURE
+
+|2 |ParentCode |Obligatorisk |Forkortelse for kildenavn med prefiks G
+for variabelGruppe og underscore, f.eks. G++_++HUNT. «ParentCode» for
+toppnoden skal være lik kortnavnet på datakilden, f.eks. HUNT. +
+Eller referere til overliggende variabelgruppe i et hierarki.
+
+|3 |Hierarchy |Valgfri |Brukes ikke for variabelgrupper.
+
+|4 |PreferredTerm |Obligatorisk |Kort beskrivende navn på den enkelte
+variabelgruppe. PreferredTerm på toppnoden skal ha navn lik
+VARIABELGRUPPER med store bokstaver.
+
+|5 |ConceptType |Valgfri |Skal være tom for VARIABELGRUPPE
+
+|6 |PresentationOrder |Valgfri |Brukes dersom man ønsker å presentere
+variabelgruppene i en egendefinert rekkefølge som f.eks. avviker fra en
+alfabetisk. Gyldige verdier er positive heltall og variabelgruppene
+presenteres i stigende rekkefølge basert på disse tallene.
+
+|7 |ValidFrom |Obligatorisk a|
+Brukes for å angi fra når en variabelgruppe er gyldig.
+
+Format: YYYYMMDD
+
+|8 |ValidTo |Valgfri |Skal være tom for VARIABELGRUPPE
+
+|9 |Synonym |Valgfri |Brukes dersom man ønsker å legge til synonymer til
+en variabelgruppe. Krever en ny rad i importfilen dersom mer enn ett
+synonym.
+
+|10 |PatientFriendlyTerm |Valgfri |Pasientvennlig navn på
+variabelgruppen
+
+|11 |ClinicalFriendlyTerm |Valgfri |Helsefaglig begrep på
+variabelgruppen
+
+|12 |Beskrivelse |Obligatorisk |Utførlig beskrivelse av variabelgruppen.
+
+|13 |NavnEngelsk |Anbefalt |Engelsk oversettelse av PreferredTerm
+
+|14 |BeskrivelseEngelsk |Anbefalt |Engelsk oversettelse av beskrivelsen
+av variabelgruppen.
+
+|15 |Filter |Valgfri a|
+Definerer om variabelgruppen skal brukes til filtrering i Helsedata.no.
+Variabelgruppe er tenkt som en egen filtertype, og er ikke en del av
+klassen «Filter»
+
+Standardisert vokabular:
+
+____
+1 = Obligatorisk
+
+2 = Valgfri
+____
+
+|16-N |Mulige tilleggsproperties |Valgfri |Gir mulighet for å legge til
+ytterligere properties ved behov
 |===

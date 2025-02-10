@@ -4,403 +4,268 @@ Importfil 1b-Variabelmetadata brukes til å beskrive variablene med utgangspunkt
 
 I Tabell 7 er det en kolonne for «Gruppering». Den skal ikke inkluderes i importfilen og er lagt til i spesifikasjonen for å øke lesbarheten
 
-[cols="30s,70d"]
+*Tabell 7*: *Format for importfil 1b-Variabelmetadata*
+[width="100%",cols="18%,4%,13%,10%,55%",options="header",]
 |===
-| Gruppering | Administrative formål
-| Nr | 1
-| Property | Code
-| Status | Obligatorisk
-| Beskrivelse | Unik navnestreng for en variabel som også benyttes for å koble metadata med data. Tillatte tegn er store bokstaver og tall, uten mellomrom og æ, ø, å. +
-Prefiks V for variabel, underscore, kortnavn på datakilden, punktum, og samme
-variabelnavn som i kilden, f.eks. V_DAR.ALDER_AAR. 
-|===
+|_Gruppering_ |Nr |Property |Status |Beskrivelse
 
-[cols="30s,70d"]
-|===
-| Gruppering | Administrative formål
-| Nr | 2
-| Property | ParentCode
-| Status | Obligatorisk
-| Beskrivelse |Forkortelse for kildenavn med prefiks V for Variabel og underscore, f.eks. V_DAR.
-«ParentCode» for toppnoden skal være lik kortnavnet på datakilden, f.eks. DAR
-|===
+|_Administrative formål_ |*1* |*Code* |Obligatorisk a|
+Unik navnestreng for en variabel som også benyttes for å koble metadata
+med data. Tillatte tegn er store bokstaver og tall, uten mellomrom og æ,
+ø, å.
 
-[cols="30s,70d"]
-|===
-| Gruppering | HealthTerm
-| Nr | 3
-| Property | Hierarchy
-| Status | Valgfri
-| Beskrivelse |Brukes dersom man ønsker å presentere variablene i flere kontekster, også kalt polyhierarkier
-|===
+Prefiks V for variabel, underscore, kortnavn på datakilden, punktum, og
+samme variabelnavn som i kilden, f.eks. V++_++DAR.ALDER++_++AAR.
 
-[cols="30s,70d"]
-|===
-| Gruppering | Tittel og beskrivelse
-| Nr | 4
-| Property | PreferredTerm
-| Status | Obligatorisk
-| Beskrivelse |Kort beskrivende navn på den enkelte variabel, f.eks. Kjønn.preferredTerm på toppnoden skal ha navn lik «VARIABELMETADATA» med store bokstaver
-|===
+| |*2* |*ParentCode* |Obligatorisk |Forkortelse for kildenavn med
+prefiks V for Variabel og underscore, f.eks. V++_++DAR. «ParentCode» for
+toppnoden skal være lik kortnavnet på datakilden, f.eks. DAR.
 
-[cols="30s,70d"]
-|===
-| Gruppering | HealthTerm
-| Nr | 5
-| Property | ConceptType
-| Status | Valgfri
-| Beskrivelse |Skal være tom
-|===
+|_HealthTerm_ |*3* |*Hierarchy* |Valgfri |Brukes dersom man ønsker å
+presentere variablene i flere kontekster, også kalt polyhierarkier.
 
-[cols="30s,70d"]
-|===
-| Gruppering | Administrative formål
-| Nr | 6
-| Property | PresentationOrder
-| Status | Valgfri
-| Beskrivelse |Brukes dersom man ønsker å presentere variablene i en egendefinert rekkefølge som avviker fra en alfabetisk. Gyldige verdier er positive heltall og variablene presenteres i stigende rekkefølge basert på disse tallene
-|===
+|_Tittel og beskrivelse_ |*4* |*PreferredTerm* |Obligatorisk |Kort
+beskrivende navn på den enkelte variabel, f.eks. Kjønn. PreferredTerm på
+toppnoden skal ha navn lik «VARIABELMETADATA» med store bokstaver.
 
-[cols="30s,70d"]
-|===
-| Gruppering | Administrative formål
-| Nr | 7
-| Property | ValidFrom
-| Status | Obligatorisk
-| Beskrivelse |Brukes for å angi fra når en variabel er gyldig. Settes ved første import. Forutsetning for å kunne tilrettelegge for søk på gyldige variabler på en gitt dato eller endringer på en variabel i en tidsperiode.
-Med «gyldig» menes at det finnes data tilgjengelig for variabelen. Nye avledede
-variabler kan være gyldig tilbake i tid.
+|_HealthTerm_ |*5* |*ConceptType* |Valgfri |Skal være tom.
+
+|_Administrative formål_ |*6* |*PresentationOrder* |Valgfri |Brukes
+dersom man ønsker å presentere variablene i en egendefinert rekkefølge
+som avviker fra en alfabetisk. Gyldige verdier er positive heltall og
+variablene presenteres i stigende rekkefølge basert på disse tallene.
+
+| |*7* |*ValidFrom* |Obligatorisk a|
+Brukes for å angi fra når en variabel er gyldig. Settes ved første
+import. Forutsetning for å kunne tilrettelegge for søk på gyldige
+variabler på en gitt dato eller endringer på en variabel i en
+tidsperiode. +
+Med «gyldig» menes at det finnes data tilgjengelig for variabelen. Nye
+avledede variabler kan være gyldig tilbake i tid.
+
 Format: YYYYMMDD
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Administrative formål
-| Nr | 8
-| Property | ValidTo
-| Status | Valgfri
-| Beskrivelse |Brukes for å angi at en variabel ble ugyldig fra en gitt dato. Brukes kun ved initial import når man ønsker å få med historikk på utgåtte variabler. Variabler med ValidTo-dato må fjernes fra importfilen ved neste gangs import for å unngå feil i HealthTerm
+
+| |*8* |*ValidTo* |Valgfri a|
+Brukes for å angi at en variabel ble ugyldig fra en gitt dato. Brukes
+kun ved initial import når man ønsker å få med historikk på utgåtte
+variabler. Variabler med ValidTo-dato må fjernes fra importfilen ved
+neste gangs import for å unngå feil i HealthTerm
+
 Format: YYYYMMDD
-|===
 
-[cols="30s,70d"]
-|===
-| Gruppering | Tittel og beskrivelse
-| Nr | 9
-| Property | Synonym
-| Status | Valgfri
-| Beskrivelse | Brukes dersom man ønsker å legge til synonymer til et variabelnavn. Krever en ny rad i importfilen dersom mer enn ett synonym legges til.
-|===
+|_Tittel og beskrivelse_ |*9* |*Synonym* |Valgfri |Brukes dersom man
+ønsker å legge til synonymer til et variabelnavn. Krever en ny rad i
+importfilen dersom mer enn ett synonym legges til.
 
-[cols="30s,70d"]
-|===
-| Gruppering | Tittel og beskrivelse
-| Nr | 10
-| Property | PatientFriendlyTerm
-| Status | Valgfri
-| Beskrivelse |Pasientvennlig navn på variabelen.
-|===
+| |*10* |*PatientFriendlyTerm* |Valgfri |Pasientvennlig navn på
+variabelen.
 
-[cols="30s,70d"]
-|===
-| Gruppering | Tittel og beskrivelse
-| Nr |  11 
-| Property | ClinicalFriendlyTerm 
-| Status | Valgfri
-| Beskrivelse | Helsefaglig begrep på variabelen.
-|===
+| |*11* |*ClinicalFriendlyTerm* |Valgfri |Helsefaglig begrep på
+variabelen.
 
-[cols="30s,70d"]
-|===
-| Gruppering | Tittel og beskrivelse
-| Nr | 12
-| Property | NavnEngelsk 
-| Status | Anbefalt
-| Beskrivelse | Engelsk navn på variabelen.
-|===
+| |12 |NavnEngelsk |Anbefalt |Engelsk navn på variabelen.
 
-[cols="30s,70d"]
-|===
-| Gruppering | Tittel og beskrivelse
-| Nr | 13
-| Property | Beskrivelse 
-| Status | Obligatorisk
-| Beskrivelse | Utførlig beskrivelse av variabelen. Se eksempler på helsedata.no.
-|===
+| |13 |Beskrivelse |Obligatorisk |Utførlig beskrivelse av variabelen. Se
+eksempler på helsedata.no.
 
-[cols="30s,70d"]
-|===
-| Gruppering | Tittel og beskrivelse
-| Nr | 14
-| Property | BeskrivelseEngelsk 
-| Status | Anbefalt
-| Beskrivelse | Utførlig beskrivelse av variabelen på engelsk
-|===
+| |14 |BeskrivelseEngelsk |Anbefalt |Utførlig beskrivelse av variabelen
+på engelsk.
 
+|_Opphav_ |15 |Opprinnelse |Obligatorisk a|
+Om variabelen er hentet direkte fra helsetjenesten, er beregnet, avledet
+eller kodet. Dersom en variabel tilhører flere av verdiene i det
+standardiserte vokabularet så skal det siste steget i prosessen
+benyttes.
 
-[cols="30s,70d"]
-|===
-| Gruppering | Opphav
-| Nr | 15
-| Property | Opprinnelse
-| Status | Opprinnelse
-| Beskrivelse | Om variabelen er hentet direkte fra helsetjenesten, er beregnet, avledet eller kodet. Dersom en variabel tilhører flere av verdiene i det standardiserte vokabularet så skal det siste steget i prosessen benyttes.
 Standardisert vokabular:
-1 = Beregnet (F.eks. utregnet basert på en formel; Ventetid, liggetid etc.)
+
+____
+1 = Beregnet (F.eks. utregnet basert på en formel; Ventetid, liggetid
+etc.)
+
 2 = Avledet (F.eks. en kategorisering; Aldersgrupper, fylke, etc.)
-3 = Kodet (F.eks. strukturering av tekst basert på et kodeverk/terminologi)
-4 = Direkte fra fagsystem/EPJ (F.eks. hentet/gjenbrukt direkte fra NPR-melding,
-«urørt»)
-5 = Direkte fra skjema (F.eks. hentet/gjenbrukt direkte fra papirskjema eller
-elektronisk skjemaløsning, «urørt»)
+
+3 = Kodet (F.eks. strukturering av tekst basert på et
+kodeverk/terminologi)
+
+4 = Direkte fra fagsystem/EPJ (F.eks. hentet/gjenbrukt direkte fra
+NPR-melding, «urørt»)
+
+5 = Direkte fra skjema (F.eks. hentet/gjenbrukt direkte fra papirskjema
+eller elektronisk skjemaløsning, «urørt»)
+
 6 = Annet (F.eks.etablert i helsedatakilden for administrative formål.)
-|===
+____
 
+| |16 |OpprinnelseUtledning |Valgfri |Hvordan beregnede, avledede og
+kodete variabler er utledet. Ikke aktuell for variabler hentet direkte
+fra helsetjenesten eller en elektronisk skjemaløsning
 
-[cols="30s,70d"]
-|===
-| Gruppering | Opphav
-| Nr | 16
-| Property | OpprinnelseUtledning 
-| Status | Valgfri
-| Beskrivelse | Hvordan beregnede, avledede og kodete variabler er utledet. Ikke  aktuell for variabler hentet direkte fra helsetjenesten eller en elektronisk skjemaløsning
-|===
+|_Innhold og kvalitet_ |17 |Kommentar |Valgfri |Kommentar til
+variabelen. Dette kan f.eks. være når variabelen gikk over fra å være
+basert på ICD-9 til ICD-10 eller andre endringer av betydning.
 
+| |18 |KommentarEngelsk |Valgfri |Engelsk oversettelse av Kommentar.
 
-[cols="30s,70d"]
-|===
-| Gruppering | Innhold og kvalitet
-| Nr | 17
-| Property | Kommentar
-| Status | Valgfri
-| Beskrivelse | Kommentar til variabelen. Dette kan f.eks. være når variabelen gikk over fra å være basert på ICD-9 til ICD-10 eller andre endringer av betydning.
-|===
+| |19 |Kvalitetsnote |Anbefalt |Overordnet tekstlig beskrivelse av
+kvaliteten på datagrunnlaget som variabelen representerer, f.eks.
+kompletthet i form av fullstendighet (kodingskvalitet) og/eller
+kodekvalitet.
 
+| |20 |KvalitetsnoteEngelsk |Anbefalt |Engelsk oversettelse av
+Kvalitetsnote.
 
-[cols="30s,70d"]
-|===
-| Gruppering | Innhold og kvalitet
-| Nr | 18
-| Property | KommentarEngelsk 
-| Status | Valgfri
-| Beskrivelse | Engelsk oversettelse av Kommentar.
-|===
+| |21 |MaaleType |Valgfri |Hva variabelen måler. F.eks. tid, alder, vekt
+og puls.
 
+| |22 |MaaleEnhet |Valgfri |Hvilken måleenhet variabelen er basert på.
+F.eks. år, mnd., kg, gram, slag/minutt.
 
-[cols="30s,70d"]
-|===
-| Gruppering | Innhold og kvalitet
-| Nr | 19
-| Property | Kvalitetsnote 
-| Status | Anbefalt
-| Beskrivelse | Overordnet tekstlig beskrivelse av kvaliteten på datagrunnlaget som variabelen representerer, f.eks. kompletthet i form av fullstendighet (kodingskvalitet) og/eller kodekvalitet.
-|===
-
-
-[cols="30s,70d"]
-|===
-| Gruppering | Innhold og kvalitet
-| Nr | 20
-| Property | KvalitetsnoteEngelsk 
-| Status | Anbefalt
-| Beskrivelse | Engelsk oversettelse av Kvalitetsnote.
-|===
-
-[cols="30s,70d"]
-|===
-| Gruppering | Innhold og kvalitet
-| Nr | 21
-| Property | MaaleType 
-| Status | Valgfri
-| Beskrivelse | Hva variabelen måler. F.eks. tid, alder, vekt og puls.
-|===
-
-[cols="30s,70d"]
-|===
-| Gruppering | Innhold og kvalitet
-| Nr | 22
-| Property | MaaleEnhet 
-| Status | Valgfri
-| Beskrivelse | Hvilken måleenhet variabelen er basert på. F.eks. år, mnd., kg, gram, slag/minutt.
-|===
-
-[cols="30s,70d"]
-|===
-| Gruppering | Innhold og kvalitet
-| Nr | 23
-| Property | Datatype 
-| Status | Obligatorisk
-| Beskrivelse | Datatype som spesifisert i FHIR Primitive Types
+| |23 |DataType |Obligatorisk a|
+Datatype som spesifisert i FHIR Primitive Types
 (https://www.hl7.org/fhir/datatypes.html).
+
 Standardisert vokabular:
+
+____
 1 = String
+
 2 = Integer
+
 3 = Decimal
+
 4 = Boolean
+
 5 = Time
+
 6 = Date
+
 7 = Datetime
+
 8 = Uri
+
 9 = Base64binary
+
 10 = Fødselsnummer (11 siffer)
+____
 
-|===
+| |24 |Lengde |Valgfri |Maksimal lengde på variabelen i antall
+tegn/siffer +
+Kan brukes for variabler med datatype 1,2 og 3 (String, Integer og
+Decimal)
 
-[cols="30s,70d"]
-|===
-| Gruppering | Innhold og kvalitet
-| Nr | 24 
-| Property | Lengde 
-| Status | Valgfri
-| Beskrivelse | Maksimal lengde på variabelen i antall tegn/siffer. Kan brukes for variabler med datatype 1,2 og 3 (String, Integer og Decimal)
-|===
+| |25 |Presisjon |Valgfri |Maksimalt antall desimaler.
 
+| |26 |GrenseLav |Valgfri |Nedre grenseverdi (minimumsverdi) +
+Kan brukes for variabler med datatype 2 og 3 (Integer og Decimal) +
+Indikerer at lavere verdier med stor sannsynlighet er feil, og bør
+utelates fra analyse.
 
-[cols="30s,70d"]
-|===
-| Gruppering | Innhold og kvalitet
-| Nr | 25
-| Property | Presisjon
-| Status | Valgfri
-| Beskrivelse | Maksimalt antall desimaler.
-|===
+| |27 |GrenseHoy |Valgfri |Øvre grenseverdi (maksimumsverdi) +
+Kan brukes for variabler med datatype 2 og 3 (Integer og Decimal) +
+Indikerer at høyere verdier med stor sannsynlighet er feil, og bør
+utelates fra analyse.
 
+|_Juridisk informasjon_ |28 |Identifiseringsgrad |Valgfri a|
+Dataforvalters klassifisering av bidrag til risiko for identifisering av
+individ. Nyttig informasjon for forsker når prosjekt må vurdere tiltak
+for dataminimering.
 
-[cols="30s,70d"]
-|===
-| Gruppering | Innhold og kvalitet
-| Nr | 26
-| Property | GrenseLav 
-| Status | Valgfri
-| Beskrivelse | Nedre grenseverdi (minimumsverdi) Kan brukes for variabler med datatype 2 og 3 (Integer og Decimal) Indikerer at lavere verdier med stor sannsynlighet er feil, og bør utelates fra analyse.
-|===
+Standardisert vokabular:
 
+____
+1 = Ikke vurdert
 
-[cols="30s,70d"]
-|===
-| Gruppering | Innhold og kvalitet 
-| Nr | 27
-| Property | GrenseHoy
-| Status | Valgfri
-| Beskrivelse | Øvre grenseverdi (maksimumsverdi)
-Kan brukes for variabler med datatype 2 og 3 (Integer og Decimal)
-Indikerer at høyere verdier med stor sannsynlighet er feil, og bør utelates fra analyse.
-|===
+2 = Ingen
 
-[cols="30s,70d"]
-|===
-| Gruppering | Juridisk informasjon
-| Nr | 28
-| Property | Identifiseringsgrad
-| Status | Valgfri
-| Beskrivelse | Dataforvalters klassifisering av bidrag til risiko for identifisering av individ. Nyttig informasjon for forsker når prosjekt må vurdere tiltak for dataminimering. Standardisert vokabular: 1 = Ikke vurdert, 2 = Ingen, 3 = Lav, 4 = Middels, 5 = Høy
-|===
+3 = Lav
 
-[cols="30s,70d"]
-|===
-| Gruppering | Skjema
-| Nr | 29
-| Property | Ledetekst
-| Status | Valgfri
-| Beskrivelse | Dette er teksten som står i spørreskjema eller innrapporteringsskjema ved hver variabel. Ledetekst er primært aktuell for variabler som er registrert via et skjema/en skjemaløsning.
-|===
+4 = Middels
 
-[cols="30s,70d"]
-|===
-| Gruppering | Skjema
-| Nr | 30
-| Property | LedetekstEngelsk
-| Status | Valgfri
-| Beskrivelse | Engelsk ledetekst for variabelen.
-|===
+5 = Høy
+____
 
-[cols="30s,70d"]
-|===
-| Gruppering | Skjema
-| Nr | 31
-| Property | SpoersmaalNummer
-| Status | Valgfri
-| Beskrivelse | Spørsmålsnummer i spørreskjema eller innrapporteringsskjema.
-|===
+|_Skjema_ |29 |Ledetekst |Valgfri |Dette er teksten som står i
+spørreskjema eller innrapporteringsskjema ved hver variabel. Ledetekst
+er primært aktuell for variabler som er registrert via et skjema/en
+skjemaløsning.
 
-[cols="30s,70d"]
-|===
-| Gruppering | Administrative formål
-| Nr | 32
-| Property | SkjemaVersjon
-| Status | Valgfri
-| Beskrivelse | Vise hvilke(n) versjon(er) av spørreskjema eller innrapporteringsskjema denne variabelen finnes i.
-|===
+| |30 |LedetekstEngelsk |Valgfri |Engelsk ledetekst for variabelen.
 
-[cols="30s,70d"]
-|===
-| Gruppering | Administrative formål
-| Nr | 33
-| Property | AnbefaltForDigitaltInnsyn
-| Status | Obligatorisk*
-| Beskrivelse | Anbefaling fra forvalter av datakilden til HDS om hvorvidt variabelen bør inngå i et digitalt, automatisert innsyn til den registrerte via helsenorge.no. Er det anbefalt at variabelen, gitt at denne inngår i et dataprodukt som skal overføres til Helseanalyseplattformen, inngår i et digitalt, automatisert innsyn? Standardisert vokabular: 1 = Ja, 2 = Nei. *Gjelder kun for variabler som skal inngå i dataprodukt som skal overføres til Helsanalyseplattformen.
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Administrative formål
-| Nr | 34
-| Property | TabellvennligNavn
-| Status | Valgfri
-| Beskrivelse | Alternativ kolonneoverskrift for eksport eller utskrift av data.
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Administrative formål
-| Nr | 35
-| Property | TabellvennligNavnEngelsk
-| Status | Valgfri
-| Beskrivelse | Alternativ kolonneoverskrift for eksport eller utskrift av data for engelskspråklige.
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Administrative formål
-| Nr | 36
-| Property | DatabaseReferanse
-| Status | Obligatorisk
-| Beskrivelse | API-streng/URL/SourceID/TechName/unikt navn på klasse og/eller attributt i datakildens egen database. Denne referansen vil bli benyttet ved forespørsel om henting av variabelen fra kilden.
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Administrative formål
-| Nr | 37
-| Property | Erstatter
-| Status | Anbefalt
-| Beskrivelse | Code som er erstattet av denne variabelen.
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Administrative formål
-| Nr | 38
-| Property | ErstattesAv
-| Status | Valgfri
-| Beskrivelse | Code til variabelen som evt. erstatter denne variabelen.
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Administrative formål
-| Nr | 39
-| Property | StartdatoHistorikk
-| Status | Valgfri
-| Beskrivelse | Dato for start reell historikk. Hvis angitt er dette den første datoen man har historikk på metadata. Dette for å dokumentere at det kan være periode der variabelen er i bruk, men at man ikke kjenner hvilke endringer som er gjort. Hvis ikke angitt, regnes ValidFrom som start på historikk.
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Administrative formål
-| Nr | 40
-| Property | Synlig
-| Status | Obligatorisk
-| Beskrivelse | Definerer om variabelen skal presenteres på helsedata.no. Variabler som ikke er synlige vil heller ikke kunne inngå i en variabelliste som legges ved søknad om tilgang til helsedata via felles søknadsskjema på helsedata.no. Standardisert vokabular: 1 = Ja, 2 = Nei.
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Administrative formål
-| Nr | 41
-| Property | Tillegg
-| Status | Valgfri
-| Beskrivelse | Mulige tilleggsproperties. Gir mulighet for å legge til ytterligere properties som f.eks. registerspesifikke tilleggsproperties, properties for «harmoniseringsarbeid», properties for kategoriseringsformål, properties med referanser til begrepskataloger, terminologier, standarder etc. Skal også gi mulighet for generelle eller registerspesifikke filtreringsmekanismer.
+| |31 |SpoersmaalNummer |Valgfri |Spørsmålsnummer i spørreskjema eller
+innrapporteringsskjema.
+
+| |32 |SkjemaVersjon |Valgfri |Vise hvilke(n) versjon(er) av
+spørreskjema eller innrapporteringsskjema denne variabelen finnes i.
+
+|_Administrative formål_ |33 |AnbefaltForDigitaltInnsyn
+|Obligatorisk++*++ a|
+Anbefaling fra forvalter av datakilden til HDS om hvorvidt variabelen
+bør inngå i et digitalt, automatisert innsyn til den registrerte via
+helsenorge.no.
+
+Er det anbefalt at variabelen, gitt at denne inngår i et dataprodukt som
+skal overføres til Helseanalyseplattformen, inngår i et digitalt,
+automatisert innsyn?
+
+Standardisert vokabular:
+
+____
+1 = Ja
+
+2 = Nei
+____
+
+++*++Gjelder kun for variabler som skal inngå i dataprodukt som skal
+overføres til Helsanalyseplattformen.
+
+| |34 |TabellvennligNavn  |Valgfri |Alternativ kolonneoverskrift for
+eksport eller utskrift av data.
+
+| |35 |TabellvennligNavnEngelsk |Valgfri |Alternativ kolonneoverskrift
+for eksport eller utskrift av data for engelskspråklige.
+
+| |36 |DatabaseReferanse |Obligatorisk
+|API-streng/URL/SourceID/TechName/unikt navn på klasse og/eller
+attributt i datakildens egen database. Denne referansen vil bli benyttet
+ved forespørsel om henting av variabelen fra kilden.
+
+| |37 |Erstatter |Anbefalt |Code som er erstattet av denne variabelen.
+
+| |38 |ErstattesAv |Valgfri |Code til variabelen som evt. erstatter
+denne variabelen.
+
+| |39 |StartdatoHistorikk |Valgfri a|
+Dato for start reell historikk. +
+Hvis angitt er dette den første datoen man har historikk på metadata.
+
+Dette for å dokumentere at det kan være periode der variabelen er i
+bruk, men at man ikke kjenner hvilke endringer som er gjort.
+
+Hvis ikke angitt, regnes ValidFrom som start på historikk
+
+| |40 |Synlig |Obligatorisk a|
+Definerer om variabelen skal presenteres på helsedata.no. Variabler som
+ikke er synlige vil heller ikke kunne inngå i en variabelliste som
+legges ved søknad om tilgang til helsedata via felles søknadsskjema på
+helsedata.no.
+
+Standardisert vokabular:
+
+____
+1 = Ja
+
+2 = Nei
+____
+
+|_Tillegg_ |41-N |Mulige tilleggsproperties |Valgfri a|
+Gir mulighet for å legge til ytterligere properties som f.eks.
+registerspesifikke tilleggsproperties, properties for
+«harmoniseringsarbeid», properties for kategoriseringsformål, properties
+med referanser til begrepskataloger, terminologier, standarder etc.
+
+Skal også gi mulighet for generelle eller registerspesifikke
+filtreringsmekanismer.
+
 |===
 

@@ -9,155 +9,87 @@ inneholde samtlige kodeverk som anvendes i kildene. Kodeverkene er strukturert i
 Variabler som er basert på administrative kodeverk, helsefaglige kodeverk eller andre masterkodeverk som definert i Tabell 14 skal ikke inngå i
 Importfil 2-Kildekodeverk.
 
-[cols="30s,70d"]
+*Tabell 12: Format for importfil 2-Kildekodeverk*
+[width="100%",cols="6%,11%,10%,73%",options="header",]
 |===
-| Gruppering | Kildekodeverk
-| Nr | 1
-| Property | Code
-| Status | Obligatorisk
-| Beskrivelse | Standardisert og unik navnestreng for et kodeverk med tilhørende koder. Store bokstaver, uten mellomrom og æ, ø, å. Prefiks for KK for kildekodeverk, kortnavn på datakilden, punktum, variabelnavn, punktum og KodeverkLokalId (som i kilden), f.eks. KK_KILDE.KJONN_K.1
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Kildekodeverk
-| Nr | 2
-| Property | ParentCode
-| Status | Obligatorisk
-| Beskrivelse | Kildekodeverkene importeres i en forhåndsdefinert struktur som viser hvem som eier de, hvilken datasamling (kilde) de inngår i, samt en samlegruppe der alle kildekodeverkene presenteres alfabetisk i en flat liste. Dette kalles polyhierarkier. En kilde vil derfor ha flere «ParentCodes», henholdsvis for eier, f.eks. KK_FHI, for samling, f.eks. KK_MFR, og for den flate samlelisten, KK_ALLE.
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Kildekodeverk
-| Nr | 3
-| Property | Hierarchy
-| Status | Valgfri
-| Beskrivelse | Brukes for å presentere kodeverkene i flere kontekster, også kalt polyhierarkier.
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Kildekodeverk
-| Nr | 4
-| Property | PreferredTerm
-| Status | Obligatorisk
-| Beskrivelse | Kort beskrivende navn på det enkelte kodeverk, f.eks. Kjønn, eller Kode, f.eks. Kvinne. «PreferredTerm» på toppnoden skal ha navn lik KILDEKODEVERK med store bokstaver. For koder som ikke har en tekst, for eksempel en skala-verdi fra 1 – 10, kan kodeverdien legges her.
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Kildekodeverk
-| Nr | 5
-| Property | ConceptType
-| Status | Valgfri
-| Beskrivelse | Skal være tom for KILDEKODEVERK
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Kildekodeverk
-| Nr | 6
-| Property | PresentationOrder
-| Status | Valgfri
-| Beskrivelse | Brukes dersom man ønsker å presentere kodeverkene og/eller kodene i en egendefinert rekkefølge som f.eks. avviker fra en alfabetisk. Gyldige verdier er positive heltall og kildekodeverkene og kodene presenteres i stigende rekkefølge basert på disse tallene.
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Kildekodeverk
-| Nr | 7
-| Property | ValidFrom
-| Status | Obligatorisk
-| Beskrivelse | Brukes for å angi fra når et kodeverk eller en kode er gyldig. Settes ved første import. Forutsetning for å kunne tilrettelegge for søk på gyldige kodeverk og/eller koder på en gitt dato eller endringer på et kodeverk og/eller på en kode i en tidsperiode. Format: YYYYMMDD
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Kildekodeverk
-| Nr | 8
-| Property | ValidTo
-| Status | Valgfri
-| Beskrivelse | Brukes for å angi at et kodeverk eller en kode ble, eller vil bli, ugyldig fra en gitt dato. For aktive kodeverk skal denne være tom. Format: YYYYMMDD
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Kildekodeverk
-| Nr | 9
-| Property | Synonym
-| Status | Valgfri
-| Beskrivelse | Skal være tom for KILDEKODEVERK
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Kildekodeverk
-| Nr | 10
-| Property | PatientFriendlyTerm
-| Status | Valgfri
-| Beskrivelse | Skal være tom for KILDEKODEVERK
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Kildekodeverk
-| Nr | 11
-| Property | ClinicalFriendlyTerm
-| Status | Valgfri
-| Beskrivelse | Skal være tom for KILDEKODEVERK
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Kildekodeverk
-| Nr | 12
-| Property | Beskrivelse
-| Status | Valgfri
-| Beskrivelse | Utførlig beskrivelse/definisjon av en kode
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Kildekodeverk
-| Nr | 13
-| Property | Kommentar
-| Status | Anbefalt
-| Beskrivelse | Generelle kommentarer f.eks. til endringer
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Kildekodeverk
-| Nr | 14
-| Property | Eier
-| Status | Valgfri
-| Beskrivelse | Hvilken institusjon som er ansvarlig for å forvalte kodeverket
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Kildekodeverk
-| Nr | 15
-| Property | MasterKodeverk
-| Status | Anbefalt
-| Beskrivelse | Hvilket masterkodeverk som dette kodeverket er basert på, evt. er et subset av, f.eks. ICD-10 (ValueSet)
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Kildekodeverk
-| Nr | 16
-| Property | ReferanseTerm
-| Status | Valgfri
-| Beskrivelse | Dersom termen som brukes i navnet på kodeverket og/eller koden kan forankres/defineres av en standardisert term (begrep)
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Kildekodeverk
-| Nr | 17
-| Property | KodeverkLokalID
-| Status | Obligatorisk
-| Beskrivelse | Lokal kodeverdi for koden, f.eks. 1 eller 2 for hhv Mann og Kvinne.
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Kildekodeverk
-| Nr | 18
-| Property | NavnEngelsk
-| Status | Anbefalt
-| Beskrivelse | PreferredTerm oversatt til Engelsk. Dvs. kodeteksten oversatt til engelsk
-|===
-[cols="30s,70d"]
-|===
-| Gruppering | Kildekodeverk
-| Nr | 19
-| Property | BeskrivelseEngelsk
-| Status | Anbefalt
-| Beskrivelse |
+|*Nr* |*Property* |*Status* |*Beskrivelse*
+
+|1 |Code |Obligatorisk |Standardisert og unik navnestreng for et
+kodeverk med tilhørende koder. Store bokstaver, uten mellomrom og æ, ø,
+å. Prefiks for KK for kildekodeverk, kortnavn på datakilden, punktum,
+variabelnavn, punktum og KodeverkLokalId (som i kilden), f.eks.
+KK++_++KILDE.KJONN++_++K.1
+
+|2 |ParentCode |Obligatorisk |Kildekodeverkene importeres i en
+forhåndsdefinert struktur som viser hvem som eier de, hvilken
+datasamling (kilde) de inngår i, samt en samlegruppe der alle
+kildekodeverkene presenteres alfabetisk i en flat liste. Dette kalles
+polyhierarkier. En kilde vil derfor ha flere «ParentCodes», henholdsvis
+for eier, f.eks. KK++_++FHI, for samling, f.eks. KK++_++MFR, og for den
+flate samlelisten, KK++_++ALLE.
+
+|3 |Hierarchy |Valgfri |Brukes for å presentere kodeverkene i flere
+kontekster, også kalt polyhierarkier.
+
+|4 |PreferredTerm |Obligatorisk |Kort beskrivende navn på det enkelte
+kodeverk, f.eks. Kjønn, eller Kode, f.eks. Kvinne. «PreferredTerm» på
+toppnoden skal ha navn lik KILDEKODEVERK med store bokstaver. +
+For koder som ikke har en tekst, for eksempel en skala-verdi fra 1 – 10,
+kan kodeverdien legges her.
+
+|5 |ConceptType |Valgfri |Skal være tom for KILDEKODEVERK
+
+|6 |PresentationOrder |Valgfri |Brukes dersom man ønsker å presentere
+kodeverkene og/eller kodene i en egendefinert rekkefølge som f.eks.
+avviker fra en alfabetisk. Gyldige verdier er positive heltall og
+kildekodeverkene og kodene presenteres i stigende rekkefølge basert på
+disse tallene.
+
+|7 |ValidFrom |Obligatorisk a|
+Brukes for å angi fra når et kodeverk eller en kode er gyldig. Settes
+ved første import. Forutsetning for å kunne tilrettelegge for søk på
+gyldige kodeverk og/eller koder på en gitt dato eller endringer på et
+kodeverk og/eller på en kode i en tidsperiode.
+
+Format: YYYYMMDD
+
+|8 |ValidTo |Valgfri a|
+Brukes for å angi at et kodeverk eller en kode ble, eller vil bli,
+ugyldig fra en gitt dato. +
+For aktive kodeverk skal denne være tom.
+
+Format: YYYYMMDD
+
+|9 |Synonym |Valgfri |Skal være tom for KILDEKODEVERK
+
+|10 |PatientFriendlyTerm |Valgfri |Skal være tom for KILDEKODEVERK
+
+|11 |ClinicalFriendlyTerm |Valgfri |Skal være tom for KILDEKODEVERK
+
+|12 |Beskrivelse |Valgfri |Utførlig beskrivelse/definisjon av en kode
+
+|13 |Kommentar |Anbefalt |Generelle kommentarer f.eks. til endringer
+
+|14 |Eier |Valgfri |Hvilken institusjon som er ansvarlig for å forvalte
+kodeverket
+
+|15 |MasterKodeverk |Anbefalt |Hvilket masterkodeverk som dette
+kodeverket er basert på, evt. er et subset av, f.eks. ICD-10 (ValueSet)
+
+|16 |ReferanseTerm |Valgfri |Dersom termen som brukes i navnet på
+kodeverket og/eller koden kan forankres/defineres av en standardisert
+term (begrep)
+
+|17 |KodeverkLokalID |Obligatorisk |Lokal kodeverdi for koden, f.eks. 1
+eller 2 for hhv Mann og Kvinne.
+
+|18 |NavnEngelsk |Anbefalt |PreferredTerm oversatt til Engelsk. Dvs.
+kodeteksten oversatt til engelsk
+
+|19 |BeskrivelseEngelsk |Anbefalt |Beskrivelse oversatt til Engelsk
+
+|20 |KommentarEngelsk |Anbefalt |Evt. Kommentar oversatt til Engelsk
+
+|21-N |Mulige tilleggsproperties |Valgfri |Gir mulighet for å legge til
+ytterligere properties ved behov
 |===
