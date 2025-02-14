@@ -5,7 +5,7 @@ DCAT-AP-NO er et pågående arbeid.
 Mappingen er viktig for å kunne utveksle og dele metadata om datasett på tvers av sektorer og landegrenser, samt for å opparbeide en felles
 forståelse av innholdet.
 Mappingen er også en forutsetning for å kunne etablere maskinell validering av kvaliteten på metadataene.
-Der det i tabellen er brukt «E-helse:Extension» , «?» eller (…) har vi foreløpig ikke funnet en god match, eller er usikre på mappingen, mellom
+Der det i tabellen er brukt «FHI:Extension» , «?» eller (…) har vi foreløpig ikke funnet en god match, eller er usikre på mappingen, mellom
 propertiene i denne spesifikasjonen og DCAT.
 
 *Overføres til Felles datakatalog, https://data.norge.no/
@@ -45,7 +45,7 @@ f.eks. K++_++HUNT.HUNT1.
 |Datasett: er del av |dct:isPartOf
 
 |HealthTerm |3 |Hierarchy |Valgfri |Skal være tom for KILDEMETADATA
-|E-helse:Extension |
+|FHI:Extension |
 
 |Tittel og beskrivelse |4 |PreferredTerm |Obligatorisk a|
 Kort beskrivende navn på datakilden, delkilden eller datasamlingen.
@@ -57,7 +57,7 @@ delkilde og datasamling.
 |Datasett: tittel (NB) ++*++ |dct:title (NB)
 
 |HealthTerm |5 |ConceptType |Valgfri |Skal være tom For KILDEMETADATA
-|E-helse:Extension |
+|FHI:Extension |
 
 |Administrative formål |6 |PresentationOrder |Valgfri a|
 *Datakilde:* Skal være tom.
@@ -68,7 +68,7 @@ fra alfabetisk. Gyldige verdier er positive heltall og delkildene eller
 datasamlingene presenteres i stigende rekkefølge basert på disse
 tallene.
 
-|E-helse:Extension |
+|FHI:Extension |
 
 | |7 |ValidFrom |Obligatorisk a|
 Brukes for å angi fra når en datakilde, delkilde eller datasamling er
@@ -76,19 +76,19 @@ gyldig. Settes ved første import.
 
 Format: YYYYMMDD
 
-|E-helse:Extension |
+|FHI:Extension |
 
 | |8 |ValidTo |Valgfri |Skal være tom for KILDEMETADATA
-|E-helse:Extension |
+|FHI:Extension |
 
 |Tittel og beskrivelse |9 |Synonym |Valgfri |Skal være tom for
-KILDEMETADATA (inntil videre) |E-helse:Extension |
+KILDEMETADATA (inntil videre) |FHI:Extension |
 
 | |10 |PatientFriendlyTerm |Valgfri |Skal være tom for KILDEMETADATA
-(inntil videre) |E-helse:Extension |
+(inntil videre) |FHI:Extension |
 
 | |11 |ClinicalFriendlyTerm |Valgfri |Skal være tom for KILDEMETADATA
-(inntil videre) |E-helse:Extension |
+(inntil videre) |FHI:Extension |
 
 | |12 |KortNavn |Valgfri |Forkortelse av navnet på datakilden, delkilden
 eller datasamlingen. F.eks. MOBA eller NPR. |(Datasett: tittel)
@@ -109,7 +109,7 @@ beskrivelse (EN) ++*++ |dct:description (EN) ++*++
 typer formål (eksempelvis forskning, analyse, styringsdata, beredskap
 osv) og faglige temaer (eksempelvis kreft, hjerte og kar, kirurgi osv),
 en datakilde, delkilde og/eller datasamling er egent for.
-|E-helse:Extension |
+|FHI:Extension |
 
 | |17 |Emneord |Valgfri |Beskrivende emneord (tag). Skilles ved å bruke
 «;». F.eks. Emneord;Nytt emneord; |Datasett: emneord |dcat:keyword
@@ -120,7 +120,7 @@ en datakilde, delkilde og/eller datasamling er egent for.
 
 Format: YYYY.
 
-|E-helse:Extension |
+|FHI:Extension |
 
 | |19 |SistOppdatert |Obligatorisk a|
 Dato for siste oppdatering av KILDEMETADATA
@@ -137,7 +137,6 @@ datagrunnlaget oppdateres på Helseanalyseplattformen.
 
 Standardisert vokabular:
 
-____
 1 = Sjeldnere enn årlig
 
 2 = Årlig
@@ -155,7 +154,6 @@ ____
 8 = Daglig
 
 9 = Hyppigere enn daglig
-____
 
 |Datasett: frekvens ++*++ |dct:accrualPeriodicity ++*++
 
@@ -167,7 +165,7 @@ Kategorisering av datakilden.
 
 Standardisert vokabular:
 
-____
+
 1 = Sentralt helseregisterfootnote:[Inkluderer lovbestemte helseregistre
 og andre sentrale helseregistre
 (https://www.fhi.no/div/datatilgang/om-sentrale-helseregistre/)]
@@ -181,7 +179,6 @@ og andre sentrale helseregistre
 5 = Biobank
 
 6 = Annen datakilde
-____
 
 |Aktør: utgivertype |foaf:name
 
@@ -189,7 +186,7 @@ ____
 overordnet beskrivelse av hvilke kriterier som stilles for at en person
 skal være registrert i datakilden, delkilden eller datasamlingen. Dette
 tilsvarer en beskrivelse av populasjonen som inngår i datakilden,
-delkilden eller datasamlingen. |E-helse:Extension |
+delkilden eller datasamlingen. |FHI:Extension |
 
 | |24 |GeografiskAvgrensning |Valgfri |Beskrivelse av opptaksområdet for
 innbyggerne som inngår i datakilden, delkilden eller datasamlingen.
@@ -272,15 +269,13 @@ datakilden, delkilden eller datasamlingen.
 
 Standardisert vokabular:
 
-____
 1 = Direkte personidentifiserbare opplysninger
 
 2 = Indirekte personidentifiserbare opplysninger
 
 3 = Anonyme opplysninger
-____
 
-|E-helse: Extension |
+|FHI:Extension |
 
 | |37 |JuridiskNote |Valgfri |Relevant juridisk informasjon som ikke
 dekkes av andre properties. F.eks. informasjon om reservasjonsrett eller
@@ -308,26 +303,24 @@ spørringer.
 
 *Delkilde, datasamling:* Skal være tom.
 
-|E-helse: Extension |dcat:contactPoint
+|FHI:Extension |dcat:contactPoint
 
 | |43 |HERidDataansvarlig |Valgfri |Unik identifikator som tildeles av
 NHN, Brukes for identifisering av datakilden innenfor helsenettet. Kan
-brukes til spørringer. |E-helse: Extension |
+brukes til spørringer. |FHI:Extension |
 
 |_Administrative formål_ |44 |Kildemetadatatype |Obligatorisk a|
 Angir hvilken type kildemetadata som beskrives.
 
 Standardisert vokabular:
 
-____
 1 = Datakilde
 
 2 = Delkilde
 
 3 = Datasamling
-____
 
-|E-helse: Extension |
+|FHI:Extension |
 
 | |45 |ErISamsvarMed  |Valgfri |Referanse til evt. standard(er),
 spesifikasjon(er) etc. som datakilden, delkilden eller datasamlingen er
@@ -342,17 +335,15 @@ som for DÅR.
 
 Standardisert vokabular:
 
-____
 1 = Akkumulert
 
 2 = Årsbasert
-____
 
-|E-helse: Extension |
+|FHI:Extension |
 
 | |47 |TelleEnhet |Valgfri |Datasamling: Telleenhet for datasamlingen
 angitt ved en tekstlig beskrivelse, eks. pasient, opphold. +
-*Kilde, Delkilde:* Skal være tom |E-helse: Extension |
+*Kilde, Delkilde:* Skal være tom |FHI:Extension |
 
 |_Tillegg_ |48-N |Mulige tilleggsproperties | a|
 Gir mulighet for å legge til ytterligere properties som f.eks.
