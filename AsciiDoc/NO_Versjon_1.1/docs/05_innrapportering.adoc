@@ -1,7 +1,7 @@
 = Prosess for innrapportering av metadata [[innrapportering]]
 
 
-Metadata om datakilder, datasamlinger, versjoner, variabler og kodeverk må i størst mulig grad speile datagrunnlaget i kildene, både i nåtid og historisk. Filstrukturen er utviklet blant annet for å kunne knytte versjoner av datasamlinger og variabler opp mot metadata og statistikk, på et gitt tidspunkt og/eller i en gitt periode. I første omgang er det lagt opp til årlige oppdateringer. Det vil også være mulig å gjøre oppdateringer hyppigere i de tilfellene der dette fremstår som hensiktsmessig. 
+Metadata om datakilder, datasamlinger, versjoner, variabler og kodeverk må i størst mulig grad speile datagrunnlaget i kildene, både i nåtid og historisk. Filstrukturen er utviklet blant annet for å kunne knytte versjoner av datasamlinger og variabler opp mot metadata og statistikk, på et gitt tidspunkt og/eller i en gitt periode. Metadata må oppdateres minimum en gang i året. Det vil også være mulig å gjøre oppdateringer hyppigere i de tilfellene der dette fremstår som hensiktsmessig (2-4 ganger i året). 
 Det er ønskelig at innrapporteringsprosessen i størst mulig grad skal være automatisert. Ettersom dagens tekniske løsning for den nasjonale variabelkatalogen foreløpig ikke støtter automatisert innlesning av metadata, vil man i en overgangsfase legge opp til en prosess der de nasjonale helsedatakildene lager et sett med eksportfiler som sendes per e-post til metadata@helsedata.no.
 Det utredes nærmere løsninger for automatisert mottak av metadata til Nasjonal variabelkatalog, og man tar sikte på å støtte mottak av oppdaterte metadatafiler via API i løpet av 2026. 
 
