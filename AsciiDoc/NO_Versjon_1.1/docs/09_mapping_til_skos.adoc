@@ -97,7 +97,6 @@ benyttes.
 
 Standardisert vokabular:
 
-____
 1 = Beregnet (F.eks. utregnet basert på en formel; Ventetid, liggetid
 etc)
 
@@ -113,7 +112,7 @@ NPR-melding, «urørt»)
 eller elektronisk skjemaløsning, «urørt»)
 
 6 = Annet (F.eks. etablert i helsedatakilden for administrative formål.)
-____
+
 
 |E-helse: Extension |
 
@@ -150,7 +149,6 @@ Datatype som spesifisert i FHIR Primitive Types
 
 Standardisert vokabular:
 
-____
 1 = String
 
 2 = Integer
@@ -168,7 +166,6 @@ ____
 8 = Uri
 
 9 = Base64binary
-____
 
 |E-helse: Extension |
 

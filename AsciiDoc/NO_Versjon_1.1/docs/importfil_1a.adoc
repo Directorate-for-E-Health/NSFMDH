@@ -121,7 +121,6 @@ datagrunnlaget oppdateres på Helseanalyseplattformen.
 
 Standardisert vokabular:
 
-____
 1 = Sjeldnere enn årlig
 
 2 = Årlig
@@ -139,7 +138,6 @@ ____
 8 = Daglig
 
 9 = Hyppigere enn daglig
-____
 
 | |21 |Innsamlingsmetode |Valgfri |Kort beskrivelse av metode for
 innsamling av data.
@@ -149,7 +147,6 @@ Kategorisering av datakilden.
 
 Standardisert vokabular:
 
-____
 1 = Sentralt helseregisterfootnote:[Inkluderer lovbestemte helseregistre
 og andre sentrale helseregistre
 (https://www.fhi.no/div/datatilgang/om-sentrale-helseregistre/)]
@@ -163,7 +160,6 @@ og andre sentrale helseregistre
 5 = Biobank
 
 6 = Annen datakilde
-____
 
 | |23 |InklusjonsOgEksklusjonskriterier |Obligatorisk |En faglig
 overordnet beskrivelse av hvilke kriterier som stilles for at en person
@@ -236,13 +232,11 @@ datakilden, delkilden eller datasamlingen. +
  +
 Standardisert vokabular:
 
-____
 1 = Direkte personidentifiserbare opplysninger
 
 2 = Indirekte personidentifiserbare opplysninger
 
 3 = Anonyme opplysninger
-____
 
 | |37 |JuridiskNote |Valgfri |Relevant juridisk informasjon som ikke
 dekkes av andre properties. F.eks. informasjon om reservasjonsrett eller
@@ -272,13 +266,11 @@ Angir hvilken type kildemetadata som beskrives.
 
 Standardisert vokabular:
 
-____
 1 = Datakilde
 
 2 = Delkilde
 
 3 = Datasamling
-____
 
 | |45 |ErISamsvarMed  |Valgfri |Referanse til evt. standard(er),
 spesifikasjon(er) etc. som datakilden, delkilden eller datasamlingen er
@@ -293,11 +285,11 @@ som for DÅR.
 
 Standardisert vokabular:
 
-____
+
 1 = Akkumulert
 
 2 = Årsbasert
-____
+
 
 | |47 |TelleEnhet |Valgfri |Datasamling: Telleenhet for datasamlingen
 angitt ved en tekstlig beskrivelse, eks. pasient, episode eller
