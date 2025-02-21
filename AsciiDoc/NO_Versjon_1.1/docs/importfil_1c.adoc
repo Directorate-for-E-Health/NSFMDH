@@ -7,9 +7,9 @@ Dataprodukter identifiseres ved hjelp av Versjon. Derfor må det registreres en 
 identifisere hvilke variabler som inngår i dataproduktet, hvilken tidsperiode datagrunnlaget er registrert, og når denne versjonen er gyldig. +
 Filen er basert på HealthTerm 11+N importformat og har følgende spesifikasjoner.
 
+*Tabell 8*: *Format for importfil 1c-Versjon*
 [width="100%",cols="5%,12%,10%,73%",options="header",]
 |===
-|Tabell 8: Format for importfil 1c-Versjon | | |
 |Nr |Property |Status |Beskrivelse
 
 |1 |Code |Obligatorisk a|

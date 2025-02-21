@@ -63,11 +63,9 @@ klassen «Filter»
 
 Standardisert vokabular:
 
-____
 1 = Obligatorisk
 
 2 = Valgfri
-____
 
 |16-N |Mulige tilleggsproperties |Valgfri |Gir mulighet for å legge til
 ytterligere properties ved behov

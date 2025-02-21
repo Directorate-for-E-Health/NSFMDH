@@ -3,6 +3,7 @@
 Mapset er et eget importfilformat i HealthTerm. Dette brukes for å mappe mellom concepts i
 to forskjellig Code Systems, eller mellom to Namespaces internt i et Code System.
 For å realisere vår informasjonsmodell i HealthTerm, er følgende mapset nødvendige:
+
 1. Fra DATASAMLINGER til respektive VERSJONER av datasamlingene
 2. Fra VERSJONER til VARIABELMETDATA og variabler som inngår i respektive
 versjoner
@@ -12,6 +13,7 @@ versjoner
 6. Fra VARIABELMETADATA til STATISTIKK
 7. Fra VARIABELGRUPPE til VARIABELMETADATA
 8. Fra INSTRUMENT til VARIABELMETADATA
+
 I tillegg kan man bruke Mapsets for å mappe concepts til f.eks. felles klassifikasjoner,
 standarder og informasjonsmodeller som er importert, og som man har tilgang til i
 HealthTerm. Dette kan være nyttig for f.eks. tilrettelegging og videreutvikling av filtrering og
@@ -32,6 +34,6 @@ For kodeverk vil det være Kodeverk-ID.
 * Eksempel for lokale kodeverk er KK_DAR.KJONN_K.
 * Eksempel for administrative kodeverk er 3101.
 * Eksempel for helsefaglige kodeverk er ICD-10.
-For Versjon vil det være Versjon-ID. Eksempel V_DAR.DAR.2017Q3
+For Versjon vil det være Versjon-ID. Eksempel V_DAR.DAR.2024Q3
 
 
