@@ -48,7 +48,7 @@ datakilde.
 informasjon som finnes i de nasjonale helsedatakildene.
 
 - **Variabelgruppe** er en kategorisering av variabler. Strukturen kan bygges opp
-hierarkisk. Variabelgruppe erstatter den nå utgåtte propertien LokaltTema, men vil
+hierarkisk. Variabelgruppe erstatter den nå utgåtte propertien TemaLokalt, men vil
 også kunne brukes til å gruppere variabler på tvers av helsedatakilder.
 
 - **Kodeverk** representerer i denne sammenhengen et verdisett. Et kodeverk kan for

@@ -25,7 +25,7 @@ samme variabelnavn som i kilden, f.eks. V++_++DAR.ALDER++_++AAR.
 
 | |2 |ParentCode |Obligatorisk |Forkortelse for kildenavn med prefiks V
 for Variabel og underscore, f.eks. V++_++DAR. «««ParentCode»»» for
-toppnoden skal være lik kortnavnet på datakilden, f.eks. DAR. |E-helse:
+toppnoden skal være lik kortnavnet på datakilden, f.eks. DAR. |FHI:
 Extension |
 
 |HealthTerm |3 |Hierarchy |Valgfri |Brukes dersom man ønsker å
@@ -43,7 +43,7 @@ anbefaltTerm (NB) |skosxl:prefLabel (NB)
 |Administrative formål |6 |PresentationOrder |Valgfri |Brukes dersom man
 ønsker å presentere variablene i en egendefinert rekkefølge som avviker
 fra en alfabetisk. Gyldige verdier er positive heltall og variablene
-presenteres i stigende rekkefølge basert på disse tallene. |E-helse:
+presenteres i stigende rekkefølge basert på disse tallene. |FHI:
 Extension |
 
 | |7 |ValidFrom |Obligatorisk a|
@@ -118,7 +118,7 @@ eller elektronisk skjemaløsning, «urørt»)
 
 | |16 |OpprinnelseUtledning |Valgfri |Hvordan beregnede, avledede og
 kodete variabler er utledet. Ikke aktuell for variabler hentet direkte
-fra helsetjenesten eller en elektronisk skjemaløsning |E-helse:
+fra helsetjenesten eller en elektronisk skjemaløsning |FHI:
 Extension |
 
 |Innhold og kvalitet |17 |Kommentar |Valgfri |Kommentar til variabelen.
@@ -248,7 +248,7 @@ overføres til Helsanalyseplattformen.
 eksport eller utskrift av data. |FHI:Extension |
 
 | |35 |TabellvennligNavnEngelsk |Valgfri |Alternativ kolonneoverskrift
-for eksport eller utskrift av data for engelskspråklige. |E-helse:
+for eksport eller utskrift av data for engelskspråklige. |FHI:
 Extension |
 
 | |36 |DatabaseReferanse |Obligatorisk

@@ -29,7 +29,7 @@ måling av bentetthet, analyse av prøvemateriale etc.
 datasamlinger kodeverkene anvendes i og hvem som eier disse, samt en liste der alle kodeverkene med tilhørende koder (verdier/svaralternativ) er sortert i en flat alfabetisk liste. Sistnevnte for enklere å kunne identifisere kodeverk og/eller koder som kan/bør harmoniseres på tvers av kildene. Strukturen er lik den som brukes for
 administrative kodeverk.
 
-10. Kodeverk som er basert på enten nasjonale administrative kodeverk, nasjonale helsefaglige kodeverk eller terminologier, eller Subsets av disse, kan mappes til direkte. Når man ønsker det, kan da de samme kodeverkene settes til Retired i KILDEKODEVERK. Nasjonale administrative kodeverk, nasjonale helsefaglige kodeverk og terminologier har egne Customer Codes i HealthTerm og importeres som separate Code Systems. Disse forvaltes av Direktoratet for E-helse, avdeling helsefaglige kodeverk og terminologi. Hvilke nasjonale kodeverk det skal mappes til direkte fra variablene er definert i kapittel 4.2.14.
+10. Kodeverk som er basert på enten nasjonale administrative kodeverk, nasjonale helsefaglige kodeverk eller terminologier, eller Subsets av disse, kan mappes til direkte. Når man ønsker det, kan da de samme kodeverkene settes til Retired i KILDEKODEVERK. Nasjonale administrative kodeverk, nasjonale helsefaglige kodeverk og terminologier har egne Customer Codes i HealthTerm og importeres som separate Code Systems. Disse forvaltes av Helsedirektoratet. Hvilke nasjonale kodeverk det skal mappes til direkte fra variablene er definert i kapittel 4.2.14.
 
 11. Datasamlinger mappes til respektive VERSJONER som igjen mappes til de variablene som inngår i gjeldende versjon av datasamlingen.
 

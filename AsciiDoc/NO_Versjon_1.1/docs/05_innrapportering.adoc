@@ -15,7 +15,7 @@ metadata skal ikke eksponeres på helsedata.no eller andre kilder før forvalter
 
 Ved førstegangs import av metadata er det mulig å bygge opp en endringshistorikk tilbake i tid ved å anvende properties ValidFrom og ValidTo. Variabler med ValidTo-dato må fjernes ved påfølgende oppdateringer. Historikk etter førstegangs import ivaretas ved at påfølgende filer importeres i kronologisk rekkefølge. ValidFrom settes til datoen innholdet gjelder fra. Dette styres i importgrensesnittet, og skal ikke angis i filen(e). HealthTerm sporer så automatisk alle endringer. Det anbefales at signifikante endringer i f.eks. kodeverk framgår av properties Beskrivelse eller Kommentar, og at signifikante kvalitetsbrister i datagrunnlaget framgår av propertien Kvalitetsnote. Det redegjøres nærmere for bruken av ValidFrom og ValidTo i kapittel 4.1.2.
 
-Forvaltning av den nasjonale variabelkatalogen omfatter også tilrettelegging for harmoniseringsarbeid for realisering av Felles språk i helse- og omsorgssektoren, [8] samt videreutvikling av mappinger og relasjoner mot andre kodeverk, terminologier og standarder. Dette er illustrert i Figur 4. 
+Forvaltning av den nasjonale variabelkatalogen omfatter også tilrettelegging for harmoniseringsarbeid for realisering av Felles språk i helse- og omsorgssektoren, [9] samt videreutvikling av mappinger og relasjoner mot andre kodeverk, terminologier og standarder. Dette er illustrert i Figur 4. 
 
 [link=images/figur_4.jpg, title=""]image::images/figur_4.jpg[width=100%]
 image::images/figur_4.jpg[]
