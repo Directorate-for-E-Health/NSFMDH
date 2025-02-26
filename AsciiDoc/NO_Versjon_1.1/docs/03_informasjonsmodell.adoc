@@ -6,8 +6,7 @@ som inngår i informasjonsmodellen og hvordan de logiske relasjonene mellom de u
 klassene skal håndteres. Kapittel 3 beskriver hvordan dette konkret skal håndteres i dagens
 tekniske løsning.
 
-Informasjonsmodellen i Figur 1 er utvidet med et flere nye klasser fra versjon 1.0 av denne
-spesifikasjonen. Ikke alle klassene er obligatoriske, og enkelte vil kun være relevant for kun
+Ikke alle klassene er obligatoriske, og enkelte vil kun være relevant for kun
 enkelte typer av datakilder. I Vedlegg 3: Obligatoriske og frivillige klasser i den logiske
 informasjonsmodellen, redegjøres det nærmere for hvilke klasser som er obligatoriske og
 frivillige, samt hvilke som ikke skal benyttes. Dette gjøres for å synliggjøre hva som minimum
@@ -84,8 +83,8 @@ nærmere forklart i Tabell 1.
 [options="header"]
 |===
 |Ikon |Definisjon |Beskrivelse
-| image:images/Class.jpg[Class,100,100,align="center"]| Klasse |En klasse er en logisk gruppering av entiteter som beskriver en gitt del av modellen. Klasser kjennetegnes ved at de brukes til å beskrive en gitt type objekter. Eksempler på plasser er Variabel som brukes til å definere alle variablene i gitt datakilde.
-| image:images/Assosiativ.png[Assosiativ,100,50,align="center"]|Assosiativ relasjon |En assosiativ relasjon er den mest generelle formen for relasjon innenfor UML. I modellen under brukes assosiative relasjoner der det ikke er noen form for hierarkisk relasjon mellom klassene i form av en referer tilrelasjon.
+| image:images/Class.jpg[Class,100,100,align="center"]| Klasse |En klasse er en logisk gruppering av entiteter som beskriver en gitt del av modellen. Klasser kjennetegnes ved at de brukes til å beskrive en gitt type objekter. Eksempler på klasser er Variabel som brukes til å definere alle variablene i gitt datakilde.
+| image:images/Assosiativ.png[Assosiativ,100,50,align="center"]|Assosiativ relasjon |En assosiativ relasjon er den mest generelle formen for relasjon innenfor UML. I modellen under brukes assosiative relasjoner der det ikke er noen form for hierarkisk relasjon mellom klassene i form av en referer til relasjon.
 | image:images/Aggregerende.png[Aggregerende,100,50,align="center"]|Aggregerende relasjon |En aggregerende relasjon uttrykker at deler settes sammen til en større helhet, i invers forstand ofte kalt en «part of» relasjon. I modellen under brukes aggregerende relasjoner der en klasse kan inneholde av 0, 1 eller flere instanser av en sub-klasse.
 |image:images/Komposisjon.png[Class,100,50,align="center"]| Komposisjonrelasjon |En komposisjon-relasjon uttrykker er en spesiell form for en aggregerende relasjon i de tilfellene der det er et strengt krav at en klasse må inneholde minst én instans av en gitt sub-klasse.
 |===

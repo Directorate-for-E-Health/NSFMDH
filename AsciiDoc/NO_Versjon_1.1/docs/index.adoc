@@ -4,7 +4,9 @@
 // include::locale/attributes.adoc[]
 = Nasjonal spesifikasjon for metadata om helsedata [[nasjonal-spesifikasjon-for-metadata-om-helsedata]]
 :doctype: book
+:sectnums:
 :docinfo:
+:docs-path: ../
 :icons: font
 :toc: left
 ifdef::backend-pdf[:toc: macro]
@@ -31,7 +33,7 @@ link:{lang-switch-link}[English version]
 0473 Oslo +
 *Telefon*: 21 07 81 60 +
 
-
+//// 
 = Forord [[forord]]
 
 
@@ -52,10 +54,10 @@ Spesifikasjonen vil etter hvert revideres for å favne ytterligere behov relater
 Videre arbeid med begrepskoordinering på variabelnivå, bruk av kodeverk og utvikling av felles overordnede begreps- og/eller informasjonsmodeller vil foregå i nært samarbeid med registerforvaltere og relevante fagavdelinger i Direktoratet for E-helse. 
 
 Spesifikasjonen utvikles i tråd med https://www.go-fair.org/fair-principles/[FAIR-prinsippene] og de internasjonale standardene DCAT og SKOS, og gjennom anbefalinger innhentet gjennom samarbeide i Europeiske og Nordiske prosjekter og arbeidsgrupper.
-
+////
 
 toc::[]
-// include::01_forord.adoc[]
+include::01_forord.adoc[]
 
 include::02_innledning.adoc[]
 

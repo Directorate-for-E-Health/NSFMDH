@@ -1,6 +1,6 @@
 = Innledning [[innledning]]
 
-*1.1 Bakgrunn*
+== Bakgrunn
 
 Arbeidet med å definere og innrapportere standardiserte metadata fra helseregistre ble initiert gjennom infrastrukturprosjektet Health Registries for Research (HRR) [1]. HRR ble avsluttet i 1. kvartal 2019 og Helsedataprogrammet i Direktoratet for e-helse videreførte dette arbeidet. Gjennom 2020 ble spesifikasjonen utvidet til å inkludere metadata fra nasjonale medisinske kvalitetsregistre og befolkingsbaserte helseundersøkelser. 
 Nasjonal variabelkatalog ble etablert i løsningen HealthTerm i 2019. HealthTerm er levert av Rhapsody, tidligere CareCom AS og er anskaffet av Helsedirektoratet.
