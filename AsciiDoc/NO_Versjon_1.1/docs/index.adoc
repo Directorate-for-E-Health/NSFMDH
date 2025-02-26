@@ -86,6 +86,8 @@ include::importfil_1f.adoc[]
 
 include::importfil_2.adoc[]
 
+include::importfil_4.adoc[]
+
 :leveloffset: -1
 
 include::08_mapping_til_dcat.adoc[]
