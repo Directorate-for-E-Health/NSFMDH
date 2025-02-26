@@ -3,11 +3,11 @@
 Dette kapittelet beskriver i detalj kravene til de ulike importfilene definert i Figur 5 og relaterer
 de ulike importfilene til klassene i den logiske informasjonsmodellen illustrert i Figur 1.
 
-// == Filtyper for importfiler [[filtyper-for-importfiler]]
+=== Filtyper for importfiler [[filtyper-for-importfiler]]
 
-// Alle importfiler skal være i Excel-format (*.xlsx). Mapping-fil skal være i CSV-format (.csv)
-// med komma (‘,’) som separasjonstegn, ikke semikolon (‘;’). For csv-filen skal tegnsett følge
-// UTF-8. Disse kravene følger av systemkrav fra HealthTerm.
+Alle importfiler skal være i Excel-format (*.xlsx). Mapping-fil skal være i CSV-format (.csv)
+med komma (‘,’) som separasjonstegn, ikke semikolon (‘;’). For csv-filen skal tegnsett følge
+UTF-8. Disse kravene følger av systemkrav fra HealthTerm.
 
 === Navnestandard for importfiler [[navnestandard-for-importfiler]]
 

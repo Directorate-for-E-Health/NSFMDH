@@ -1,4 +1,5 @@
 = Innrapportering av metadata til Nasjonal Variabelkatalog
+
 == Prosess for innrapportering av metadata [[innrapportering]]
 
 
@@ -33,12 +34,12 @@ De ulike importfilene vil være basert på to ulike importformater i HealthTerm:
 11+N-formatet og mappingformatet er nærmere dokumentert i CareCom sin egen dokumentasjon av løsningen og kan deles av Helsedataservice på forespørsel. 
 
 
-== Prosess for oppdatering av innrapporterte metadata
+=== Prosess for oppdatering av innrapporterte metadata
 
 Oppdateringer av metadata gjøres ved at den eller de filene der ny informasjon er tilgjengelig sendes inn på nytt som en del av et komplett sett av importfiler. Dette gjøres for å sikre at metadataene til enhver tid er konsistente. Også feilretting gjøres ved å sende inn nye komplette filer. En oppdatering kan for eksempel være å legge til en ny variabel, fjerne en variabel som er utgått, endre navn på en variabel eller endre innholdet i en property. Nye variabler eller variabler som utgår må generere en ny Versjon
 Historikk ivaretas av sporingsfunksjonaliteten i HealthTerm. Dato for når en endring ble gjeldene kan overstyres i importgrensesnittet.
 
-== Bruk av systemproperties ValidFrom og ValidTo
+=== Bruk av systemproperties ValidFrom og ValidTo
 
 Systempropertiene ValidFrom og ValidTo har i etterkant av at versjon 1.0 av denne spesifikasjonen ble publisert, vært gjenstand for mye forvirring. I dette avsnittet redegjøres det derfor nærmere for betydningen av disse propertiene.
 

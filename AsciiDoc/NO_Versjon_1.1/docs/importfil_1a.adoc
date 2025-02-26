@@ -15,7 +15,6 @@ sammen med andre properties i samme gruppering. Disse propertyene har også navn
 Enkelte properties har ulike verdier og beskrivelser for datakilde, delkilde og datasamling. Der det ikke er eksplisitt spesifisert så gjelder
 verdiene og beskrivelsene for alle de tre kildemetadatatypene.
 
-== Format for importfil 1a-Kildemetadata
 *Tabell 6: Format for importfil 1a-Kildemetadata.*
 [width="100%",cols="17%,5%,9%,11%,58%",options="header",]
 |===

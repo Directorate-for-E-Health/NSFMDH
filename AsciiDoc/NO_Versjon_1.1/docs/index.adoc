@@ -69,7 +69,7 @@ include::05_innrapportering.adoc[]
 
 include::06_importfiler.adoc[]
 
-include::07_filtyper.adoc[]
+//include::07_filtyper.adoc[]
 
 :leveloffset: +1
 include::importfil_1a.adoc[]

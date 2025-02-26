@@ -1,6 +1,7 @@
+//// 
 = Filtyper [[filtyper]]
 
 Alle importfiler skal være i Excel-format (*.xlsx). Mapping-fil skal være i CSV-format (.csv)
 med komma (‘,’) som separasjonstegn, ikke semikolon (‘;’). For csv-filen skal tegnsett følge
 UTF-8. Disse kravene følger av systemkrav fra HealthTerm.
-
+////
