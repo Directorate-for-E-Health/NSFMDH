@@ -71,7 +71,7 @@ include::06_importfiler.adoc[]
 
 //include::07_filtyper.adoc[]
 
-:leveloffset: +1
+//:leveloffset: +1
 include::importfil_1a.adoc[]
 
 include::importfil_1b.adoc[]
@@ -86,9 +86,17 @@ include::importfil_1f.adoc[]
 
 include::importfil_2.adoc[]
 
+=== Importfil 3-Filter
+
+Filter implementeres ved hjelp av *filterkodeverk* og *mapset*.
+Beskrivelse av filter detaljeres i en senere versjon. 
+
+
 include::importfil_4.adoc[]
 
-:leveloffset: -1
+include::13_Administrative kodeverk.adoc[]
+
+//:leveloffset: -1
 
 include::08_mapping_til_dcat.adoc[]
 

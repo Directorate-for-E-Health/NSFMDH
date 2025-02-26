@@ -1,0 +1,71 @@
+=== Importfil 3-Filter
+
+Filter implementeres ved hjelp av *filterkodeverk* og *mapset*.
+
+Mapset skal mappe filterelementet til kodeverdi i en en-til-en, eller
+en-til-mange relasjon. +
+Hvis man har mange filterkodeverk som ligger i ulike Codesystems, må det
+være ett mapset pr Codesystem
+
+Variabler som er basert på administrative kodeverk, helsefaglige
+kodeverk eller andre masterkodeverk som definert i Tabell 14 skal ikke
+inngå i Importfil 2-Kildekodeverk.
+
+[width="100%",cols="6%,11%,10%,73%",options="header",]
+|===
+|*Tabell 13: Format for importfil 3-Filter* | | |
+|*Nr* |*Property* |*Status* |*Beskrivelse*
+
+|1 |Code |Obligatorisk |Standardisert og unik navnestreng for et
+filterkodeverk med tilhørende koder. Store bokstaver, uten mellomrom og
+æ, ø, å. Prefiks for FK for kildekodeverk, «_FILTER», punktum, kodenavn,
+punktum og kodeverdi, f.eks. FK_FILTER.TJENESTEOMRADE.SOM
+
+|2 |ParentCode |Obligatorisk |Filterkodeverkene importeres i en
+forhåndsdefinert struktur. ParentCode er alltid «FK_FILTER»
+
+|3 |Hierarchy |Valgfri |Brukes ikke for Filterkodeverk
+
+|4 |PreferredTerm |Obligatorisk |Kort beskrivende navn på det enkelte
+kodeverk, f.eks. Tjenesteområde, eller Kode, f.eks. Somatikk
+
+|5 |ConceptType |Valgfri |Skal være tom for FILTERKODEVERK
+
+|6 |PresentationOrder |Valgfri |Brukes dersom man ønsker å presentere
+filterkodeverkene og/eller kodene i en egendefinert rekkefølge som
+f.eks. avviker fra en alfabetisk. Gyldige verdier er positive heltall og
+kildekodeverkene og kodene presenteres i stigende rekkefølge basert på
+disse tallene.
+
+|7 |ValidFrom |Obligatorisk a|
+Brukes for å angi fra når et filterkodeverk eller en kode er gyldig.
+Settes ved første import. Forutsetning for å kunne tilrettelegge for søk
+på gyldige kodeverk og/eller koder på en gitt dato eller endringer på et
+kodeverk og/eller på en kode i en tidsperiode.
+
+Format: YYYYMMDD
+
+|8 |ValidTo |Valgfri a|
+Brukes for å angi at et filterkodeverk eller en kode ble ugyldig fra en
+gitt dato. +
+For aktive kodeverk skal denne være tom.
+
+Format: YYYYMMDD
+
+|9 |Synonym |Valgfri |Skal være tom for FILTERKODEVERK
+
+|10 |PatientFriendlyTerm |Valgfri |Skal være tom for FILTERKODEVERK
+
+|11 |ClinicalFriendlyTerm |Valgfri |Skal være tom for FILTERKODEVERK
+
+|12 |Beskrivelse |Valgfri |Utførlig beskrivelse/definisjon av
+FiltekKodeverket eller en kode
+
+|13 |NavnEngelsk |Anbefalt |PreferredTerm oversatt til Engelsk. Dvs.
+kodeteksten oversatt til engelsk
+
+|14 |BeskrivelseEngelsk |Anbefalt |Beskrivelse oversatt til Engelsk
+
+|15-N |Mulige tilleggsproperties |Valgfri |Gir mulighet for å legge til
+ytterligere properties ved behov
+|===
