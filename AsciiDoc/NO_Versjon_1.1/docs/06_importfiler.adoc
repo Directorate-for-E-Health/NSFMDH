@@ -144,7 +144,7 @@ Tabell 4: Polyhierarkisk oppbygging av Importfil 2: Kildekodeverk
 Properties med beskrivende tekst formatteres ved hjelp av Markdown syntaks. 
 
 NOTE: *Dette brukes kun i propertiene* +
-Beskrivelse, BeskrivelseEngelsk, Kommentar, KommentarEngelsk, InklusjonsOgEksklusjonskriterier, OpprinnelseUtledning og OpprinnelseUtledningEngelsk.
+Beskrivelse, BeskrivelseEngelsk, Kommentar, KommentarEngelsk, Kvalitetsnote, InklusjonsOgEksklusjonskriterier, OpprinnelseUtledning og OpprinnelseUtledningEngelsk.
 
 Formatet støtter bare et utvalg formatteringskoder:
 

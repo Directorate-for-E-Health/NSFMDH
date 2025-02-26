@@ -3,10 +3,10 @@
 
 Importfil 1a-Kildemetadata brukes til å beskrive både datakilden, eventuelle delkilder og underliggende datasamlinger, på et overordnet nivå ved hjelp av et sett standardiserte properties.
 
-For datakilder som skal levere dataprodukt til Helseanalyseplattformen vil importfilen også brukes til å definere dataprodukt i form av datasamlinger og evt. logiske grupperinger av dataprodukt i form av delkilder.
-
-Ihht Prop. 63 (2019-2020) skal dataprodukt inneholde informasjon om dataproduktets bruksområder (Anbefalte bruksområder og Rettsgrunnlag). Dette representeres som metadata om datasamlinger i importfilen definert under. Anbefalte bruksområder er definert i property
+//// Ihht Prop. 63 (2019-2020) skal dataprodukt inneholde informasjon om dataproduktets bruksområder (Anbefalte bruksområder og Rettsgrunnlag). Dette representeres som metadata om datasamlinger i importfilen definert under. Anbefalte bruksområder er definert i property
 16, mens Rettsgrunnlag er definert i properties 30-37. 
+////
+
 Datakilden, eventuelle delkilder og datasamlinger representeres ved en Parent/Child-struktur i en og samme fil.
 
 I påfølgende tabell er det en kolonne for «Gruppering». Den skal ikke inkluderes i importfilen og er lagt til i spesifikasjonen for å øke lesbarheten. De 11 første propertyene (fet skrift) er posisjonbestemte som følge av HealthTerm sitt 11+N importformat og er derfor ikke plassert
@@ -116,7 +116,7 @@ Format: YYYYMMDD
 *Datakilde*, *delkilde*: Skal være tom.
 
 *Datasamling*: Oppdateringsfrekvens brukes for å beskrive hvor ofte
-datagrunnlaget oppdateres på Helseanalyseplattformen.
+det tilgjengelige datagrunnlaget oppdateres.
 
 Standardisert vokabular:
 

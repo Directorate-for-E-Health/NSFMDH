@@ -227,17 +227,14 @@ Anbefaling fra forvalter av datakilden til HDS om hvorvidt variabelen
 bør inngå i et digitalt, automatisert innsyn til den registrerte via
 helsenorge.no.
 
-Er det anbefalt at variabelen, gitt at denne inngår i et dataprodukt som
-skal overføres til Helseanalyseplattformen, inngår i et digitalt,
+Er det anbefalt at variabelen inngår i et digitalt,
 automatisert innsyn?
 
 Standardisert vokabular:
 
-____
 1 = Ja
 
 2 = Valgfri
-____
 
 ++*++Gjelder kun for variabler som skal inngå i dataprodukt som skal
 overføres til Helsanalyseplattformen.
@@ -282,11 +279,9 @@ helsedata.no.
 
 Standardisert vokabular:
 
-____
 1 = Ja
 
 2 = Valgfri
-____
 
 |FHI:Extension |
 

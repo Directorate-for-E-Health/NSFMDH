@@ -8,8 +8,8 @@ Tabell 15: Begrepsliste
 
 |===
 |Begrep |Forklaring
-|CareCom |CareCom er teknisk leverandør av HealthTerm, løsningen
-Nasjonal variabelkatalog er realisert i.
+|CareCom |CareCom er det opprinnelige navnet på den tekniske leverandøren av HealthTerm, løsningen
+Nasjonal variabelkatalog er realisert i. Løsningen heter nå Rhapsody Semantics, og leverandøren heter Rhapsody.
 |Code System |Code System er et løsningsspesifikt begrep som anvendes i
 HealthTerm.
 Et Code System kan betraktes som den øverste mappen i en

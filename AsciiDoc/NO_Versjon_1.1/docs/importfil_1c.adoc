@@ -13,9 +13,7 @@ Filen er basert på HealthTerm 11+N importformat og har følgende spesifikasjone
 |Nr |Property |Status |Beskrivelse
 
 |1 |Code |Obligatorisk a|
-Unik navnestreng for en versjon som også brukes til å koble en versjon
-av metadatafiler til et datasett ved overføring av data til
-Helseanalyseplattformen. Store bokstaver, uten mellomrom og æ, ø, å.
+Unik navnestreng for en versjon. Store bokstaver, uten mellomrom og æ, ø, å.
 
 Prefiks N, kortnavn på datakilden, punktum, kortnavn på datasamlingen,
 underscore og versjonsnummer/ID. N++_++NPR.AMK++_++2018

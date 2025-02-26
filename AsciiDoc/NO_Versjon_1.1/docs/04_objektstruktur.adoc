@@ -25,7 +25,7 @@ image::images/objektstruktur_for_helsedatakilder_i_healthterm.jpg[]
 8. INSTRUMENT importeres som en Extension til Core Namespace. INSTRUMENT er en betegnelse på en standardisert innsamlingsmetode for data. Det kan være hele eller deler av et spørreskjema, eller et fysisk instrument for f.eks.
 måling av bentetthet, analyse av prøvemateriale etc.
 
-9. KILDEKODEVERK importeres til et eget og felles Code System som inneholder alle kodeverkene som anvendes i respektive datakilder og datasamlinger. Kodeverkene er definert som egne concepts med tilhørende properties. KILDEKODEVERK er strukturert ved hjelp av polyhierarkier for enkelt å kunne identifisere hvilke kilder og
+9. KILDEKODEVERK importeres til en Extension til et eget felles Code System som inneholder alle kodeverkene som anvendes i respektive datakilder og datasamlinger. Kodeverkene er definert som egne concepts med tilhørende properties. KILDEKODEVERK er strukturert ved hjelp av polyhierarkier for enkelt å kunne identifisere hvilke kilder og
 datasamlinger kodeverkene anvendes i og hvem som eier disse, samt en liste der alle kodeverkene med tilhørende koder (verdier/svaralternativ) er sortert i en flat alfabetisk liste. Sistnevnte for enklere å kunne identifisere kodeverk og/eller koder som kan/bør harmoniseres på tvers av kildene. Strukturen er lik den som brukes for
 administrative kodeverk.
 
