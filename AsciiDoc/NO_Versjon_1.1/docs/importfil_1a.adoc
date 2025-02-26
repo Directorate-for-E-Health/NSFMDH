@@ -1,5 +1,5 @@
 
-= Importfil 1a-Kildemetadata [[importfil_1a]]
+=== Importfil 1a-Kildemetadata [[importfil_1a]]
 
 Importfil 1a-Kildemetadata brukes til å beskrive både datakilden, eventuelle delkilder og underliggende datasamlinger, på et overordnet nivå ved hjelp av et sett standardiserte properties.
 

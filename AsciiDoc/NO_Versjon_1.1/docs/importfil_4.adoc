@@ -1,4 +1,4 @@
-= Importfil 4x-Mapset [[importfil_4]]
+=== Importfil 4x-Mapset [[importfil_4]]
 
 Mapset er et eget importfilformat i HealthTerm. Dette brukes for å mappe mellom concepts i
 to forskjellig Code Systems, eller mellom to Namespaces internt i et Code System.
@@ -35,5 +35,6 @@ For kodeverk vil det være Kodeverk-ID.
 * Eksempel for administrative kodeverk er 3101.
 * Eksempel for helsefaglige kodeverk er ICD-10.
 For Versjon vil det være Versjon-ID. Eksempel V_DAR.DAR.2024Q3
+|===
 
 

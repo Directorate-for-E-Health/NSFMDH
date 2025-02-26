@@ -1,4 +1,4 @@
-= Importfil 2-Kildekodeverk [[importfil_2]]
+=== Importfil 2-Kildekodeverk [[importfil_2]]
 
 Importfil 2-Kildekodeverk brukes til å beskrive kodeverk og koder som variablene er basert på. Filen skal inneholde alle kodeverk som benyttet
 av den aktuelle datakilden. Endringer og historikk i nasjonale kodeverk og terminologier forutsettes ivaretatt av respektive «kodeverkseiere».

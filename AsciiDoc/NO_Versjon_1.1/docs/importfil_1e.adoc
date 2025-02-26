@@ -1,4 +1,4 @@
-= Importfil 1e-Variabelgruppe [[importfil_1e]]
+=== Importfil 1e-Variabelgruppe [[importfil_1e]]
 
 Importfil 1e-Variabelgruppe brukes til å beskrive variabelgrupper med utgangspunkt i et sett standardiserte properties. Filen er basert på
 HealthTerm 11+N importformat.

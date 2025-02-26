@@ -1,4 +1,4 @@
-= Importfil 1c-Versjon [[importfil_1c]]
+=== Importfil 1c-Versjon [[importfil_1c]]
 
 Importfil 1c-Versjon brukes til å identifisere hvilke variabler som inngår i en datasamling i en gitt periode og evt. revisjon. Den skal også inneholde opplysninger om når datagrunnlaget er registrert. En variabel vil kunne inngå i flere datasamlinger i forskjellige perioder. Hver versjon gis en unik code, og en angivelse av start på gyldighetsperiode. En variabels tilhørighet til en versjon defineres ved hjelp av Mapsets.
 Ved import av en ny versjon av en eksisterende datasamling, gis forrige (gjeldene) versjon en sluttdato av metadataforvaltningsansvarlige slik at det kun er en gjeldende versjon av hver datasamling. 

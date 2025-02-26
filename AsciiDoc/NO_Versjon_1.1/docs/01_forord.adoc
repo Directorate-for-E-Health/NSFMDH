@@ -1,3 +1,4 @@
+[discrete]
 = Forord [[forord]]
 
 Dette dokumentet er utarbeidet av helsedataavdelingen i Folkehelseinstituttet FHI og

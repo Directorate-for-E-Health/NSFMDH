@@ -1,4 +1,4 @@
-= Importfil 1f-Instrument [[importfil_1f]]
+=== Importfil 1f-Instrument [[importfil_1f]]
 
 Importfil 1f-Instrument brukes til å beskrive instrument med utgangspunkt i et sett standardiserte properties. Filen er basert på HealthTerm
 11+N importformat. 

@@ -1,4 +1,4 @@
-= Importfil 1-d Statistikk [[importfil_1d]]
+=== Importfil 1-d Statistikk [[importfil_1d]]
 
 Importfil 1d-Statistikk brukes til å presentere enkel statistikk for et utvalg av datakildens variabler.
 Statistikk som metadata har som formål å si noe om registerings-/ kodingskvaliteten og gi en pekepinn om antall forekomster. Statistikken egner

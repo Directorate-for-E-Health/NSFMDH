@@ -1,4 +1,4 @@
-= Importfiler for metadata i Nasjonal variabelkatalog [[importfiler]]
+== Importfiler for metadata i Nasjonal variabelkatalog [[importfiler]]
 
 Dette kapittelet beskriver i detalj kravene til de ulike importfilene definert i Figur 5 og relaterer
 de ulike importfilene til klassene i den logiske informasjonsmodellen illustrert i Figur 1.
@@ -9,7 +9,7 @@ de ulike importfilene til klassene i den logiske informasjonsmodellen illustrert
 // med komma (‘,’) som separasjonstegn, ikke semikolon (‘;’). For csv-filen skal tegnsett følge
 // UTF-8. Disse kravene følger av systemkrav fra HealthTerm.
 
-== Navnestandard for importfiler [[navnestandard-for-importfiler]]
+=== Navnestandard for importfiler [[navnestandard-for-importfiler]]
 
 For å sikre sporbarhet skal importfilene definert i Figur 5 gis et standardisert navn. Navnene kan kun inneholde store og små bokstaver (A-Z og a-z) og tall (0-9). +
 Bindestrek (-) og understrek (_) brukes som vist i definisjonene under og skal ikke inngå i de delene av filnavnet som defineres fritt av datakilden.
@@ -53,7 +53,7 @@ VERSJON 2018)
 * `KREG_3c_MAPSET_V-KK_2024_V34d_20190402` (Filen mapper variablene i Kreftregisteret til KILDEKODEVERK gyldige i 2018)
 * `KREG_3d_MAPSET_V-S_2024_V34d_20190402` (Filen mapper variablene i Kreftregisteret til STATISTIKK for i 2018)
 
-== Navngivning av nøkkelfeltet Code i importfilene [[navngivning-av-nøkkelfeltet-code-i-importfilene]]
+=== Navngivning av nøkkelfeltet Code i importfilene [[navngivning-av-nøkkelfeltet-code-i-importfilene]]
 
 _Propertien_ `Code` er nøkkel for de forskjellige metadataobjektene. For at den skal kunne fungere som en unik og persistent ID skal den navngis på følgende måte:
 
@@ -84,7 +84,7 @@ datasamling.KortNavn + «.» + variabel.KortNavn + «.» + KodeverLokalid
 |===
 
 
-== Format for importfiler [[format-for-importfiler]]
+=== Format for importfiler [[format-for-importfiler]]
 
 Importfilene for metadata i HealthTerm er spesifisert i Tabell 5 til Tabell 13. Følgende begrep brukes for å definere importspesifikasjonen. 
 
@@ -139,7 +139,7 @@ Tabell 4: Polyhierarkisk oppbygging av Importfil 2: Kildekodeverk
 **Eiere defineres som en del av grunnstrukturen. Eksempel KK_FHI, KK_HDIR, KK_KREFT etc.
 --
 
-== Formatering av tekst [[formatering-av-tekst]]
+=== Formatering av tekst [[formatering-av-tekst]]
 
 Properties med beskrivende tekst formatteres ved hjelp av Markdown syntaks. 
 

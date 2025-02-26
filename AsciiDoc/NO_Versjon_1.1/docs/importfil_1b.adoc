@@ -1,4 +1,4 @@
-= Importfil 1b-Variabelmetadata [[importfil_1b]]
+=== Importfil 1b-Variabelmetadata [[importfil_1b]]
 
 Importfil 1b-Variabelmetadata brukes til å beskrive variablene med utgangspunkt i et sett standardiserte properties. Filen er basert på HealthTerm 11+N importformat.
 
