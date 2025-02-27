@@ -1,4 +1,5 @@
-= Klasser i logisk informasjonsmodell [[klasser_i_logisk_informasjonsmodell]]
+[appendix]
+== Klasser i logisk informasjonsmodell [[klasser_i_logisk_informasjonsmodell]]
 
 Informasjonsmodellen som ligger til grunn for denne spesifikasjonen er utvidet med flere nye klasser siden versjon 1.0 av spesifikasjonen. Dette er gjort for å muliggjøre en mer presis beskrivelse av nye typer datakilder som nasjonale medisinske kvalitetsregistre og befolkningsbaserte helseundersøkelser. +
 

@@ -98,6 +98,9 @@ include::13_Administrative kodeverk.adoc[]
 
 //:leveloffset: -1
 
+[discrete]
+= Vedlegg [[vedlegg]]
+
 include::08_mapping_til_dcat.adoc[]
 
 include::09_mapping_til_skos.adoc[]

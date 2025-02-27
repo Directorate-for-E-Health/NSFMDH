@@ -1,4 +1,5 @@
-= Begrepsliste [[begrepsliste]]
+[appendix]
+== Begrepsliste [[begrepsliste]]
 
 Dette dokumentet benytter en del fag- og løsningsspesifikke begrep. Disse er forklart nærmere i tabellen under
 

@@ -1,4 +1,5 @@
-= Mapping av properties i KILDEMETADATA-filen til DCAT-AP-NO og DCAT-EN [[mapping_til_dcat]]
+[appendix]
+== Mapping av properties i KILDEMETADATA-filen til DCAT-AP-NO og DCAT-EN [[mapping_til_dcat]]
 
 Arbeidet med å mappe kildemetadata mot henholdsvis den internasjonale versjonen av DCAT og Digitaliseringsdirektoratets norske versjon
 DCAT-AP-NO er et pågående arbeid.
