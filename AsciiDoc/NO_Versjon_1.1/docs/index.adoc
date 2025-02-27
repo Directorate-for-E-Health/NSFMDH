@@ -86,11 +86,7 @@ include::importfil_1f.adoc[]
 
 include::importfil_2.adoc[]
 
-=== Importfil 3-Filter
-
-Filter implementeres ved hjelp av *filterkodeverk* og *mapset*.
-Beskrivelse av filter detaljeres i en senere versjon. 
-
+include::importfil_3_tmp.adoc[]
 
 include::importfil_4.adoc[]
 

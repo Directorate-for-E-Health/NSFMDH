@@ -1,0 +1,4 @@
+=== Importfil 3-Filter
+
+Filter implementeres ved hjelp av *filterkodeverk* og *mapset*.
+Beskrivelse av filter detaljeres i en senere versjon. 
