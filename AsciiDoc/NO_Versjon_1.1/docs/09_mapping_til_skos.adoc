@@ -1,5 +1,5 @@
 [appendix]
-= Mapping av properties i VARIABELMETADATAfilen til SKOS-AP-NO og SKOS-EN [[mapping_til_skos]]
+== Mapping av properties i VARIABELMETADATAfilen til SKOS-AP-NO og SKOS-EN [[mapping_til_skos]]
 
 Arbeidet med å mappe variabelmetadata mot henholdsvis den internasjonale versjonen av SKOS og Digitaliseringsdirektoratets norske versjon
 SKOS-AP-NO er et pågående arbeid.
