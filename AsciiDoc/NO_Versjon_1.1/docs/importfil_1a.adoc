@@ -3,7 +3,8 @@
 
 Importfil 1a-Kildemetadata brukes til å beskrive både datakilden, eventuelle delkilder og underliggende datasamlinger, på et overordnet nivå ved hjelp av et sett standardiserte properties.
 
-//// Ihht Prop. 63 (2019-2020) skal dataprodukt inneholde informasjon om dataproduktets bruksområder (Anbefalte bruksområder og Rettsgrunnlag). Dette representeres som metadata om datasamlinger i importfilen definert under. Anbefalte bruksområder er definert i property
+////
+Ihht Prop. 63 (2019-2020) skal dataprodukt inneholde informasjon om dataproduktets bruksområder (Anbefalte bruksområder og Rettsgrunnlag). Dette representeres som metadata om datasamlinger i importfilen definert under. Anbefalte bruksområder er definert i property
 16, mens Rettsgrunnlag er definert i properties 30-37. 
 ////
 
