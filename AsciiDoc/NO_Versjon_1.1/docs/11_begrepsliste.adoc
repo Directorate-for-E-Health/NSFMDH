@@ -33,15 +33,15 @@ et moder-concept. Et «Record»-concept kan ikke ha barn under
 seg, men er ellers som et normalt concept.
 |Core Namespace| Core namespace er et løsningsspesifikt begrep som anvendes i
 HealthTerm. Core Namespace er hovedmappen i et Code
-System. For de nasjonale helsedatakildene lagres kildemetadata
-om variablene som Core Namespace.
+System. For de nasjonale helsedatakildene lagres metadata
+om Datakilde, delkilder og datasamlinger i Core Namespace.
 |Dataansvarlig |Den som bestemmer formålet med behandlingen av
 helseopplysningene og hvilke hjelpemidler som skal brukes, og
 den som i eller i medhold av lov er pålagt et
 databehandlingsansvar.
 Kilde: Helseregisterloven § § 2 bokstav e.
 |Databehandler |Den som behandler personopplysninger på vegne av den
-[data]behandlingsansvarlige.
+(data)behandlingsansvarlige.
 Kilde: Personopplysningsloven § § 2 nr.5
 |Datakilde |Datakilde er definert som kildene til dataene. I denne versjonen
 av spesifikasjonen er en datakilde ekvivalent med et
@@ -53,8 +53,7 @@ sikre analyserom. Konseptet dataprodukt består av et
 datasett, samt metadata om variabler, versjon og datasamling.
 |Datasamling |Datasamling er definert som et sub-register innenfor en
 datakilde, altså en delmengde av variablene i den aktuelle
-datakilden. Eksempler på datasamlinger kan være sektorer i
-NPR eller skjema i medisinske kvalitetsregistre.
+datakilden. Eksempler på datasamlinger kan være skjema i medisinske kvalitetsregistre.
 |Dekningsgrad |Dekningsgraden angir i hvilken grad de pasienter eller hendelser
 som skal registreres faktisk blir registrert. Dekningsgraden for et
 enkeltsykehus er et mål på hvor mange av de aktuelle
