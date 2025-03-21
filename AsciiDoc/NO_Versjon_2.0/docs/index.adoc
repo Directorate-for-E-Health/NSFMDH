@@ -1,0 +1,77 @@
+// Language switch link (adjust the path to the English document)
+:lang-switch-link: ./en/index.html
+
+// include::locale/attributes.adoc[]
+= Nasjonal spesifikasjon for metadata om helsedata [[nasjonal-spesifikasjon-for-metadata-om-helsedata]]
+:doctype: book
+:docinfo:
+:icons: font
+:toc: left
+ifdef::backend-pdf[:toc: macro]
+:toc-title: Innholdsfortegnelse
+:toclevels: 4
+:sectlinks:
+:table-stripes: even
+:leveloffset: +1
+:title-logo-image: image::images/logo.svg[pdfwidth=30vw]
+
+image::./images/fhi-logo-norsk-forkortelse.svg[width=50%, pdfwidth=30vw]
+
+// Language switch link (displayed)
+[.text-right]
+link:{lang-switch-link}[English version]
+
+*Status*: Siste versjon# +
+*Versjon*: Versjon 1.1 +
+*Oppdatert*: 02/2025  +
+*Utgitt av*: Folkehelseinstituttet +
+*Kontakt*: service@helsedata.no +
+*Postadresse*: Lovisenberggata 8, 0456 Oslo  +
+*Besøksadresse*: Myrens verksted 6H
+0473 Oslo +
+*Telefon*: 21 07 81 60 +
+
+toc::[]
+include::01_forord.adoc[]
+
+include::02_innledning.adoc[]
+
+include::03_informasjonsmodell.adoc[]
+
+include::04_objektstruktur.adoc[]
+
+include::05_innrapportering.adoc[]
+
+include::06_importfiler.adoc[]
+
+include::07_filtyper.adoc[]
+
+:leveloffset: +1
+include::importfil_1a.adoc[]
+
+include::importfil_1b.adoc[]
+
+include::importfil_1c.adoc[]
+
+include::importfil_1d.adoc[]
+
+include::importfil_1e.adoc[]
+
+include::importfil_1f.adoc[]
+
+include::importfil_2.adoc[]
+
+:leveloffset: -1
+
+include::08_mapping_til_dcat.adoc[]
+
+include::09_mapping_til_skos.adoc[]
+
+include::11_begrepsliste.adoc[]
+
+include::12_klasser_i_logisk_informasjonsmodell.adoc[]
+
+
+
+
+

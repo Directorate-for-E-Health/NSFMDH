@@ -1,0 +1,18 @@
+= Referanser [[referanser]]
+
+[1] «Health Registries for Research (HRR), WP 4. National standard for registry data
+documentation,» [Internett]. Available: https://hrr.w.uib.no/wp-4-national-standard-forregistry-data-documentation/.
+[2] «Nasjonal e-helsestrategi 2017-2022,» Direktoratet for e-helse, 2017.
+[3] «Data Catalog Vocabulary (DCAT) - Version 2,» [Internett]. Available:
+https://www.w3.org/TR/vocab-dcat-2/.
+[4] «SKOS Simple Knowledge Organization System,» [Internett]. Available:
+https://www.w3.org/2004/02/skos/.
+[5] «Standard for beskrivelse av datasett, datatjenester og datakataloger (DCAT-AP-NO),»
+[Internett]. Available: https://data.norge.no/specification/dcat-ap-no/.
+[6] «SKOS-AP-NO-Begrep – Forvaltningsstandard for tilgjengeliggjøring av
+begrepsbeskrivelser basert på SKOS,» [Internett]. Available:
+https://data.norge.no/specification/skos-ap-no-begrep/.
+[7] «FAIR-prinsippene,» [Internett]. Available:
+https://www.force11.org/group/fairgroup/fairprinciples.
+[8] «Felles språk i helse- og omsorgssektoren,» Direktoratet for e-helse, 2019.
+

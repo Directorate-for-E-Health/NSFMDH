@@ -1,0 +1,111 @@
+= Importfil 1-d Statistikk [[importfil_1d]]
+
+Importfil 1d-Statistikk brukes til å presentere enkel statistikk for et utvalg av datakildens variabler.
+Statistikk som metadata har som formål å si noe om registerings-/ kodingskvaliteten og gi en pekepinn om antall forekomster. Statistikken egner
+seg ikke for analyse som sådan..
+En egen property, StatistikkType, på Kildemetadata angir om statistikken er årsbasert eller akkumulert. Årsbasert statistikk rapporteres på
+grunnlag av hele avsluttede årganger. Alle akkumuleringer og beregninger er basert på ett kalenderår. Akkumulert statistikk brukes der
+grunnlagsdataene ikke har naturlig inndeling i år, for eksempel helseundersøkelser. Alle akkumuleringer og beregninger er da basert på alle
+innsamlede data totalt. Legg merke til at statistikk rapporteres pr. datasamling.
+Statistikk rapporteres ulikt for kategoriske variabler og kontinuerlige variabler. For kategoriske variabler, gjøres det kun en opptelling innenfor
+hver kategori/kodeverdi samt antall variabler som mangler verdi. For kontinuerlige variabler, gjøres opptelling av antall rapporterte og antall
+manglende forekomster, samt enkle standardiserte statistiske beregninger. For funksjonene median og standardavvik skal bare gyldige verdier
+inngå i grunnlaget, og beregningen skjer ut fra ett år eller akkumulert i henhold til StatistikkType som nevnt over.
+Det må gjøres en vurdering av hvilke variabler det er naturlig å rapportere statistikk for. Kontinuerlige variable må inneholde data som
+representerer én rad i datasamlingen.
+Filen er basert på HealthTerm 11+N importformat og har følgende spesifikasjoner.
+I denne versjonen av denne spesifikasjonen er det ikke obligatorisk å produsere statistikk. 
+
+*Tabell 9: Format for importfil 1d-Statistikk*
+[width="100%",cols="5%,12%,10%,73%",options="header",]
+|===
+|*Nr* |*Property* |*Status* |*Beskrivelse*
+
+|1 |Code |Obligatorisk |Unik navnestreng for et statistikk-concept.
+Store bokstaver, uten mellomrom og æ, ø, å. Prefiks S for statistikk,
+underscore, årstall, kortnavn på datakilden, punktum, datasamling,
+punktum, variabelnavn, punktum KodeverkLokalID, f.eks.
+S++_++NPR++_++2017.BUP.KJONN.1
+
+|2 |ParentCode |Obligatorisk |Forkortelse av datakildens navn med
+prefiks S for statistikk som toppnode f.eks. S++_++NPR. «ParentCode» for
+toppnoden skal være lik kortnavnet på datakilden, For å splitte
+underliggende datasamlinger på årssett brukes i tillegg et årstall
+etterfulgt av kortnavnet på datasamlingen, f.eks.
+S++_++NPR++_++2017.BUP. +
+For kilder med akkumulert statistikk, brukes årstall for det året
+statistikken er produsert.
+
+|3 |Hierarchy |Valgfri |Skal være tom for STATISTIKK
+
+|4 |PreferredTerm |Obligatorisk |Kort beskrivende navn på den enkelte
+variabel, f.eks. Kjønn. «PreferredTerm» på toppnoden skal ha navn lik
+STATISTIKK med store bokstaver.
+
+|5 |ConceptType |Valgfri |Skal være tom for STATISTIKK
+
+|6 |PresentationOrder |Valgfri |Brukes dersom man ønsker å presentere
+statistikken på verdier/koder i en egendefinert rekkefølge som f.eks.
+avviker fra en alfabetisk. Gyldige verdier er positive heltall og
+statistikken presenteres i stigende rekkefølge basert på disse tallene.
+
+|7 |ValidFrom |Obligatorisk a|
+Brukes for å angi fra når statistikken er gyldig. Forutsetning for å
+kunne tilrettelegge for søk på statistikk på en gitt dato eller
+endringer i en valgt tidsperiode f.eks. utvikling over flere år.
+
+Format: YYYYMMDD
+
+|8 |ValidTo |Valgfri a|
+Brukes for å angi til når statistikken er gyldig. Forutsetning for å
+kunne tilrettelegge for søk på statistikk på en gitt dato eller
+endringer i en valgt tidsperiode f.eks. utvikling over flere år.
+
+Årsbasert statistikk skal ikke ha overlappende gyldighetsdatoer.
+
+ValidTo kan brukes ved innlesing av statistikk for tidligere årganger av
+årsbasert statistikk. Denne skal ellers være tom. Settes av
+metadataforvalter hos Helsedataservice.
+
+Format: YYYYMMDD
+
+|9 |Synonym |Valgfri |Skal være tom for STATISTIKK
+
+|10 |PatientFriendlyTerm |Valgfri |Skal være tom for STATISTIKK
+
+|11 |ClinicalFriendlyTerm |Valgfri |Skal være tom for STATISTIKK
+
+|12 |Kommentar |Valgfri |En mer utførlig beskrivelse av statistikken ved
+behov.
+
+|13 |SisteOppdaterteAarssett |Obligatorisk |Året statistikken gjelder
+for. Brukes for enklere å kunne filtrere på årssett. Kompletterer
+«ValidFrom» og «ValidTo».
+
+|14 |GyldigeTilfeller |Obligatorisk |Antall rapportert inn totalt
+
+|15 |ManglendeTilfeller |Anbefalt |Antall som mangler innrapportering
+(«NULL-forekomster i datagrunnlaget»)
+
+|16 |Desimaler |Valgfri |Antall desimaler avrundet til
+
+|17 |Prosentandel |Valgfri |Dersom beregnet i kilden
+
+|18 |MIN |Valgfri |Minimum
+
+|19 |MAX |Valgfri |Maksimum
+
+|20 |AVG |Valgfri |Gjennomsnitt
+
+|21 |STD |Valgfri |Standardavvik. Det er registerets
+populasjon/innsamlende data som avgjør om dette er standard avvik for
+populasjon eller innsamlede data.
+
+|22 |MED |Valgfri |Median
+
+|23 |KodeverkLokalID |Valgfri |Lokal ID for kodeverket og koden, f.eks.
+1 eller 2 for hhv Mann og Kvinne.
+
+|24-N |Mulige tilleggsproperties |Valgfri |Gir mulighet for å legge til
+ytterligere properties ved behov
+|===

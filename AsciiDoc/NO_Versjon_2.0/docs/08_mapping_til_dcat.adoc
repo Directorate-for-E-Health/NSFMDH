@@ -1,0 +1,365 @@
+= Mapping av properties i KILDEMETADATA-filen til DCAT-AP-NO og DCAT-EN [[mapping_til_dcat]]
+
+Arbeidet med å mappe kildemetadata mot henholdsvis den internasjonale versjonen av DCAT og Digitaliseringsdirektoratets norske versjon
+DCAT-AP-NO er et pågående arbeid.
+Mappingen er viktig for å kunne utveksle og dele metadata om datasett på tvers av sektorer og landegrenser, samt for å opparbeide en felles
+forståelse av innholdet.
+Mappingen er også en forutsetning for å kunne etablere maskinell validering av kvaliteten på metadataene.
+Der det i tabellen er brukt «E-helse:Extension» , «?» eller (…) har vi foreløpig ikke funnet en god match, eller er usikre på mappingen, mellom
+propertiene i denne spesifikasjonen og DCAT.
+
+*Overføres til Felles datakatalog, https://data.norge.no/
+
+Vedlegg 1a: Mapping KILDEMETADATA til DCAT-AP-NO 
+[width="100%",cols="14%,4%,6%,6%,46%,12%,12%"",options="header",]
+|===
+|Gruppering |Nr |Property |Status |Beskrivelse |DCAT-AP-NO |DCAT-EN
+(DQV-EN)
+
+|Administrative formål |1 |Code |Obligatorisk a|
+Unik navnestreng. Tillatte tegn er store bokstaver og tall, uten
+mellomrom og æ, ø, å.
+
+*Datakilde*: Prefiks K for kilde, underscore, kortnavn på datakilden.
+F.eks. K++_++HUNT.
+
+*Delkilde*: Prefiks K for kilde, underscore, kortnavn på datakilden,
+punktum, og navn på delkilde. F.eks. K++_++HUNT.HUNT1
+
+*Datasamling*: Prefiks K for kilde, underscore, kortnavn på datakilden,
+punktum, og navn på datasamling. F.eks.
+K++_++HUNT.HUNT1++_++QUESTIONAIRE1
+
+|Datasett: identifikator ++*++ |dct:identifier
+
+| |2 |ParentCode |Obligatorisk a|
+*Datakilde*: Skal være lik kortnavnet på datakilden, f.eks. HUNT.
+
+*Delkilde*: Skal være lik Code for tilhørende datakilde, f.eks.
+K++_++HUNT.
+
+*Datasamling*: Skal være lik Code for tilhørende datakilde. Hvis
+datasamlingen tilhører en delkilde, skal delkildens Code benyttes,
+f.eks. K++_++HUNT.HUNT1.
+
+|Datasett: er del av |dct:isPartOf
+
+|HealthTerm |3 |Hierarchy |Valgfri |Skal være tom for KILDEMETADATA
+|E-helse:Extension |
+
+|Tittel og beskrivelse |4 |PreferredTerm |Obligatorisk a|
+Kort beskrivende navn på datakilden, delkilden eller datasamlingen.
+
+F.eks. «««Den norske mor, far og barn undersøkelsen»»», «««MOBA
+Hovedskjema»»» eller «««Spørreskjema1»»» for henholdsvis datakilde,
+delkilde og datasamling.
+
+|Datasett: tittel (NB) ++*++ |dct:title (NB)
+
+|HealthTerm |5 |ConceptType |Valgfri |Skal være tom For KILDEMETADATA
+|E-helse:Extension |
+
+|Administrative formål |6 |PresentationOrder |Valgfri a|
+*Datakilde:* Skal være tom.
+
+*Delkilde, datasamling*: Brukes dersom man ønsker å presentere
+delkildene eller datasamlingene i en egendefinert rekkefølge som avviker
+fra alfabetisk. Gyldige verdier er positive heltall og delkildene eller
+datasamlingene presenteres i stigende rekkefølge basert på disse
+tallene.
+
+|E-helse:Extension |
+
+| |7 |ValidFrom |Obligatorisk a|
+Brukes for å angi fra når en datakilde, delkilde eller datasamling er
+gyldig. Settes ved første import.
+
+Format: YYYYMMDD
+
+|E-helse:Extension |
+
+| |8 |ValidTo |Valgfri |Skal være tom for KILDEMETADATA
+|E-helse:Extension |
+
+|Tittel og beskrivelse |9 |Synonym |Valgfri |Skal være tom for
+KILDEMETADATA (inntil videre) |E-helse:Extension |
+
+| |10 |PatientFriendlyTerm |Valgfri |Skal være tom for KILDEMETADATA
+(inntil videre) |E-helse:Extension |
+
+| |11 |ClinicalFriendlyTerm |Valgfri |Skal være tom for KILDEMETADATA
+(inntil videre) |E-helse:Extension |
+
+| |12 |KortNavn |Valgfri |Forkortelse av navnet på datakilden, delkilden
+eller datasamlingen. F.eks. MOBA eller NPR. |(Datasett: tittel)
+|(dct:title)
+
+| |13 |NavnEngelsk |Anbefales |Engelsk navn på datakilden, delkilden
+eller datasamlingen. |Datasett: tittel (EN) ++*++ |dct:title (EN)++*++
+
+| |14 |Beskrivelse |Obligatorisk |En utførlig beskrivelse. Skal være
+forståelig også for innbyggere. Se eksempler på helsedata.no |Datasett:
+beskrivelse (NB) ++*++ |dct:description (NB) ++*++
+
+| |15 |BeskrivelseEngelsk |Anbefales |En utførlig beskrivelse på
+engelsk. Skal være forståelig også for innbyggere. |Datasett:
+beskrivelse (EN) ++*++ |dct:description (EN) ++*++
+
+| |16 |AnbefalteBruksomraader |Obligatorisk |En beskrivelse av hvilke
+typer formål (eksempelvis forskning, analyse, styringsdata, beredskap
+osv) og faglige temaer (eksempelvis kreft, hjerte og kar, kirurgi osv),
+en datakilde, delkilde og/eller datasamling er egent for.
+|E-helse:Extension |
+
+| |17 |Emneord |Valgfri |Beskrivende emneord (tag). Skilles ved å bruke
+«;». F.eks. Emneord;Nytt emneord; |Datasett: emneord |dcat:keyword
+
+|Opphav og ferskhet |18 |Opprettet |Obligatorisk a|
+Året datakilden, delkilden eller datasamlingen ble opprettet og begynte
+å samle inn data.
+
+Format: YYYY.
+
+|E-helse:Extension |
+
+| |19 |SistOppdatert |Obligatorisk a|
+Dato for siste oppdatering av KILDEMETADATA
+
+Format: YYYYMMDD
+
+|Datasett: endringsdato |dct:modified
+
+| |20 |Frekvens |Valgfri a|
+*Datakilde*, *delkilde*: Skal være tom.
+
+*Datasamling*: Oppdateringsfrekvens brukes for å beskrive hvor ofte
+datagrunnlaget oppdateres på Helseanalyseplattformen.
+
+Standardisert vokabular:
+
+____
+1 = Sjeldnere enn årlig
+
+2 = Årlig
+
+3 = Halvårlig
+
+4 = Tertialvis
+
+5 = Kvartalsvis
+
+6 = Månedlig
+
+7 = Ukentlig
+
+8 = Daglig
+
+9 = Hyppigere enn daglig
+____
+
+|Datasett: frekvens ++*++ |dct:accrualPeriodicity ++*++
+
+| |21 |Innsamlingsmetode |Valgfri |Kort beskrivelse av metode for
+innsamling av data. |Datasett: ble generert ved |prov:wasGeneratedBy
+
+|_Innhold og kvalitet_ |22 |Kildetype |Obligatorisk a|
+Kategorisering av datakilden.
+
+Standardisert vokabular:
+
+____
+1 = Sentralt helseregisterfootnote:[Inkluderer lovbestemte helseregistre
+og andre sentrale helseregistre
+(https://www.fhi.no/div/datatilgang/om-sentrale-helseregistre/)]
+
+2 = Nasjonalt medisinsk kvalitetsregister
+
+3 = Annet medisinsk kvalitetsregister
+
+4 = Befolkningsbasert helseundersøkelse
+
+5 = Biobank
+
+6 = Annen datakilde
+____
+
+|Aktør: utgivertype |foaf:name
+
+| |23 |InklusjonsOgEksklusjonskriterier |Obligatorisk |En faglig
+overordnet beskrivelse av hvilke kriterier som stilles for at en person
+skal være registrert i datakilden, delkilden eller datasamlingen. Dette
+tilsvarer en beskrivelse av populasjonen som inngår i datakilden,
+delkilden eller datasamlingen. |E-helse:Extension |
+
+| |24 |GeografiskAvgrensning |Valgfri |Beskrivelse av opptaksområdet for
+innbyggerne som inngår i datakilden, delkilden eller datasamlingen.
+|Datasett: dekningsområde ++*++ |dct:spatial ++*++
+
+| |25 |Tilslutningsgrad |Valgfri |Andel enheter av totalt antall
+relevante enheter som rapporterer inn til datakilden, delkilden eller
+datasamlingen. Med enheter menes foretak, organisasjoner og
+virksomheter. Oppgis som desimaltall på formatet «0,875». (Kompletthet i
+form av dekningsgrad på institusjons- eller enhetsnivå) |Kompletthet
+(completeness)? |dqv:dimension
+
+| |26 |BeregningTilslutningsgrad |Valgfri |Hvordan tilslutningsgraden er
+beregnet. F.eks. hva er nevneren i brøken? |Kompletthet (completeness)?
+|dqv:dimension
+
+| |27 |Dekningsgrad |Obligatorisk a|
+*NB! Kun for Nasjonale kvalitetsregistre inntil videre.*
+
+Dekningsgraden angir i hvilken grad de pasienter eller hendelser som
+skal registreres faktisk blir registrert. Dekningsgraden for et
+enkeltsykehus er et mål på hvor mange av de aktuelle pasientene som
+behandles ved sykehuset som blir registrert i kvalitetsregisteret, mens
+den samlede dekningsgraden for registeret er den aggregerte
+dekningsgraden for alle sykehusene som behandler pasienter i registerets
+målgruppe.
+
+Man kan for eksempel si at registeret har en samlet dekningsgrad på 80%
+og at spesifikt sykehus har en dekningsgrad på 85%.
+
+Andre helsedatkilder bruker propertien «Kvalitetsnote» for å beskrive
+kvaliteten på datagrunnlaget.
+
+Oppgis som desimaltall på formatet «0,875».
+
+|Kompletthet (completeness)? |dqv:dimension
+
+| |28 |BeregningDekningsgrad |Valgfri |Hvordan dekningsgrad er beregnet.
+F.eks. sammenstilt med data fra NPR, og evt. fomel. |Kompletthet
+(completeness)? |dqv:dimension
+
+| |29 |Kvalitetsnote |Anbefales |Overordnet tekstlig beskrivelse av
+kvaliteten på datagrunnlaget. |Datasett: Kvalitetsnote (++*++)
+|dqv:qualityAnnotation
+
+|Rettsgrunnlag |30 |Formaal |Obligatorisk |Kort beskrivelse av formålet
+datakilden er opprettet for. Dersom mulig, en kopi av formålet slik det
+står skrevet i forskrift. a|
+Datasett: Følger
+
+(dcatno:objective? Finnes kun i veileder)
+
+|cpsv:follows
+
+| |31 |Lovverk |Obligatorisk |En eller flere URL-er til lovverk på
+lovdata.no. F.eks. URL til Lov om helseregistre og behandling av
+helseopplysninger. Flere URL-er skilles ved å bruke «;». |Datasett:
+Følger |cpsv:follows
+
+| |32 |Forskrift |Valgfri |En eller flere URL-er til forskrift på
+lovdata.no. F.eks. URL til Forskrift om innsamling og behandling av
+helseopplysninger i Medisinsk fødselsregister. Flere URL-er skilles ved
+å bruke «;». |Datasett: Følger |cpsv:follows
+
+| |33 |HjemmelTilgjengeliggjoering |Valgfri |URL til paragraf med
+hjemmel for tilgjengeliggjøring. |Datasett: Følger |cpsv:follows
+
+| |34 |Dataansvarlig |Obligatorisk |Navn på virksomheten eller enheten
+som eier og har det juridiske dataansvaret for datakilden, delkilden
+eller datasamlingen. |Datasett: kontaktpunkt |dcat:contactPoint
+
+| |35 |Databehandler |Obligatorisk |Navn på virksomheten eller enheten
+som faktisk behandler datakilden. Er det samme som Dataansvarlig med
+mindre denne har satt ut databehandlingen til ekstern tredjepart.
+|Datasett: kontaktpunkt |dcat:contactPoint
+
+| |36 |GradAvPersonidentifikasjon |Valgfri a|
+Høyeste grad av identifisering det er mulig å søke om fra denne
+datakilden, delkilden eller datasamlingen.
+
+Standardisert vokabular:
+
+____
+1 = Direkte personidentifiserbare opplysninger
+
+2 = Indirekte personidentifiserbare opplysninger
+
+3 = Anonyme opplysninger
+____
+
+|E-helse: Extension |
+
+| |37 |JuridiskNote |Valgfri |Relevant juridisk informasjon som ikke
+dekkes av andre properties. F.eks. informasjon om reservasjonsrett eller
+hvilke andre kilder data kan sammenstilles med. |Datasett: Følger
+|cpsv:follows
+
+|_Kontaktinformasjon_ |38 |Hjemmeside |Obligatorisk |URL til hjemmeside.
+|Datasett: kontaktpunkt |dcat:contactPoint
+
+| |39 |Epost |Obligatorisk |E-postadresse for henvendelser om
+datakilden, delkilden eller datasamlingen. |Datasett: kontaktpunkt ++*++
+|dcat:contactPoint ++*++
+
+| |40 |Telefonnummer |Valgfri |Telefonnummer for henvendelser om
+datakilden, delkilden eller datasamlingen. |Datasett: kontaktpunkt ++*++
+|dcat:contactPoint ++*++
+
+| |41 |OrgnrDataansvarlig |Valgfri |Organisasjonsnummer til
+dataansvarlig. |Datasett: kontaktpunkt |dcat:contactPoint
+
+| |42 |HERidDatakilde   |Valgfri a|
+*Datakilde*: Unik identifikator som tildeles av NHN, Brukes for
+identifisering av datakilden innenfor helsenettet. Kan brukes til
+spørringer.
+
+*Delkilde, datasamling:* Skal være tom.
+
+|E-helse: Extension |dcat:contactPoint
+
+| |43 |HERidDataansvarlig |Valgfri |Unik identifikator som tildeles av
+NHN, Brukes for identifisering av datakilden innenfor helsenettet. Kan
+brukes til spørringer. |E-helse: Extension |
+
+|_Administrative formål_ |44 |Kildemetadatatype |Obligatorisk a|
+Angir hvilken type kildemetadata som beskrives.
+
+Standardisert vokabular:
+
+____
+1 = Datakilde
+
+2 = Delkilde
+
+3 = Datasamling
+____
+
+|E-helse: Extension |
+
+| |45 |ErISamsvarMed  |Valgfri |Referanse til evt. standard(er),
+spesifikasjon(er) etc. som datakilden, delkilden eller datasamlingen er
+i henhold til, f.eks. DCAT-AP-NO. Skilles ved å bruke «;». F.eks.
+Standard 1;Standard 2; |Datasett: i samsvar med |dqv:conformsTo
+
+| |46 |StatistikkType |Valgfri a|
+Hvorvidt medfølgende statistikk er akkumulert eller årsbasert.
+Akkumulert vil eksempelvis kunne være over flere år slik som for
+helseundersøkelser, mens årsbasert vil være innenfor et definert år slik
+som for DÅR.
+
+Standardisert vokabular:
+
+____
+1 = Akkumulert
+
+2 = Årsbasert
+____
+
+|E-helse: Extension |
+
+| |47 |TelleEnhet |Valgfri |Datasamling: Telleenhet for datasamlingen
+angitt ved en tekstlig beskrivelse, eks. pasient, opphold. +
+*Kilde, Delkilde:* Skal være tom |E-helse: Extension |
+
+|_Tillegg_ |48-N |Mulige tilleggsproperties | a|
+Gir mulighet for å legge til ytterligere properties som f.eks.
+registerspesifikke tilleggsproperties, properties for
+kategoriseringsformål etc.
+
+Disse kan defineres etter hvert som ønsker og behov oppstår.
+
+| |
+|===

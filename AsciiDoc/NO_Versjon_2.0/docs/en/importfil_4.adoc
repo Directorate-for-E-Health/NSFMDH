@@ -1,0 +1,37 @@
+= Importfil 4x-Mapset [[importfil_4]]
+
+Mapset er et eget importfilformat i HealthTerm. Dette brukes for å mappe mellom concepts i
+to forskjellig Code Systems, eller mellom to Namespaces internt i et Code System.
+For å realisere vår informasjonsmodell i HealthTerm, er følgende mapset nødvendige:
+1. Fra DATASAMLINGER til respektive VERSJONER av datasamlingene
+2. Fra VERSJONER til VARIABELMETDATA og variabler som inngår i respektive
+versjoner
+3. Fra VARIABELMETADATA til LOKALE KODEVERK
+4. Fra VARIABELMETADATA til ADMINSTRATIVE KODEVERK
+5. Fra VARIABELMETADATA til HELSEFAGLIGE KODEVERK
+6. Fra VARIABELMETADATA til STATISTIKK
+7. Fra VARIABELGRUPPE til VARIABELMETADATA
+8. Fra INSTRUMENT til VARIABELMETADATA
+I tillegg kan man bruke Mapsets for å mappe concepts til f.eks. felles klassifikasjoner,
+standarder og informasjonsmodeller som er importert, og som man har tilgang til i
+HealthTerm. Dette kan være nyttig for f.eks. tilrettelegging og videreutvikling av filtrering og
+søk på helsedata.no og visualisering av hvilken kontekst variablene er samlet inn i/nngår i.
+Mappingfiler inneholder et løpenummer, en source og en target. Source er konseptet det
+mappes fra, f.eks. en variabel. Target er konseptet det mappes til, f.eks. kodeverket som
+variabelen er basert på.
+[options="header"]
+|===
+|Nr |Source |Target
+|1 |CODE eller annen property |CODE eller annen property
+|Løpenummer |String |String
+|Løpenummer tildeles sekvensielt. Dette har ingen praktisk betydning.
+|Source_Code henviser til felt 1,Code, for det codesystemet som skal være kilde for mappingen. Dette vil være Variabel-ID for mapset for statistikk, kodeverk og versjonen. Eksempel V_DAR.KJONN_K.
+|Target_Code henviser til felt 1, Code, for det codesystemet som skal være mål for mappingen. +
+For statistikk-mapset vil dette være Statistikk-ID. Eksempel S_DAR.KJONN_K.
+For kodeverk vil det være Kodeverk-ID.
+* Eksempel for lokale kodeverk er KK_DAR.KJONN_K.
+* Eksempel for administrative kodeverk er 3101.
+* Eksempel for helsefaglige kodeverk er ICD-10.
+For Versjon vil det være Versjon-ID. Eksempel V_DAR.DAR.2017Q3
+
+

@@ -1,0 +1,305 @@
+= Mapping av properties i VARIABELMETADATAfilen til SKOS-AP-NO og SKOS-EN [[mapping_til_skos]]
+
+Arbeidet med å mappe variabelmetadata mot henholdsvis den internasjonale versjonen av SKOS og Digitaliseringsdirektoratets norske versjon
+SKOS-AP-NO er et pågående arbeid.
+Mappingen er viktig for å kunne utveksle og dele metadata om variabler på tvers av sektorer og landegrenser, samt for å opparbeide en felles
+forståelse av hva en variabel betyr.
+Mappingen er også en forutsetning for å kunne etablere maskinell validering av kvaliteten på metadataene.
+Der det i tabellen er brukt «E-helse:Extension» eller «?» har vi foreløpig ikke funnet en god match, eller er usikre på mappingen, mellom
+propertiene i denne spesifikasjonen og SKOS.
+
+Vedlegg 1b: Mapping VARIABELMETADATA til SKOS-AP-NO 
+[width="100%",cols="13%,5%,11%,11%,37%,11%,12%",options="header",]
+|===
+|Gruppering |Nr |Property |Status |Beskrivelse |SKOS-AP-NO |SKOS Engelsk
+
+|Administrative formål |1 |Code |Obligatorisk a|
+Unik navnestreng for en variabel som også benyttes for å koble metadata
+med data. Tillatte tegn er store bokstaver og tall, uten mellomrom og æ,
+ø, å.
+
+Prefiks V for variabel, underscore, kortnavn på datakilden, punktum, og
+samme variabelnavn som i kilden, f.eks. V++_++DAR.ALDER++_++AAR.
+
+|Begrep: identifikator |dct:identifier
+
+| |2 |ParentCode |Obligatorisk |Forkortelse for kildenavn med prefiks V
+for Variabel og underscore, f.eks. V++_++DAR. «««ParentCode»»» for
+toppnoden skal være lik kortnavnet på datakilden, f.eks. DAR. |E-helse:
+Extension |
+
+|HealthTerm |3 |Hierarchy |Valgfri |Brukes dersom man ønsker å
+presentere variablene i flere kontekster, også kalt polyhierarkier.
+|E-helse: Extension |
+
+|Tittel og beskrivelse |4 |PreferredTerm |Obligatorisk |Kort beskrivende
+navn på den enkelte variabel, f.eks. Kjønn. PreferredTerm på toppnoden
+skal ha navn lik «««VARIABELMETADATA»»» med store bokstaver. |Begrep:
+anbefaltTerm (NB) |skosxl:prefLabel (NB)
+
+|HealthTerm |5 |ConceptType |Valgfri |Skal være tom. |E-helse: Extension
+|
+
+|Administrative formål |6 |PresentationOrder |Valgfri |Brukes dersom man
+ønsker å presentere variablene i en egendefinert rekkefølge som avviker
+fra en alfabetisk. Gyldige verdier er positive heltall og variablene
+presenteres i stigende rekkefølge basert på disse tallene. |E-helse:
+Extension |
+
+| |7 |ValidFrom |Obligatorisk a|
+Brukes for å angi fra når en variabel er gyldig. Settes ved første
+import. Forutsetning for å kunne tilrettelegge for søk på gyldige
+variabler på en gitt dato eller endringer på en variabel i en
+tidsperiode. +
+Med «gyldig» menes at det finnes data tilgjengelig for variabelen. Nye
+avledede variabler kan være gyldig tilbake i tid.
+
+Format: YYYYMMDD
+
+|Begrep: gyldighetsperiode.gyldigFraOgMed |dct:temporal
+
+| |8 |ValidTo |Valgfri a|
+Brukes for å angi at en variabel ble ugyldig fra en gitt dato. Brukes
+kun ved initial import når man ønsker å få med historikk på utgåtte
+variabler. Variabler med ValidTo-dato må fjernes fra importfilen ved
+neste gangs import for å unngå feil i HealthTerm
+
+Format: YYYYMMDD
+
+|Begrep: gyldighetsperiode.gyldigTilOgMed |dct:temporal
+
+|Tittel og beskrivelse |9 |Synonym |Valgfri |Brukes dersom man ønsker å
+legge til synonymer til et variabelnavn. Krever en ny rad i importfilen
+dersom mer enn ett synonym legges til. |Begrep: tillattTerm
+|skosxl:prefLabel
+
+| |10 |PatientFriendlyTerm |Valgfri |Pasientvennlig navn på variabelen.
+|Begrep: tillattTerm |skosxl:prefLabel
+
+| |11 |ClinicalFriendlyTerm |Valgfri |Helsefaglig begrep på variabelen.
+|Begrep: tillattTerm |skosxl:prefLabel
+
+| |12 |NavnEngelsk |Anbefalt |Engelsk navn på variabelen. |Begrep:
+anbefaltTerm (EN) |skosxl:prefLabel (EN)
+
+| |13 |Beskrivelse |Obligatorisk |Utførlig beskrivelse av variabelen. Se
+eksempler på helsedata.no. |Begrep: definisjon (NB) |skosno:definisjon
+(NB)
+
+| |14 |BeskrivelseEngelsk |Anbefalt |Utførlig beskrivelse av variabelen
+på engelsk. |Begrep: definisjon (EN) |skosno:definisjon (EN)
+
+|Opphav |15 |Opprinnelse |Obligatorisk a|
+Om variabelen er hentet direkte fra helsetjenesten, er beregnet, avledet
+eller kodet. Dersom en variabel tilhører flere av verdiene i det
+standardiserte vokabularet så skal det siste steget i prosessen
+benyttes.
+
+Standardisert vokabular:
+
+____
+1 = Beregnet (F.eks. utregnet basert på en formel; Ventetid, liggetid
+etc)
+
+2 = Avledet (F.eks. en kategorisering; Aldersgrupper, fylke, etc.)
+
+3 = Kodet (F.eks. strukturering av tekst basert på et
+kodeverk/terminologi)
+
+4 = Direkte fra fagsystem/EPJ (F.eks. hentet/gjenbrukt direkte fra
+NPR-melding, «urørt»)
+
+5 = Direkte fra skjema (F.eks. hentet/gjenbrukt direkte fra papirskjema
+eller elektronisk skjemaløsning, «urørt»)
+
+6 = Annet (F.eks. etablert i helsedatakilden for administrative formål.)
+____
+
+|E-helse: Extension |
+
+| |16 |OpprinnelseUtledning |Valgfri |Hvordan beregnede, avledede og
+kodete variabler er utledet. Ikke aktuell for variabler hentet direkte
+fra helsetjenesten eller en elektronisk skjemaløsning |E-helse:
+Extension |
+
+|Innhold og kvalitet |17 |Kommentar |Valgfri |Kommentar til variabelen.
+Dette kan f.eks. være når variabelen gikk over fra å være basert på
+ICD-9 til ICD-10 eller andre endringer av betydning. |E-helse: Extension
+(NB) |
+
+| |18 |KommentarEngelsk |Valgfri |Engelsk oversettelse av Kommentar.
+|E-helse: Extension (EN) |
+
+| |19 |Kvalitetsnote |Anbefalt |Overordnet tekstlig beskrivelse av
+kvaliteten på datagrunnlaget som variabelen representerer, f.eks.
+kompletthet i form av fullstendighet (kodingskvalitet) og/eller
+kodekvalitet. |(Datasett: Kvalitetsnote (NB)) |
+
+| |20 |KvalitetsnoteEngelsk |Anbefalt |Engelsk oversettelse av
+Kvalitetsnote. |(Datasett: Kvalitetsnote (EN)) |
+
+| |21 |MaaleType |Valgfri |Hva variabelen måler. F.eks. tid, alder, vekt
+og puls. |E-helse: Extension |
+
+| |22 |MaaleEnhet |Valgfri |Hvilken måleenhet variabelen er basert på.
+F.eks. år, mnd., kg, gram, slag/minutt. |E-helse: Extension |
+
+| |23 |DataType |Obligatorisk a|
+Datatype som spesifisert i FHIR Primitive Types
+(https://www.hl7.org/fhir/datatypes.html).
+
+Standardisert vokabular:
+
+____
+1 = String
+
+2 = Integer
+
+3 = Decimal
+
+4 = Boolean
+
+5 = Time
+
+6 = Date
+
+7 = Datetime
+
+8 = Uri
+
+9 = Base64binary
+____
+
+|E-helse: Extension |
+
+| |24 |Lengde |Valgfri |Maksimal lengde på variabelen i antall
+tegn/siffer +
+Kan brukes for variabler med datatype 1,2 og 3 (String, Integer og
+Decimal) |E-helse: Extension |
+
+| |25 |Presisjon |Valgfri |Maksimalt antall desimaler. |E-helse:
+Extension |
+
+| |26 |GrenseLav |Valgfri |Nedre grenseverdi (minimumsverdi) +
+Kan brukes for variabler med datatype 2 og 3 (Integer og Decimal) +
+Indikerer at lavere verdier med stor sannsynlighet er feil, og bør
+utelates fra analyse. |E-helse: Extension |
+
+| |27 |GrenseHoy |Valgfri |Øvre grenseverdi (maksimumsverdi) +
+Kan brukes for variabler med datatype 2 og 3 (Integer og Decimal) +
+Indikerer at høyere verdier med stor sannsynlighet er feil, og bør
+utelates fra analyse. |E-helse: Extension |
+
+|Juridisk informasjon |28 |Identifiseringsgrad |Valgfri a|
+Dataforvalters klassifisering av bidrag til risiko for identifisering av
+individ. Nyttig informasjon for forsker når prosjekt må vurdere tiltak
+for dataminimering.
+
+Standardisert vokabular:
+
+____
+1 = Ikke vurdert
+
+2 = Ingen
+
+3 = Lav
+
+4 = Middels
+
+5 = Høy
+____
+
+|E-helse: Extension |
+
+|Skjema |29 |Ledetekst |Valgfri |Dette er teksten som står i
+spørreskjema eller innrapporteringsskjema ved hver variabel. Ledetekst
+er primært aktuell for variabler som er registrert via et skjema/en
+skjemaløsning. |E-helse: Extension |
+
+| |30 |LedetekstEngelsk |Valgfri |Engelsk ledetekst for variabelen.
+|E-helse: Extension |
+
+| |31 |SpoersmaalNummer |Valgfri |Spørsmålsnummer i spørreskjema eller
+innrapporteringsskjema. |E-helse: Extension |
+
+| |32 |SkjemaVersjon |Valgfri |Vise hvilke(n) versjon(er) av
+spørreskjema eller innrapporteringsskjema denne variabelen finnes i.
+|E-helse: Extension |
+
+|Administrative formål |33 |AnbefaltForDigitaltInnsyn |Obligatorisk++*++
+a|
+Anbefaling fra forvalter av datakilden til HDS om hvorvidt variabelen
+bør inngå i et digitalt, automatisert innsyn til den registrerte via
+helsenorge.no.
+
+Er det anbefalt at variabelen, gitt at denne inngår i et dataprodukt som
+skal overføres til Helseanalyseplattformen, inngår i et digitalt,
+automatisert innsyn?
+
+Standardisert vokabular:
+
+____
+1 = Ja
+
+2 = Valgfri
+____
+
+++*++Gjelder kun for variabler som skal inngå i dataprodukt som skal
+overføres til Helsanalyseplattformen.
+
+|E-helse: Extension |
+
+| |34 |TabellvennligNavn  |Valgfri |Alternativ kolonneoverskrift for
+eksport eller utskrift av data. |E-helse: Extension |
+
+| |35 |TabellvennligNavnEngelsk |Valgfri |Alternativ kolonneoverskrift
+for eksport eller utskrift av data for engelskspråklige. |E-helse:
+Extension |
+
+| |36 |DatabaseReferanse |Obligatorisk
+|API-streng/URL/SourceID/TechName/unikt navn på klasse og/eller
+attributt i datakildens egen database. Denne referansen vil bli benyttet
+ved forespørsel om henting av variabelen fra kilden. |E-helse: Extension
+|
+
+| |37 |Erstatter |Anbefalt |Code som er erstattet av denne variabelen.
+|Begrep: erstatter |dct:replaces
+
+| |38 |ErstattesAv |Valgfri |Code til variabelen som evt. erstatter
+denne variabelen. |Begrep: erstattesAv |dct:replacedBy
+
+| |39 |StartdatoHistorikk |Valgfri a|
+Dato for start reell historikk. +
+Hvis angitt er dette den første datoen man har historikk på metadata.
+
+Dette for å dokumentere at det kan være periode der variabelen er i
+bruk, men at man ikke kjenner hvilke endringer som er gjort.
+
+Hvis ikke angitt, regnes ValidFrom som start på historikk
+
+|E-helse: Extension |
+
+| |40 |Synlig |Obligatorisk a|
+Definerer om variabelen skal presenteres på helsedata.no. Variabler som
+ikke er synlige vil heller ikke kunne inngå i en variabelliste som
+legges ved søknad om tilgang til helsedata via felles søknadsskjema på
+helsedata.no.
+
+Standardisert vokabular:
+
+____
+1 = Ja
+
+2 = Valgfri
+____
+
+|E-helse: Extension |
+
+|Tillegg |41-N |Mulige tilleggsproperties |Valgfri |Gir mulighet for å
+legge til ytterligere properties som f.eks. registerspesifikke
+tilleggsproperties, properties for «««harmoniseringsarbeid»»»,
+properties for kategoriseringsformål, properties med referanser til
+begrepskataloger, terminologier, standarder etc. +
+Skal også gi mulighet for generelle eller registerspesifikke filtrerings
+mekanismer. | |
+|===

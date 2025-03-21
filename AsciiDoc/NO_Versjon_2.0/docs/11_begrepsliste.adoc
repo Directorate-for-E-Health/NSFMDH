@@ -1,0 +1,199 @@
+= Begrepsliste [[begrepsliste]]
+
+Dette dokumentet benytter en del fag- og løsningsspesifikke begrep. Disse er forklart nærmere i tabellen under
+
+Tabell 15: Begrepsliste
+
+[options="header"]
+
+|===
+|Begrep |Forklaring
+|CareCom |CareCom er teknisk leverandør av HealthTerm, løsningen
+Nasjonal variabelkatalog er realisert i.
+|Code System |Code System er et løsningsspesifikt begrep som anvendes i
+HealthTerm.
+Et Code System kan betraktes som den øverste mappen i en
+mappestruktur i HealthTerm. All informasjon lagres innenfor et
+Code System. Hvert register modelleres i løsningen som et
+separat Code System.
+|Concept |Concept er et løsningsspesifikt begrep som anvendes i
+HealthTerm.
+Concept er de meningsbærende dataobjektene i HealthTerm og
+brukes til å modellere variabler, datakilder, datasamlinger osv.
+|Concept type |Concept type er et løsningsspesifikt begrep som anvendes i
+HealthTerm.
+Brukes for å skille mellom, og kunne søke på, forskjellige typer
+concepts; Regular, Grouping og Record. «Regular» forteller at et
+concept er et vanlig concept med tilhørende properties, f.eks. en
+variabel. «Grouping» forteller at et concept kun er til for å
+gruppere regulære concepts, f.eks. kapitler, tema, etc. «Record»
+er et concept som brukes for å legge til utfyllende informasjon på
+et moder-concept. Et «Record»-concept kan ikke ha barn under
+seg, men er ellers som et normalt concept.
+|Core Namespace| Core namespace er et løsningsspesifikt begrep som anvendes i
+HealthTerm. Core Namespace er hovedmappen i et Code
+System. For de nasjonale helsedatakildene lagres kildemetadata
+om variablene som Core Namespace.
+|Dataansvarlig |Den som bestemmer formålet med behandlingen av
+helseopplysningene og hvilke hjelpemidler som skal brukes, og
+den som i eller i medhold av lov er pålagt et
+databehandlingsansvar.
+Kilde: Helseregisterloven § § 2 bokstav e.
+|Databehandler |Den som behandler personopplysninger på vegne av den
+[data]behandlingsansvarlige.
+Kilde: Personopplysningsloven § § 2 nr.5
+|Datakilde |Datakilde er definert som kildene til dataene. I denne versjonen
+av spesifikasjonen er en datakilde ekvivalent med et
+helseregister, et nasjonalt medisinsk kvalitetsregister eller en
+befolkningsbasert helseundersøkelse.
+|Dataprodukt |Dataprodukt er en konseptualisering av måten data skal
+overføres fra nasjonale helsedatakilder til
+sikre analyserom. Konseptet dataprodukt består av et
+datasett, samt metadata om variabler, versjon og datasamling.
+|Datasamling |Datasamling er definert som et sub-register innenfor en
+datakilde, altså en delmengde av variablene i den aktuelle
+datakilden. Eksempler på datasamlinger kan være sektorer i
+NPR eller skjema i medisinske kvalitetsregistre.
+|Dekningsgrad |Dekningsgraden angir i hvilken grad de pasienter eller hendelser
+som skal registreres faktisk blir registrert. Dekningsgraden for et
+enkeltsykehus er et mål på hvor mange av de aktuelle
+pasientene som behandles ved sykehuset som blir registrert i
+kvalitetsregisteret, mens den samlede dekningsgraden for
+registeret er den aggregerte dekningsgraden for alle sykehusene
+som behandler pasienter i registerets målgruppe. Man kan for
+eksempel si at registeret har en samlet dekningsgrad på 80% og
+at spesifikt sykehus har en dekningsgrad på 85%.
+I vår sammenheng er det kun den aggregerte dekningsgraden
+for de nasjonale kvalitetsregistrene som skal rapportere inn
+(DekningsgradAggregert).
+|Delkilde |Delkilde kan brukes dersom datakilden har ulike deler som må
+beskrives ut ifra en logisk, kronologisk, juridisk eller
+populasjonsbasert betraktning. HUNT1, 2, 3 og 4 er eksempel
+på delkilder. Denne kan ha flere nivåer. 
+Delkilde også brukes for å lage logiske grupperinger av flere
+dataprodukt.
+|Extension Namespace |Extension Namespace er et løsningsspesifikt begrep som
+anvendes i HealthTerm. Extension Namespace (eller bare
+Extension) er tilleggsmapper i HealthTerm der annen
+informasjon lagres. Variabelmetadata, statistikk, versjon,
+instrument og variabelgruppe lagres i Extension Namespaces
+under respektive Core Namespaces
+|Filter |Filter er en kategorisering av variabler ved hjelp av kodeverk
+eller egenskaper som ikke er definert som generelle properties i
+denne spesifikasjonen.
+Et filterkodeverk kan f.eks. bestå av koder for Mor, Barn og Far,
+der en variabel som kun benyttes for Far, knyttes til
+filteregenskapen Far.
+|Informasjonsmodell |En informasjonsmodell er en formalisert beskrivelse av et
+interesseområde f.eks. i form av modellelementer (klasserer)
+med tilhørende egenskaper (properties), og relasjoner mellom
+disse. Den formelle beskrivelsen av en informasjonsmodell er
+«en beskrivelse av informasjonen en virksomhet trenger å motta
+eller selv produsere for å utføre sitt daglige virke».
+Kilde: Skatteetaten gjennom Difi:
+https://www.difi.no/artikkel/2016/09/begreperfellesinformasjonsmodeller
+|Instrument |Instrument er en betegnelse på en standardisert
+innsamlingsmetode for data. Dette kan være hele eller deler av
+et spørreskjema, eller et fysisk instrument for f.eks. måling av
+bentetthet, analyse av prøvemateriale etc.
+|Kategorisk variabel |En kategorisk variabel er en variabel som kan ta på seg en av et
+begrenset, og vanligvis fast, antall mulige verdier, f.eks. en
+kodeverdi fra et kodeverk (Diagnose, kjønn, kommune etc.).
+Den består altså ikke av tallverdier, men av f.eks. kodeverdier
+eller kategoriseringer (klassifiseringer).
+Kontinuerlig variabel En kontinuerlig variabel kan anta alle verdier, ofte innenfor et
+bestemt intervall, f.eks. høyde, vekt, inntekt, osv.
+|Klasse |En klasse brukes til å klassifisere og beskrive et sett av objekter
+f.eks. variabler med tilhørende egenskaper (properties)
+|Kode |Kode er i denne sammenheng det samme som svaralternativene
+i et verdisett. Består av en kodeverdi (KodeverkLokalID) og en
+kodetekst (Kodebeskrivelsetekst), for eksempel «2» og
+«Kvinne».
+|Kodefrekvens |Kodefrekvens er definert som antall gyldige tilfeller av et
+svaralternativ/utfall av en variabel.
+|Kodeverdi |Kodeverdien er koden som står foran en kodetekst, f.eks. 1 for
+Mann. Kodeverdier kan vær alfanumeriske og inneholde både
+mellomrom og forskjellige tegn. Dersom man skal koble en
+kodeverdi med kodetekst er det derfor viktig at formatene er
+«en-til-en».
+|Kodeverk |Kodeverk favner i denne sammenheng bredere enn det man i
+helsevesenet normalt definerer som et kodeverk. Et kodeverk
+kan i denne sammenheng både representere en variabels
+verdisett/svaralternativ eller et standardisert (kontrollert)
+vokabular for å beskrive en properties egenskaper.
+Den formelle definisjonen av et kodeverk er «en samling av
+begreper eller en klassifikasjon hvor hver tilhørende
+begrepsdefinisjon er tilknyttet en unik kode innenfor samlingen
+eller klassifikasjonen».
+|Kodetekst| Kodeteksten er teksten som etterfølger en kodeverdi, f.eks.
+«Mann» for kodeverdien 1.
+|Mapping |Mapping brukes for å håndtere ikke-hierarkiske relasjoner i
+HealthTerm, eksempelvis referere til kodeverk. Mer formelt kan
+man si at mapping er en funksjon som knytter dataobjekter
+(concepts) i et gitt sett av unike dataobjekter (souce) til et annet
+sett av unike dataobjekter (target).
+|Lovbestemte helseregistre| Lovbestemte helseregistre (§11) behandler direkte
+personidentifiserbare helseopplysninger uten krav til samtykke.
+De er etablert av den sentrale helseforvaltningen for å ivareta
+landsomfattende funksjoner og er meldepliktige. 10 av de
+sentrale helseregistrene er lovbestemte. De resterende 8
+registrene er samtykkebaserte eller uten direkte
+personidentifiserende kjennetegn (§9a og 9b)
+|Nasjonal variabelkatalog |Den nasjonale variabelkatalogen er navnet på løsningen der
+innrapporterte metadata fra helsedatakildene forvaltes og
+tilgjengeliggjøres for helsedata.no og andre metadatakataloger i
+inn og utland.
+|Objektstruktur |En objekstruktur er en representasjon av hvordan klassene i en
+informasjonsmodell er modellert i henhold til hverandre og hvilke
+relasjoner som f.eks. finnes mellom klassene i
+informasjonsmodellen.
+|Polyhierarki |Polyhieraki betyr at et begrep kan plasseres i flere hierarkier,
+f.eks. kan et helseregister både plasseres i et
+organisasjonshierarki, et hierarki for type registre og et hierarki
+der registeret er kategorisert etter hvilken pasientgruppe det
+favner.
+|Property |Properties er det samme som attributter som brukes til å
+beskrive egenskapene til dataobjekt (concept), f.eks. en
+variabel.
+|Retired| Retired brukes, i denne sammenheng, til å beskrive at et
+concept, eller en property, ikke lengre er aktive i løsningen.
+En gammel versjon av en property settes eksempelvis til retired
+når man redigerer navnet på den.
+|Rike metadata| Rike metadata er ekvivalent med utfyllende metadata. Metadata som er tilstrekkelige for å utfylle et definert formål.
+Rike metadata må si noe om blant annet hvor man kan
+henvendes seg for å søke om å få tilgang til data, tilgangen til
+data i seg selv, restriksjoner som er lagt på datagrunnlaget,
+datakvaliteten, kodeverk og terminologi som er anvendt,
+kontekst f.eks. i form av en begreps-/informasjonsmodell etc.
+|Sentrale helseregistre| De sentrale helseregistrene er etablert for å ivareta
+landsomfattende oppgaver. De brukes først og fremst til
+helseanalyser, statistikk, kvalitetsforbedring av helsetjenester,
+forskning, administrasjon, styring og beredskap.
+Registrene er opprettet med hjemmel i helseregisterloven og
+forskrifter. Registre med direkte personidentifiserbare
+opplysninger som ikke er basert på samtykke, er opprettet etter
+behandling i Stortinget. Det finnes også sentrale helseregistre
+som ikke inneholder personidentifiserbare opplysninger, eller
+bare indirekte personidentifiserbare opplysninger. Registrene
+forvaltes av ulike virksomheter i den sentrale helseforvaltningen.
+https://www.fhi.no/div/datatilgang/om-sentrale-helseregistre/
+|Standardisert vokabular |Et standardisert (kontrollert) vokabular er en liste med
+forhåndsdefinerte svaralternativ. Standardiserte vokabularer
+bidrar blant annet til enklere validering av datakvalitet, bedre
+semantisk interoperabilitet og enklere tilrettelegging av data for
+analyse, og består vanligvis av en kodeverdi og kodetekst.
+Et synonymt begrep er «kontrollert vokabular». Ref.
+https://data.norge.no/specification/dcat-ap-no/#Kontrollerte-vokabularer
+|Statistikk |Statistikk i denne sammenheng, er å betrakte som metadata
+som sier noe om volum, kodingskvalitet og datakvalitet generelt
+på variabelnivå. Statistikken som innrapporteres som metadata
+egner seg ikke for, og er heller ikke ment for, analyseformål.
+|Variabel |Variabler er de informasjonsbærende elementene i datakilden
+og definerer hvilken informasjon som finnes i den aktuelle
+helsedatakilden.
+|Variabelgruppe |Variabelgruppe er en kategorisering av variabler. Strukturen kan
+bygges opp hierarkisk. Inntil videre begrenset til 2 nivåer.
+|Versjon |Versjon er et teknisk hjelpemiddel som brukes til å definere
+hvilke variabler som inngår i ulike årganger/versjoner av de ulike
+datasamlingene i en datakilde.
+|===

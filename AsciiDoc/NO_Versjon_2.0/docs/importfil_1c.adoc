@@ -1,0 +1,131 @@
+= Importfil 1c-Versjon [[importfil_1c]]
+
+Importfil 1c-Versjon brukes til å identifisere hvilke variabler som inngår i en datasamling i en gitt periode og evt. revisjon. Den skal også inneholde opplysninger om når datagrunnlaget er registrert. En variabel vil kunne inngå i flere datasamlinger i forskjellige perioder. Hver versjon gis en unik code, og en angivelse av start på gyldighetsperiode. En variabels tilhørighet til en versjon defineres ved hjelp av Mapsets.
+Ved import av en ny versjon av en eksisterende datasamling, gis forrige (gjeldene) versjon en sluttdato av metadataforvaltningsansvarlige slik at det kun er en gjeldende versjon av hver datasamling. 
+
+Dataprodukter identifiseres ved hjelp av Versjon. Derfor må det registreres en ny versjon i forkant av leveranse av et dataprodukt for å
+identifisere hvilke variabler som inngår i dataproduktet, hvilken tidsperiode datagrunnlaget er registrert, og når denne versjonen er gyldig. +
+Filen er basert på HealthTerm 11+N importformat og har følgende spesifikasjoner.
+
+Tabell 8: Format for importfil 1c-Versjon
+[width="100%",cols="5%,12%,10%,73%",options="header",]
+|===
+|Nr |Property |Status |Beskrivelse
+
+|1 |Code |Obligatorisk a|
+Unik navnestreng for en versjon som også brukes til å koble en versjon
+av metadatafiler til et datasett ved overføring av data til
+Helseanalyseplattformen. Store bokstaver, uten mellomrom og æ, ø, å.
+
+Prefiks N, kortnavn på datakilden, punktum, kortnavn på datasamlingen,
+underscore og versjonsnummer/ID. N++_++NPR.AMK++_++2018
+
+|2 |ParentCode |Obligatorisk |Forkortelse av datakildenavn med prefiks N
+for versjon, f.eks. N++_++NPR. «ParentCode» for toppnoden skal være lik
+kortnavnet på datakilden, f.eks. NPR.
+
+|3 |Hierarchy |Valgfri |Skal være tom for VERSJON
+
+|4 |PreferredTerm |Obligatorisk |Kort beskrivende navn på Versjonen,
+f.eks. Somatikk. Toppnoden skal ha navn lik VERSJON.
+
+|5 |ConceptType |Valgfri |Skal være tom for VERSJON
+
+|6 |Presentation Order |Valgfri |Skal være tom for VERSJON
+
+|7 |ValidFrom |Valgfri a|
+Brukes for å angi fra når en versjon er gyldig. Den første versjonen av
+en datasamling vil ha ValidFrom lik den datoen datagrunnlaget er gyldig
+fra.
+
+ValidFrom for nye versjoner settes av metadatforvalter i
+Helsedataservice
+
+|8 |ValidTo |Valgfri a|
+Brukes for å angi at en versjon ble, eller vil bli, ugyldig fra en gitt
+dato. Versjoner skal ikke ha overlappende gyldighetsdatoer mellom
+revisjoner.
+
+ValidTo for nye versjoner settes av metadataforvalter i Helsedataservice
+
+|9 |Synonym |Valgfri |Skal være tom for VERSJON
+
+|10 |PatientFriendlyTerm |Valgfri |Skal være tom for VERSJON
+
+|11 |ClinicalFriendlyTerm |Valgfri |Skal være tom for VERSJON
+
+|12 |Datasamling |Obligatorisk |Kortnavn på datasamlingen, som angitt i
+Code f.eks. SOMATIKK++_++EPISODE
+
+|13 |Versjon |Obligatorisk |Versjon, som angitt i Code. Dette kan være
+årgang, frys-versjon, skjemaversjon eller liknende
+
+|14 |Forvaltningstype |Valgfri a|
+Hvorvidt dette datasettet benyttes til utlevering av data, eller om det
+er en beskrivelse av de innrapporterte dataene, som for eksempel et
+spørreskjema. Standardverdi er 1.
+
+Standardisert vokabular:
+
+____
+1 = Utlevering
+
+2 = Innrapportering
+
+3 = Innrapportering og utlevering
+____
+
+|15 |DatabaseReferanse |Valgfri a|
+API-streng, URL eller unikt navn på klasse, tabell eller view i
+datakildens database.
+
+Sammen med databasereferanse på variabelmetadata skal dette utgjøre
+eksakt referanse til dataelement i databasen.
+
+|16 |DataFra |Obligatorisk |Dato for tidligste registrerte hendelse i
+datagrunnlaget. +
+Som dato for hendelse regnes også dato for utfylling av spørreskjema,
+dato for prøvetaking, dato for intervju etc. +
+Format YYYYMMDD.
+
+|17 |DataTil |Anbefalt |Dato for siste registrerte hendelse i
+datagrunnlaget. +
+Hvis data er overført til HAP, eller innsamling av data er avsluttet,
+skal denne være utfylt. +
+Format: YYYYMMDD
+
+|18 |IdentKolonne |Valgfri a|
+Kolonner for «Primærnøkkel». En eller flere Code-verdier for variabler
+som identifiserer en forekomst i datagrunnlaget. Flere kolonner skilles
+med semikolon.
+
+Primærnøkkel skal kunne brukes for å endre/slette enkeltelementer i
+datagrunnlaget. Ved feil eller ved reservasjon/inndratt samtykke.
+
+|19 |IdentType |Valgfri a|
+Nøkkeltype.
+
+Standardisert vokabular:
+
+____
+1 = Unik
+
+2 = Duplikat
+____
+
+|20 |FinnesPaaHAP |Obligatorisk a|
+Overføres det data fra den aktuelle VERSJONEN av DATASAMLINGEN til
+Helseanalyseplattformen:
+
+Standardisert vokabular:
+
+____
+1 = Ja
+
+2 = Nei
+____
+
+|21-N |Mulige tilleggsproperties |Valgfri |Gir mulighet for å legge til
+ytterligere properties. +
+Disse kan defineres etter hvert som evt. ønsker og behov oppstår.
+|===

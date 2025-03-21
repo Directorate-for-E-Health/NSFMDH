@@ -1,0 +1,96 @@
+// include::locale/attributes.adoc[]
+// Language switch link (adjust the path to the English document)
+:lang-switch-link: ../index.html
+
+= Nasjonal spesifikasjon for metadata om helsedata [[english-version]]
+:doctype: book
+:docinfo:
+:icons: font
+:toc: left
+ifdef::backend-pdf[:toc: macro]
+:toc-title: Innholdsfortegnelse
+:toclevels: 4
+:sectlinks:
+:table-stripes: even
+:leveloffset: +1
+:title-logo-image: image::images/logo.svg[pdfwidth=30vw]
+
+image::images/logo.svg[width=50%, pdfwidth=30vw]
+
+// Language switch link (displayed)
+[.text-right]
+link:{lang-switch-link}[Norwegian version]
+
+*Status*: Siste versjon# +
+*Versjon*: Versjon 1.1 +
+*Oppdatert*: 11/2021  +
+*Utgitt av*: Direktoratet for e-helse +
+*Kontakt*: postmottak@ehelse.no +
+*Postadresse*: Postboks 6737 St. Olavs plass, 0130 OSLO +
+*Besøksadresse*: Verkstedveien 1, 0277 OSLO +
+*Telefon*: 21 49 50 70 +
+*Publikasjonen kan lastes ned på*: www.ehelse.no
+
+= Forord [[forord]]
+
+This document has been prepared by the health data department in the Directorate of eHealth and
+describes how metadata from central health registries, national medical quality registers and population-based health surveys should be exported to the National Catalogue of Variables, as well as how metadata is managed in the National Catalogue of Variables. 
+
+The target group for the document is data managers and technical developers in the national health data sources. The specification sets guidelines for how health data for secondary purposes should be documented. Furthermore, the specification facilitates the establishment of a national Health Analytics Platform by ensuring that data to be managed on the platform is described in a similar way and can be exchanged by machine. 
+
+The metadata model in this specification will also form the basis for specifying data products to be transferred to the Health Analytics Platform. The specification is based on the work initiated through the Health Registries for Research infrastructure project, in which the central health registries established a common minimum standard for documenting registry variables [1]. 
+
+Through the work of the Health Data Programme in the Norwegian Directorate of eHealth, the minimum standard has been further developed to include documentation of metadata about the data sources themselves, associated data collections, versions and the coding systems used. In this version, the specification has also been expanded to document metadata about medical quality registers and population-based health surveys, as well as to fulfil needs related to functionality in the national Health Analytics Platform. 
+
+The work has been anchored in close dialogue with affected stakeholders. The main areas of use for metadata will be in the application process on helsedata.no and for describing and organising data on the Health Analytics Platform. 
+
+The specification will eventually be revised to embrace additional needs related to the development of the National Variable Catalogue and the Health Analysis Platform, and to be able to embrace metadata from multiple health data sources such as biobanks, as well as cross-sectoral and international needs. 
+
+Further work on concept coordination at variable level, the use of codes and the development of common overall concept and/or information models will take place in close collaboration with register managers and relevant specialist departments in the Directorate of eHealth. 
+
+The specification will be developed in line with https://www.go-fair.org/fair-principles/[FAIR principles] and the international standards DCAT and SKOS, and through recommendations obtained through co-operation in European and Nordic projects and working groups.
+
+
+
+toc::[]
+// include::01_forord.adoc[]
+
+include::02_innledning.adoc[]
+
+include::03_informasjonsmodell.adoc[]
+
+include::04_objektstruktur.adoc[]
+
+include::05_innrapportering.adoc[]
+
+include::06_importfiler.adoc[]
+
+include::07_filtyper.adoc[]
+
+:leveloffset: +1
+include::importfil_1a.adoc[]
+
+include::importfil_1b.adoc[]
+
+include::importfil_1c.adoc[]
+
+include::importfil_1d.adoc[]
+
+include::importfil_1e.adoc[]
+
+include::importfil_1f.adoc[]
+
+include::importfil_2.adoc[]
+
+:leveloffset: -1
+
+include::08_mapping_til_dcat.adoc[]
+
+include::09_mapping_til_skos.adoc[]
+
+include::11_begrepsliste.adoc[]
+
+include::12_klasser_i_logisk_informasjonsmodell.adoc[]
+
+
+

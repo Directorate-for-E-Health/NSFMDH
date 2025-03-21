@@ -1,0 +1,77 @@
+= Importfil 1f-Instrument [[importfil_1f]]
+
+Importfil 1f-Instrument brukes til å beskrive instrument med utgangspunkt i et sett standardiserte properties. Filen er basert på HealthTerm
+11+N importformat. 
+
+*Tabell 11*: *Format for importfil 1f-Instrument*
+[width="100%",cols="5%,12%,10%,73%",options="header",]
+|===
+|Nr |Property |Status |Beskrivelse
+
+|1 |Code |Obligatorisk |Unik navnestreng for et instrument. Store
+bokstaver, uten mellomrom og æ, ø, å. Prefiks I for Instrument,
+underscore, kortnavn på datakilden, punktum, og samme ID som i kilden,
+f.eks. I++_++HUNT.AbbottAXSymx
+
+|2 |ParentCode |Obligatorisk |Forkortelse for kildenavn med prefiks I
+for Instrument og underscore, f.eks. I++_++HUNT «ParentCode» for
+toppnoden skal være lik kortnavnet på datakilden, f.eks. HUNT.
+
+|3 |Hierarchy |Valgfri |Skal være tom for INSTRUMENT
+
+|4 |PreferredTerm |Obligatorisk |Kort beskrivende navn på det enkelte
+Instrumentet. PreferredTerm på toppnoden skal ha navn lik INSTRUMENT med
+store bokstaver.
+
+|5 |ConceptType |Valgfri |Skal være tom for INSTRUMENT
+
+|6 |PresentationOrder |Valgfri |Brukes dersom man ønsker å presentere
+instrumentene i en egendefinert rekkefølge som f.eks. avviker fra en
+alfabetisk. Gyldige verdier er positive heltall og instrumentene
+presenteres i stigende rekkefølge basert på disse tallene.
+
+|7 |ValidFrom |Obligatorisk a|
+Brukes for å angi fra når et instrument er gyldig. Settes ved første
+import.
+
+Format: YYYYMMDD
+
+|8 |ValidTo |Valgfri |Skal være tom for INSTRUMENT
+
+|9 |Synonym |Valgfri |Brukes dersom man ønsker å legge til synonymer til
+et instrumentnavn. Krever en ny rad i importfilen dersom mer enn ett
+synonym.
+
+|10 |PatientFriendlyTerm |Valgfri |Skal være tom for INSTRUMENT
+
+|11 |ClinicalFriendlyTerm |Valgfri |Skal være tom for INSTRUMENT
+
+|12 |Beskrivelse |Obligatorisk |Utførlig beskrivelse av instrumentet.
+
+|13 |NavnEngelsk |Anbefalt |Engelsk oversettelse av PreferredTerm
+
+|14 |BeskrivelseEngelsk |Anbefalt |Engelsk oversettelse av beskrivelsen
+av Instrumentet.
+
+|15 |Filter |Valgfri a|
+Definerer om instrumentet skal brukes til filtrering i Helsedata.no.
+Instrument er tenkt som en egen filtertype, og er ikke en del av klassen
+«Filter»
+
+Standardisert vokabular:
+
+____
+1 = Obligatorisk
+
+2 = Valgfri
+____
+
+|16 |Dokumentasjon |Anbefalt |Lenke®®® til opprinnelig
+dokumentasjon/referanser for instrumentet.
+
+|17 |UnikIdentifikator |Valgfri |Unik identifikator (DOI) til et
+instrument
+
+|18-N |Mulige tilleggsproperties |Valgfri |Gir mulighet for å legge til
+ytterligere properties ved behov
+|===
