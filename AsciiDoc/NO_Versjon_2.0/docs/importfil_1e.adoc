@@ -1,6 +1,6 @@
 = Importfil 1e-Variabelgruppe [[importfil_1e]]
 
-Importfil 1e-Variabelgruppe brukes til å beskrive variabelgrupper med utgangspunkt i et sett standardiserte properties. Filen er basert på
+Importfil 1e-Variabelgruppe brukes til å beskrive variabelgrupper og prøvetyper med utgangspunkt i et sett standardiserte properties. Filen er basert på
 HealthTerm 11+N importformat.
 Variabelgruppe erstatter den nå utgåtte propertien LokaltTema, men vil også kunne brukes til å gruppere variabler på tvers av helsedatakilder
 
@@ -9,38 +9,47 @@ Variabelgruppe erstatter den nå utgåtte propertien LokaltTema, men vil også k
 |===
 |Nr |Property |Status |Beskrivelse
 
-|1 |Code |Obligatorisk |Unik navnestreng for en variabelgruppe. Store
+|1 |Code |Obligatorisk |Unik navnestreng for en variabelgruppe/prøvetype. Store
 bokstaver, uten mellomrom og æ, ø, å. Prefiks G for variabelGruppe,
 underscore, kortnavn på datakilden, punktum, og samme variabelnavn som i
 kilden, f.eks. G++_++HUNT.EXPOSURE
 
+Gruppen Prøvetyper defineres i henhold til MIABIS Detailed Samle Type (MIABIS-COLLECTION-14)
+
+G_<Kortnavn>.SERUM
+G_<Kortnavn>.WHOLE_BLOOD
+etc.
+
+For hver prøvetype defineres et basis-sett av prøvetypeattributter i klassen VARIABEL i henhold til MIABIS SAMPLE.
+I Tillegg kan man ha lokale attributter som defineres av hver kilde
+
 |2 |ParentCode |Obligatorisk |Forkortelse for kildenavn med prefiks G
-for variabelGruppe og underscore, f.eks. G++_++HUNT. «ParentCode» for
+for variabelGruppe/prøvetype og underscore, f.eks. G++_++HUNT. «ParentCode» for
 toppnoden skal være lik kortnavnet på datakilden, f.eks. HUNT. +
 Eller referere til overliggende variabelgruppe i et hierarki.
 
-|3 |Hierarchy |Valgfri |Brukes ikke for variabelgrupper.
+|3 |Hierarchy |Valgfri |Brukes ikke.
 
 |4 |PreferredTerm |Obligatorisk |Kort beskrivende navn på den enkelte
-variabelgruppe. PreferredTerm på toppnoden skal ha navn lik
+variabelgruppe/prøvetype. PreferredTerm på toppnoden skal ha navn lik
 VARIABELGRUPPER med store bokstaver.
 
-|5 |ConceptType |Valgfri |Skal være tom for VARIABELGRUPPE
+|5 |ConceptType |Valgfri |Skal være tom.
 
 |6 |PresentationOrder |Valgfri |Brukes dersom man ønsker å presentere
-variabelgruppene i en egendefinert rekkefølge som f.eks. avviker fra en
+variabelgruppene/prøvetypene i en egendefinert rekkefølge som f.eks. avviker fra en
 alfabetisk. Gyldige verdier er positive heltall og variabelgruppene
 presenteres i stigende rekkefølge basert på disse tallene.
 
 |7 |ValidFrom |Obligatorisk a|
-Brukes for å angi fra når en variabelgruppe er gyldig.
+Brukes for å angi fra når en variabelgruppe/prøvetype er gyldig.
 
 Format: YYYYMMDD
 
-|8 |ValidTo |Valgfri |Skal være tom for VARIABELGRUPPE
+|8 |ValidTo |Valgfri |Skal være tom
 
 |9 |Synonym |Valgfri |Brukes dersom man ønsker å legge til synonymer til
-en variabelgruppe. Krever en ny rad i importfilen dersom mer enn ett
+en variabelgruppe/prøvetype. Krever en ny rad i importfilen dersom mer enn ett
 synonym.
 
 |10 |PatientFriendlyTerm |Valgfri |Pasientvennlig navn på
@@ -49,25 +58,23 @@ variabelgruppen
 |11 |ClinicalFriendlyTerm |Valgfri |Helsefaglig begrep på
 variabelgruppen
 
-|12 |Beskrivelse |Obligatorisk |Utførlig beskrivelse av variabelgruppen.
+|12 |Beskrivelse |Obligatorisk |Utførlig beskrivelse av variabelgruppen/prøvetypen.
 
 |13 |NavnEngelsk |Anbefalt |Engelsk oversettelse av PreferredTerm
 
-|14 |BeskrivelseEngelsk |Anbefalt |Engelsk oversettelse av beskrivelsen
-av variabelgruppen.
+|14 |BeskrivelseEngelsk |Anbefalt |Engelsk oversettelse av beskrivelsen.
 
 |15 |Filter |Valgfri a|
 Definerer om variabelgruppen skal brukes til filtrering i Helsedata.no.
 Variabelgruppe er tenkt som en egen filtertype, og er ikke en del av
-klassen «Filter»
+klassen «Filter».
+Prøvetyper skal alltid ha verdien 1.
 
 Standardisert vokabular:
 
-____
-1 = Obligatorisk
+1 = Ja
 
-2 = Valgfri
-____
+2 = Nei
 
 |16-N |Mulige tilleggsproperties |Valgfri |Gir mulighet for å legge til
 ytterligere properties ved behov

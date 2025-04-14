@@ -12,6 +12,7 @@ versjoner
 6. Fra VARIABELMETADATA til STATISTIKK
 7. Fra VARIABELGRUPPE til VARIABELMETADATA
 8. Fra INSTRUMENT til VARIABELMETADATA
+9. Fra DATASAMLING/PRØVESAMLING til HELSEFAGLIGE KODEVERK
 I tillegg kan man bruke Mapsets for å mappe concepts til f.eks. felles klassifikasjoner,
 standarder og informasjonsmodeller som er importert, og som man har tilgang til i
 HealthTerm. Dette kan være nyttig for f.eks. tilrettelegging og videreutvikling av filtrering og

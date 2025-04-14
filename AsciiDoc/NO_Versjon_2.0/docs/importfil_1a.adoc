@@ -1,7 +1,7 @@
 
 = Importfil 1a-Kildemetadata [[importfil_1a]]
 
-Importfil 1a-Kildemetadata brukes til å beskrive både datakilden, eventuelle delkilder og underliggende datasamlinger, på et overordnet nivå ved hjelp av et sett standardiserte properties.
+Importfil 1a-Kildemetadata brukes til å beskrive både datakilden, eventuelle delkilder og underliggende datasamlinger og/eller prøvesamlinger, på et overordnet nivå ved hjelp av et sett standardiserte properties.
 
 For datakilder som skal levere dataprodukt til Helseanalyseplattformen vil importfilen også brukes til å definere dataprodukt i form av datasamlinger og evt. logiske grupperinger av dataprodukt i form av delkilder.
 
@@ -36,6 +36,7 @@ K++_++NPR.SOMATIKK.
 punktum, og navn på datasamling. F.eks.
 K++_++HUNT.HUNT1++_++QUESTIONAIRE1, eller
 K++_++NPR.SOMATIKK++_++EPISODE.
+Datasamling kan også beskrive en prøvesamling
 
 | |*2* |*ParentCode* |Obligatorisk a|
 *Datakilde*: Skal være lik kortnavnet på datakilden, f.eks. HUNT.
@@ -50,7 +51,7 @@ f.eks. K++_++HUNT.HUNT1.
 |_HealthTerm_ |*3* |*Hierarchy* |Valgfri |Skal være tom.
 
 |_Tittel og beskrivelse_ |*4* |*PreferredTerm* |Obligatorisk a|
-Kort beskrivende navn på datakilden, delkilden eller datasamlingen.
+Kort beskrivende navn på datakilden, delkilden eller datasamlingen/prøvesamlingen.
 
 F.eks. «Den norske mor, far og barn undersøkelsen», «MOBA Hovedskjema»
 eller «Spørreskjema1» for henholdsvis datakilde, delkilde og
@@ -68,7 +69,7 @@ datasamlingene presenteres i stigende rekkefølge basert på disse
 tallene.
 
 | |*7* |*ValidFrom* |Obligatorisk a|
-Brukes for å angi fra når en datakilde, delkilde eller datasamling er
+Brukes for å angi fra når en datakilde, delkilde eller datasamling eller prøvesamling er
 gyldig. Settes ved første import.
 
 Format: YYYYMMDD
@@ -114,14 +115,13 @@ Dato for siste oppdatering av KILDEMETADATA
 Format: YYYYMMDD
 
 | |20 |Frekvens |Valgfri a|
-*Datakilde*, *delkilde*: Skal være tom.
+*Datakilde*, *Delkilde*: Skal være tom.
 
 *Datasamling*: Oppdateringsfrekvens brukes for å beskrive hvor ofte
 datagrunnlaget oppdateres på Helseanalyseplattformen.
 
 Standardisert vokabular:
 
-____
 1 = Sjeldnere enn årlig
 
 2 = Årlig
@@ -139,7 +139,6 @@ ____
 8 = Daglig
 
 9 = Hyppigere enn daglig
-____
 
 | |21 |Innsamlingsmetode |Valgfri |Kort beskrivelse av metode for
 innsamling av data.
@@ -149,7 +148,6 @@ Kategorisering av datakilden.
 
 Standardisert vokabular:
 
-____
 1 = Sentralt helseregisterfootnote:[Inkluderer lovbestemte helseregistre
 og andre sentrale helseregistre
 (https://www.fhi.no/div/datatilgang/om-sentrale-helseregistre/)]
@@ -160,10 +158,9 @@ og andre sentrale helseregistre
 
 4 = Befolkningsbasert helseundersøkelse
 
-5 = Biobank
+5 = Prøvesamling
 
 6 = Annen datakilde
-____
 
 | |23 |InklusjonsOgEksklusjonskriterier |Obligatorisk |En faglig
 overordnet beskrivelse av hvilke kriterier som stilles for at en person
@@ -172,9 +169,9 @@ tilsvarer en beskrivelse av populasjonen som inngår i datakilden,
 delkilden eller datasamlingen.
 
 | |24 |GeografiskAvgrensning |Valgfri |Beskrivelse av opptaksområdet for
-innbyggerne som inngår i datakilden, delkilden eller datasamlingen.
+innbygg*erne som inngår i datakilden, delkilden eller datasamlingen.
 
-| |25 |Tilslutningsgrad  |Valgfri |Andel enheter av totalt antall
+| |25 |Tilslutningsgrad |Valgfri |Andel enheter av totalt antall
 relevante enheter som rapporterer inn til datakilden, delkilden eller
 datasamlingen. Med enheter menes foretak, organisasjoner og
 virksomheter. Oppgis som desimaltall på formatet «0,875». (Kompletthet i
@@ -236,13 +233,11 @@ datakilden, delkilden eller datasamlingen. +
  +
 Standardisert vokabular:
 
-____
 1 = Direkte personidentifiserbare opplysninger
 
 2 = Indirekte personidentifiserbare opplysninger
 
 3 = Anonyme opplysninger
-____
 
 | |37 |JuridiskNote |Valgfri |Relevant juridisk informasjon som ikke
 dekkes av andre properties. F.eks. informasjon om reservasjonsrett eller
@@ -256,10 +251,10 @@ datakilden, delkilden eller datasamlingen.
 | |40 |Telefonnummer |Valgfri |Telefonnummer for henvendelser om
 datakilden, delkilden eller datasamlingen.
 
-| |41 |OrgnrDataansvarlig |Valgfri |Organisasjonsnummer til
+| |41|OrgnrDataansvarlig |Valgfri |Organisasjonsnummer til
 dataansvarlig.
 
-| |42 |HERidDatakilde   |Valgfri |*Datakilde*: Unik identifikator som
+| |42 |HERidDatakilde |Valgfri |Datakilde: Unik identifikator som
 tildeles av NHN, Brukes for identifisering av datakilden innenfor
 helsenettet. Kan brukes til spørringer.
 
@@ -272,13 +267,11 @@ Angir hvilken type kildemetadata som beskrives.
 
 Standardisert vokabular:
 
-____
 1 = Datakilde
 
 2 = Delkilde
 
-3 = Datasamling
-____
+3 = Datasamling eller Prøvesamling (ref. Kildetype)
 
 | |45 |ErISamsvarMed  |Valgfri |Referanse til evt. standard(er),
 spesifikasjon(er) etc. som datakilden, delkilden eller datasamlingen er
@@ -293,17 +286,233 @@ som for DÅR.
 
 Standardisert vokabular:
 
-____
 1 = Akkumulert
 
 2 = Årsbasert
-____
 
 | |47 |TelleEnhet |Valgfri |Datasamling: Telleenhet for datasamlingen
 angitt ved en tekstlig beskrivelse, eks. pasient, episode eller
 sykehusopphold.
 
-|_Tillegg_ |48-N |Mulige tilleggsproperties |Valgfri a|
+|_Prøvesamling_ |48 |ProvesamlingID |Valgfri |PrøvesamlingsID. Teknisnk ID som tildeles fra BBMRI-Eric etter overføring/registrering.
+NB! Denne opprettes av BBMRI-Eric ved første gangs eksport og må etterregistreres.
+
+| |49 |Kjønn |Valgfri |Angir hvilke kjønn som er representert i prøvesamlingen. Kodes i henhold til MIABIS
+
+Standardisert vokabular (flervalg):
+
+1 = Male
+
+2 = Female
+
+3 = Unknown
+
+4 = Undifferentiated
+
+5 = Not Applicable
+
+
+| |50 |LavesteAlder |Valgfri |Laveste alder på person i prøvesamlingen
+
+
+| |51 |HoyesteAlder |Valgfri |Høyeste alder på person i prøvesamlingen
+
+
+| |52 |LavesteAlderEnhet |Valgfri |Enhet for laveste alder på person i prøvesamlingen
+
+Standardisert vokabular:
+
+1 = Years
+
+2 = Months
+
+3 = Weeks
+
+4 = Days
+
+5 = Gestational weeks
+
+| |53 |HoyesteAlderEnhet |Valgfri |Enhet for høyeste alder på person i prøvesamlingen
+
+Standardisert vokabular:
+
+1 = Years
+
+2 = Months
+
+3 = Weeks
+
+4 = Days
+
+5 = Gestational weeks
+
+| |54 |DatasettType |Valgfri |Datasett type
+
+Standardisert vokabular:
+
+1 = Lifestyle dataset
+
+2 = Environmental dataset
+
+3 = Physiological dataset
+
+4 = Biochemical dataset
+
+5 = Clinical dataset
+
+6 = Psychological dataset
+
+7 = Genomic dataset
+
+8 = Proteomic dataset
+
+9 = Metabolomic dataset
+
+10 = Body (Radiological) image
+
+11 = Whole slide image
+
+12 = Photo image
+
+13 = Genealogical records
+
+14 = Other
+
+| |55	|LagringsTemperatur	|Valgfri	|Lagringstemperatur
+
+Standardisert vokabular (flervalg):
+
+1 = RT (Room temperature)
+
+2 = 2 °C to 10°C
+
+3 = -18 °C to -35 °C
+
+4 = -60 °C to -85 °C
+
+5 = "<-" 135 °C
+
+6 = Liquid nitrogen vapor-phase
+
+7 = Liquid nitrogen liquid-phase
+
+8 = Other
+
+| |56	|Kontekst	|Valgfri	|Kontekst for prøveinnsamling
+
+Standardisert vokabular:
+
+1 = Routine health care setting
+
+2 = Clinical trial
+
+3 = Research study
+
+4 = Public health/population based study
+
+5 = Museum and/or archeological collection
+
+6 = Environment
+
+7 = Unknown
+
+8 = Other
+
+| |57	|StudieDesign	|Valgfri	|Studiedesignet som beskriver hvordan/hvorfor prøvene ble samlet inn
+
+Standardisert vokabular (flervalg):
+
+1 = Case-control
+
+2 = Cross-sectional
+
+3 = Longitudinal cohort
+
+4 = Twin-study
+
+5 = Quality control study
+
+6 = Population-based cohort
+
+7 = Disease-specific cohort
+
+8 = Birth cohort
+
+9 = Microbial collection (if applicable with resistance data)
+
+10 = Reference collection
+
+11 = Rare disease collection
+
+12 = Other
+
+| |58	|BetingelserForBruk	|Valgfri	|Betingelser for tilgjengelighet og bruk
+
+Standardisert vokabular (flervalg):
+
+1 = Commercial use
+
+2 = Collaboration
+
+3 = Specific research use
+
+4 = Genetic data use
+
+5 = Outside EU access
+
+6 = Xenograft
+
+7 = Other animal work
+
+8 = Other
+
+| |59	|PrøvesamlingsStatus	|Valgfri	|Status for prøvesamlingen
+
+Standardisert vokabular:
+
+1 = Active
+
+2 = Ended
+
+3 = Other
+
+| |60	|AntallDonorer	|Valgfri	|Antall donorer i prøvesamlingen
+
+| |61	|InklusjonsKriterier	|Valgfri	|Inklusjonskriterier
+
+Standardisert vokabular (flervalg):
+
+1 = Health status
+
+2 = Hospital patient
+
+3 = Use of medication
+
+4 = Gravidity
+
+5 = Age group
+
+6 = Familial status
+
+7 = Sex
+
+8 = Country of residence
+
+9 = Ethnic origin
+
+10 = Population representative sampling
+
+11 = Lifestyle/Exposure
+
+12 = Other
+
+| |62	|KontakpersonFornavn	|Valgfri	|Kontaktpersonens fornavn
+| |63	|KontakpersonEtternavn	|Valgfri	|Kontaktpersonens etternavn
+| |64	|KontakpersonEmail	|Valgfri	|Kontaktpersonens epost
+| |65	|KontakpersonTelefon	|Valgfri	|Kontaktpersonens telefonnummer
+
+
+|_Tillegg_ |66-N |Mulige tilleggsproperties |Valgfri a|
 Gir mulighet for å legge til ytterligere properties som f.eks.
 registerspesifikke tilleggsproperties, properties for
 kategoriseringsformål etc.

@@ -1,6 +1,7 @@
 = Importfil 1-d Statistikk [[importfil_1d]]
 
-Importfil 1d-Statistikk brukes til å presentere enkel statistikk for et utvalg av datakildens variabler.
+Importfil 1d-Statistikk brukes til å presentere enkel statistikk for et utvalg av datakildens variabler og for prøvetyper i en prøvesamling.
+
 Statistikk som metadata har som formål å si noe om registerings-/ kodingskvaliteten og gi en pekepinn om antall forekomster. Statistikken egner
 seg ikke for analyse som sådan..
 En egen property, StatistikkType, på Kildemetadata angir om statistikken er årsbasert eller akkumulert. Årsbasert statistikk rapporteres på
@@ -13,6 +14,10 @@ manglende forekomster, samt enkle standardiserte statistiske beregninger. For fu
 inngå i grunnlaget, og beregningen skjer ut fra ett år eller akkumulert i henhold til StatistikkType som nevnt over.
 Det må gjøres en vurdering av hvilke variabler det er naturlig å rapportere statistikk for. Kontinuerlige variable må inneholde data som
 representerer én rad i datasamlingen.
+
+For prøvesamlinger skal statistikk vise antall prøver pr. prøvetype.
+Det betyr at statistikken skal kobles til klassen for Variabelgruppe og ikke til variabel og kodeverdi. Denne statistikken vil alltid være av type "Akkumulert"
+
 Filen er basert på HealthTerm 11+N importformat og har følgende spesifikasjoner.
 I denne versjonen av denne spesifikasjonen er det ikke obligatorisk å produsere statistikk. 
 
@@ -22,10 +27,15 @@ I denne versjonen av denne spesifikasjonen er det ikke obligatorisk å produsere
 |*Nr* |*Property* |*Status* |*Beskrivelse*
 
 |1 |Code |Obligatorisk |Unik navnestreng for et statistikk-concept.
-Store bokstaver, uten mellomrom og æ, ø, å. Prefiks S for statistikk,
+For variabelstatistikk: Store bokstaver, uten mellomrom og æ, ø, å. Prefiks S for statistikk,
 underscore, årstall, kortnavn på datakilden, punktum, datasamling,
 punktum, variabelnavn, punktum KodeverkLokalID, f.eks.
-S++_++NPR++_++2017.BUP.KJONN.1
+S++_++NPR++_++2024.BUP.KJONN.1
+For prøvetypestatistikk: Store bokstaver, uten mellomrom og æ, ø, å. Prefiks S for statistikk,
+underscore, årstall, kortnavn på datakilden, punktum, datasamling,
+punktum, prøvetype (ref. variabelgruppe), f.eks.
+S++_++TR++_++2024.TR5_S2.SERUM
+
 
 |2 |ParentCode |Obligatorisk |Forkortelse av datakildens navn med
 prefiks S for statistikk som toppnode f.eks. S++_++NPR. «ParentCode» for

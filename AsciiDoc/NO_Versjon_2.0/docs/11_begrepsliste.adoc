@@ -8,6 +8,7 @@ Tabell 15: Begrepsliste
 
 |===
 |Begrep |Forklaring
+|Biobank |Biobank defineres som en juridisk enhet eller del av en juridisk enhet som utfører biobankvirksomhet, i samsvar med ISO 20387:2018. Biobanker inneholder ikke prøver og data direkte, da de er vert for prøvesamlinger der prøvene og dataene er innebygd. På biobanknivå representeres kun attributter knyttet til de organisatoriske aspektene ved biobankene. 
 |CareCom |CareCom er teknisk leverandør av HealthTerm, løsningen
 Nasjonal variabelkatalog er realisert i.
 |Code System |Code System er et løsningsspesifikt begrep som anvendes i
@@ -155,6 +156,10 @@ favner.
 |Property |Properties er det samme som attributter som brukes til å
 beskrive egenskapene til dataobjekt (concept), f.eks. en
 variabel.
+|Prøvesamling	|En prøvesamling er en systematisk samling av biologiske prøver  som er lagret for fremtidig bruk i forskning og medisinske studier.
+|Prøvetype	|Prøvetype beskriver hvilke typer biologisk materiale som er lagret i en prøvesamling
+|Prøvetypeattributt	|Prøvetypeattributt er egenskaper som skal beskrive en prøve i detalj. Ulike prøvetyper kan ha ulike prøvetypeattributter. En hår-prøve vil ha andre attributter enn en serum-prøve
+
 |Retired| Retired brukes, i denne sammenheng, til å beskrive at et
 concept, eller en property, ikke lengre er aktive i løsningen.
 En gammel versjon av en property settes eksempelvis til retired

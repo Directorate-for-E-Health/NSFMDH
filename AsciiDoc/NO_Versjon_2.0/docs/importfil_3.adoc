@@ -1,0 +1,134 @@
+= Importfil 3-Biobank [[importfil_3]]
+
+Importfil 3-Biobank brukes til å beskrive Biobanker. Biobanker er her den Administrative enheten som har ansvar for biobanken. Biobanker kan være lokalisert på flere fysiske lokasjoner og infrastrukturer
+
+*Tabell: Format for importfil 3-Biobank*
+[width="100%",cols="6%,11%,10%,73%",options="header",]
+|===
+|*Nr* |*Property* |*Status* |*Beskrivelse*
+
+|1 |Code |Obligatorisk |Standardisert og unik navnestreng for et kodeverk med tilhørende koder. Store bokstaver, uten mellomrom og æ, ø, å. Prefiks for KK for kildekodeverk, kortnavn på datakilden, punktum, variabelnavn, punktum og KodeverkLokalId (som i kilden), f.eks. BB_KILDE.BIOBANK_XN
+
+|2 |ParentCode |Obligatorisk |  
+
+|3 |Hierarchy |Valgfri |  
+
+|4 |PreferredTerm |Obligatorisk |Kort beskrivende navn, på norsk for den enkelte biobanken, eks. UiT Norges arktiske universitet
+
+|5 |ConceptType |Valgfri |Skal være tom
+
+|6 |PresentationOrder |Valgfri |Skal være tom
+
+|7 |ValidFrom |Obligatorisk a|
+Brukes for å angi fra når en biobank eller en kode er etablert. Settes ved første import. Format: YYYYMMDD
+
+|8 |ValidTo |Valgfri a|
+Brukes for å angi at en biobank, er blitt ugyldig fra en gitt dato. +
+For aktive biobanker skal denne være tom.
+
+Format: YYYYMMDD
+
+|9 |Synonym |Valgfri |Skal være tom
+
+|10 |PatientFriendlyTerm |Valgfri |Skal være tom
+
+|11 |ClinicalFriendlyTerm |Valgfri |Skal være tom
+
+|12 |ID |Obligatorisk |Biobankens BBMRI-ID
+
+|13 |Kortnavn |Anbefalt |Kortnavn/Akronym
+
+|14 |NavnEngelsk |Obligatorisk |Kort beskrivende navn, på engelsk for den enkelte biobanken. 
+Eks. Uit The Arctic University of Norway
+
+|15 |Hjemmeside |Valgfri |URL til biobankens hjemmeside
+
+|16 |Dataansvarlig |Obligatorisk |Ansvarlig organisasjon for biobanken
+
+|17 |Landkode |Obligatorisk |Landkode for biobanken i hht. ISO-Standard 3166 (2 tegn)
+
+|18 |Beskrivelse |Obligatorisk |Beskrivelse av biobanken på norsk
+
+|19 |BeskrivelseEngelsk |Obligatorisk |Beskrivelse oversatt til Engelsk, maks 2000 tegn
+
+|20 |InfrastrukturKapabilitet |Anbefalt |Biobankens tekniske tjenester
+
+Standardisert vokabular:
+
+1 = Sample storage
+
+2 = Data storage
+
+3 = Biosafety abilities
+|21	|OrganisasjonsKapabilitet	|Anbefalt	|Biobankens tjenester for forskerstøtte.
+
+Standardisert vokabular:
+
+1 = Recontact with donors
+
+2 = Facilitating clinical trials
+
+3 =  Setting up prospective collections
+
+4 =  Access to omics data
+
+5 =  Access to laboratory analysis data
+
+6 =  Access to donors'clinical data
+
+7 = Access to pathology archive
+
+8 =  Access to radiology archive
+
+9 =  Access to national medical registries
+
+10 =  Other
+
+|22	|AnalyseKapabilitet	|Anbefalt	|Biobankens bioprosesseringskapabilitet
+
+Standardisert vokabular:
+
+1 = Biochemical analyses
+
+2 =  Genomics
+
+3 =  Nucleic acid extraction
+
+4 = Proteomics
+
+5 =  Metabolomics
+
+6 =  Histology
+
+7 = Cell-lines processing
+
+8 = Virology 
+
+9 = Sample processing
+
+10 = Sample shipping 
+
+11 =  Sample quality control services
+
+12 = Other
+
+|23	|Akkreditering	|Valgfri	|Sertifiseringsstandard
+
+Standardisert vokabular:
+
+1 = ISO 20387
+
+2 = ISO 9001
+
+3 = Other
+
+|24	|KontakpersonFornavn	|Valgfri	|Kontaktpersonens fornavn
+|25	|KontakpersonEtternavn	|Valgfri	|Kontaktpersonens etternavn
+|26	|KontakpersonEmail	|Valgfri	|Kontaktpersonens epost
+|27	|KontakpersonTelefon	|Valgfri	|Kontaktpersonens telefonnummer
+
+
+|28-N |Mulige tilleggsproperties |Valgfri |Gir mulighet for å legge til
+ytterligere properties ved behov
+
+|===
