@@ -69,8 +69,6 @@ include::importfil_4.adoc[]
 
 include::13_Administrative kodeverk.adoc[]
 
-//:leveloffset: -1
-
 [discrete]
 = Vedlegg [[vedlegg]]
 
