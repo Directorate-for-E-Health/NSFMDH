@@ -10,7 +10,7 @@ image::images/objektstruktur_for_helsedatakilder_i_healthterm.jpg[]
 
 1. Hver enkelt datakilde importeres som et eget Code System som kan betraktes som en mappe der all informasjon om kilden med tilhørende variabler ligger lagret.
 
-2. KILDEMETADATA importeres som Code System og blir dermed Core Namespace under Code System. KILDEMETADATA består av et concept med tilhørende properties om datakilden. KILDEMETADATA inneholder også et concept for hver eventuelle delkilde, og for hver av datasamlingene. Hvert concept beskrives ved hjelp av et utvalg av de samme properties som er definert for kilden. I de tilfellene der en datakilde kun består av én datasamling, vil man likevel opprette ett concept for datasamling. Dette conceptet vil inneholde den samme informasjonen i de samme propertiene som conceptet for datakilden.
+2. KILDEMETADATA importeres som Code System og blir dermed Core Namespace under Code System. KILDEMETADATA består av et concept med tilhørende properties om datakilden. KILDEMETADATA inneholder også et concept for hver eventuelle delkilde, og for hver av datasamlingene og/eller prøvesamlingene. Hvert concept beskrives ved hjelp av et utvalg av de samme properties som er definert for kilden. I de tilfellene der en datakilde kun består av én datasamling, vil man likevel opprette ett concept for datasamling. Dette conceptet vil inneholde den samme informasjonen i de samme propertiene som conceptet for datakilden.
 
 3. Hvis det er behov kan datakilden og datasamlingene deles inn i en hierarkisk struktur av delkilder. Hver delkilde defineres da som «children» av datakilden og datasamlingene blir «children» av en delkilde istedenfor selve kilden.
 
@@ -20,7 +20,7 @@ image::images/objektstruktur_for_helsedatakilder_i_healthterm.jpg[]
 
 6. VERSJON importeres som en Extension til Core Namespace. VERSJON brukes for å koble hvilke variabler som inngår i hvilke versjoner av en datasamling, og for å vite når datagrunnlaget er oppdatert. 
 
-7. VARIABELGRUPPE importeres som en Extension til Core Namespace. VARIABELGRUPPE brukes for å ordne variabler etter tema. VARIABELGRUPPER kan bygges opp hierarkisk.
+7. VARIABELGRUPPE importeres som en Extension til Core Namespace. VARIABELGRUPPE brukes for å ordne variabler etter tema, og eventuelle prøvetypeattributter etter prøvetype. VARIABELGRUPPER kan bygges opp hierarkisk.
 
 8. INSTRUMENT importeres som en Extension til Core Namespace. INSTRUMENT er en betegnelse på en standardisert innsamlingsmetode for data. Det kan være hele eller deler av et spørreskjema, eller et fysisk instrument for f.eks.
 måling av bentetthet, analyse av prøvemateriale etc.

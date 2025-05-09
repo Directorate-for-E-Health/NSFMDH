@@ -17,6 +17,7 @@ kunne rapportere inn.
 For å forstå den logiske informasjonsmodellen i Figur 1 vil det være hensiktsmessig å ha
 kjennskap til et utvalg begrep:
 
+- **Biobank** inneholder informasjon om en juridisk enhet eller del av en juridisk enhet som utfører biobankvirksomhet, i samsvar med ISO 20387:2018. Biobanker inneholder ikke prøver og data direkte, da de er vert for prøvesamlinger der prøvene og dataene er innebygd. På biobanknivå representeres kun attributter knyttet til de organisatoriske aspektene ved biobankene. 
 
 - **Datasett** er ikke en klasse i informasjonsmodellen for metadata, men beskriver i
 stedet de faktiske helse- og personopplysningene som en versjon av en datasamling
@@ -33,7 +34,7 @@ eksempel på delkilder. Denne kan ha flere nivåer.
 - **Datasamling** er definert som et sub-register innenfor en datakilde, altså en
 delmengde av variablene i den aktuelle datakilden. Eksempler på datasamlinger kan
 være skjema i medisinske kvalitetsregistre. Klassen datasamling kan også brukes til
-å beskrive dataprodukter. 
+å beskrive dataprodukter og prøvesamlinger
 
 - **Dataprodukt** er ikke en klasse i modellen under, men en konseptuell betegnelse på 
 måten data kan overføres fra en datakilde til et sikkert analyserom. På et 
@@ -50,6 +51,7 @@ informasjon som finnes i de nasjonale helsedatakildene.
 - **Variabelgruppe** er en kategorisering av variabler. Strukturen kan bygges opp
 hierarkisk. Variabelgruppe erstatter den nå utgåtte propertien LokaltTema, men vil
 også kunne brukes til å gruppere variabler på tvers av helsedatakilder.
+Klassen Variabelgruppe brukes også til å definere prøvetyper.
 
 - **Kodeverk** representerer i denne sammenhengen et verdisett. Et kodeverk kan for
 eksempel være et administrativt kodeverk, et helsefaglig kodeverk eller egendefinerte
@@ -73,6 +75,13 @@ f.eks. måling av bentetthet, analyse av prøvemateriale etc.
 - **Filter** kan benyttes for å kategorisere variabler ved hjelp av kodeverk eller egenskaper som ikke er definert som generelle properties i denne spesifikasjonen.
 Et filterkodeverk kan f.eks. bestå av koder for Mor, Barn og Far, der en variabel som
 kun benyttes for Far, knyttes til filteregenskapen Far.
+
+- **Prøvesamling** er en variant av klassen Datasamling. 
+En datakilde kan inneholde både Datasamlinger og Prøvesamlinger der prøvesamling er en systematisk samling av biologiske prøver.
+
+- **Prøvetype** er en variant av klassen Variabelgruppe. Prøvetype beskriver hvilke typer biologisk materiale som er lagret i en prøvesamling
+
+- **Prøvetypeattributt** er en variant av klassen Variabel som beskriver egenskaper knyttet til en bestemt prøvetype.
 
 En mer komplett oversikt over relevante fagbegrep er gjengitt i begrepslisten.
 
@@ -99,7 +108,7 @@ Punktlisten under forklarer informasjonslisten illustrert i Figur 1.
 
 2. En datakilde kan inneholde null, én eller flere delkilder.
 
-3. En datakilde eller delkilde inneholder én eller flere datasamlinger.
+3. En datakilde eller delkilde inneholder én eller flere datasamlinger og/eller prøvesamlinger.
 
 4. Klassen delkilde kan brukes til å gruppere dataprodukt og dokumentere metadata om logiske grupperinger av dataprodukt.
 
