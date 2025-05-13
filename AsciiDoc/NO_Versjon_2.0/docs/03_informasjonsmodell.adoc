@@ -100,8 +100,8 @@ nærmere forklart i Tabell 1.
 |image:images/Komposisjon.png[Class,100,50,align="center"]| Komposisjonrelasjon |En komposisjon-relasjon uttrykker er en spesiell form for en aggregerende relasjon i de tilfellene der det er et strengt krav at en klasse må inneholde minst én instans av en gitt sub-klasse.
 |===
 
-[link=images/informasjonsmodell_med_prøvesamlinger.png, title="Logisk informasjonsmodell for metadata om helsedata"]image::images/informasjonsmodell_med_prøvesamlinger.png[width=100%]
-image::images/informasjonsmodell.jpg[]
+[link=images/informasjonsmodell_utvidet.jpg, title="Logisk informasjonsmodell for metadata om helsedata"]image::images/informasjonsmodell_utvidet.jpg[width=100%]
+image::images/informasjonsmodell_utvidet.jpg[]
 
 Punktlisten under forklarer informasjonslisten illustrert i Figur 1.
 
