@@ -100,7 +100,7 @@ nærmere forklart i Tabell 1.
 |===
 
 [link=images/informasjonsmodell_med_prøvesamlinger.png, title="Logisk informasjonsmodell for metadata om helsedata"]image::images/informasjonsmodell_med_prøvesamlinger.png[width=100%]
-image::images/informasjonsmodell_med_prøvesamlinger.png[]
+image::images/informasjonsmodell.jpg[]
 
 Punktlisten under forklarer informasjonslisten illustrert i Figur 1.
 
