@@ -17,7 +17,7 @@ kunne rapportere inn.
 For å forstå den logiske informasjonsmodellen i Figur 1 vil det være hensiktsmessig å ha
 kjennskap til et utvalg begrep:
 
-- **Biobank** inneholder informasjon om en juridisk enhet eller del av en juridisk enhet som utfører biobankvirksomhet, i samsvar med ISO 20387:2018. Biobanker inneholder ikke prøver og data direkte, da de er vert for prøvesamlinger der prøvene og dataene er innebygd. På biobanknivå representeres kun attributter knyttet til de organisatoriske aspektene ved biobankene. 
+- **Biobank** inneholder informasjon om en juridisk enhet eller del av en juridisk enhet som utfører biobankvirksomhet, i samsvar med ISO 20387:2018. Biobanker inneholder ikke prøver og data direkte, da de er vert for prøvesamlinger der prøvene og dataene er innebygd. På biobanknivå representeres kun attributter knyttet til de organisatoriske aspektene ved biobankene.
 
 - **Datasett** er ikke en klasse i informasjonsmodellen for metadata, men beskriver i
 stedet de faktiske helse- og personopplysningene som en versjon av en datasamling
@@ -64,6 +64,7 @@ svaralternativer for en variabel.
 variabel. Statistikk som metadata har som formål å si noe om registerings-/
 kodingskvaliteten og gi en pekepinn om antall forekomster. Statistikken egner seg
 ikke for analyse som sådan.
+Statistikk brukes også for kvantitativ representasjon av en prøvetype innenfor en prøvesamling.
 
 - **Kodefrekvens** er definert som antall gyldige tilfeller av et svaralternativ/utfall av en
 variabel.
@@ -126,4 +127,8 @@ Punktlisten under forklarer informasjonslisten illustrert i Figur 1.
 
 11. Hver variabel kan bli referert til fra null, ett eller flere instrument, og flere ulike
 variabler kan bli referert til fra samme instrument.
+
+12. Hver prøvesamling refererer til en eller flere Biobanker.
+
+13. Når en variabelgruppe representerer en prøvetype, kan dem referere til statistikk. Referansen er koblet til Prøvesamling.
 

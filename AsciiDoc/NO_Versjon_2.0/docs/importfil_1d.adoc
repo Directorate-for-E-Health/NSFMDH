@@ -27,10 +27,12 @@ I denne versjonen av denne spesifikasjonen er det ikke obligatorisk å produsere
 |*Nr* |*Property* |*Status* |*Beskrivelse*
 
 |1 |Code |Obligatorisk |Unik navnestreng for et statistikk-concept.
+
 For variabelstatistikk: Store bokstaver, uten mellomrom og æ, ø, å. Prefiks S for statistikk,
 underscore, årstall, kortnavn på datakilden, punktum, datasamling,
 punktum, variabelnavn, punktum KodeverkLokalID, f.eks.
 S++_++NPR++_++2024.BUP.KJONN.1
+
 For prøvetypestatistikk: Store bokstaver, uten mellomrom og æ, ø, å. Prefiks S for statistikk,
 underscore, årstall, kortnavn på datakilden, punktum, datasamling,
 punktum, prøvetype (ref. variabelgruppe), f.eks.
