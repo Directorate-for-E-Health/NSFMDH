@@ -38,7 +38,7 @@ Følgende forkortelse skal brukes:
 * S for statistikk
 * I for Instrument
 * G for variabelgruppe
-* B for Biobank
+* BB for Biobank
 * KK for kildekodeverk
 * AK for administrative kodeverk
 * HK for Helsefaglige kodeverk og andre masterkodeverk (definert i Tabell 14)
@@ -82,7 +82,7 @@ datasamling.KortNavn + «.» + variabel.KortNavn + «.» + KodeverLokalid
 |Kildekodeverk |Eksempel: KK_HUNT.GENDER.1 Prefix + «_» + datakilde. kortnavn + «.» + variabel.KortNavn + «.» + KodeverLokalid
 |Instrument |Eksempel: I_HUNT.AbbottAXSymx Prefix + «_» + datakilde.code + «.» + instrumentkilde.KortNavn
 |Filter |Som instrument
-|Biobank |Eksempel: B_HUNT.HUNT_BIOBANK Prefix + «_» + datakilde.KortNavn + «.» + variabelgruppe.KortNavn
+|Biobank |Eksempel: BB_HUNT.HUNT_BIOBANK Prefix + «_» + datakilde.KortNavn + «.» + variabelgruppe.KortNavn
 |===
 
 
