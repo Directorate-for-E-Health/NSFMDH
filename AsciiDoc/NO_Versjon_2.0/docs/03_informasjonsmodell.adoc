@@ -89,7 +89,6 @@ En mer komplett oversikt over relevante fagbegrep er gjengitt i begrepslisten.
 Informasjonsmodellen benytter seg videre av UML-baserte ikoner og begrep. Disse er
 nærmere forklart i Tabell 1.
 
-//image::images/Class.jpg[class,50,50,float="right",align="center"]
 
 [options="header"]
 |===
@@ -100,8 +99,8 @@ nærmere forklart i Tabell 1.
 |image:images/Komposisjon.png[Class,100,50,align="center"]| Komposisjonrelasjon |En komposisjon-relasjon uttrykker er en spesiell form for en aggregerende relasjon i de tilfellene der det er et strengt krav at en klasse må inneholde minst én instans av en gitt sub-klasse.
 |===
 
-[link=images/informasjonsmodell_utvidet.jpg, title="Logisk informasjonsmodell for metadata om helsedata"]image::images/informasjonsmodell_utvidet.jpg[width=100%]
-image::images/informasjonsmodell_utvidet.jpg[]
+[link=images/Informasjonsmodell_utvidet.jpg, title="Logisk informasjonsmodell for metadata om helsedata"]image::images/Informasjonsmodell_utvidet.jpg[width=100%]
+image::images/Informasjonsmodell_utvidet.jpg[]
 
 Punktlisten under forklarer informasjonslisten illustrert i Figur 1.
 
