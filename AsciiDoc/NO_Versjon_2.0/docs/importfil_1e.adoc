@@ -76,6 +76,8 @@ Standardisert vokabular:
 
 2 = Nei
 
-|16-N |Mulige tilleggsproperties |Valgfri |Gir mulighet for å legge til
+|16 |Gruppetype | Obligatorisk |Definerer om gruppen er en gruppe variabler eller en Prøvetype
+
+|17-N |Mulige tilleggsproperties |Valgfri |Gir mulighet for å legge til
 ytterligere properties ved behov
 |===

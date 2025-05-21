@@ -115,7 +115,7 @@ Format: YYYYMMDD
 *Datakilde*, *Delkilde*: Skal være tom.
 
 *Datasamling*: Oppdateringsfrekvens brukes for å beskrive hvor ofte
-datagrunnlaget oppdateres på Helseanalyseplattformen.
+det tilgjengelige datagrunnlaget oppdateres i datakilden.
 
 Standardisert vokabular:
 

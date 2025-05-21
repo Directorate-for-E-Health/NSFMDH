@@ -102,15 +102,16 @@ Importfilene skal definere både struktur og innhold i datakilden. Strukturen et
 Tabell 3: Hierarkisk oppbygging av importfilene
 [options="header"]
 |===
-|Filtype |Code |Parent Code |Hierarki |Preferred Term |Concept Type
-|1a: Kildemetadata |DAR | ||Dødsårsaksregisteret |GROUPING
-|1a: Kildemetadata |K_DAR |DAR ||KILDEMETADATA |REGULAR
-|1b: Variabelmetadata |V_DAR |DAR ||VARIABELMETADATA |GROUPING
-|1c: Versjon |N_DAR |DAR ||VERSJON |GROUPING
-|1d: Statistikk |S_DAR |DAR ||STATISTIKK |GROUPING
-|1d: Statistikk |S_DAR_2024.DAR |S_DAR ||DØDSÅRSAKSREGISTERET 2017 |GROUPING
-|1e: Variabelgruppe |G_DAR |DAR ||VARIABELGRUPPE |GROUPING
-|1f: Instrument |I_DAR |DAR ||INSTRUMENT |GROUPING
+|Filtype |Code |Parent Code |Hierarki |Preferred Term
+|1a: Kildemetadata |DAR | ||Dødsårsaksregisteret
+|1a: Kildemetadata |K_DAR |DAR ||KILDEMETADATA
+|1b: Variabelmetadata |V_DAR |DAR ||VARIABELMETADATA
+|1c: Versjon |N_DAR |DAR ||VERSJON
+|1d: Statistikk |S_DAR |DAR ||STATISTIKK
+|1d: Statistikk |S_DAR_2024.DAR |S_DAR ||DØDSÅRSAKSREGISTERET 2017
+|1e: Variabelgruppe |G_DAR |DAR ||VARIABELGRUPPE
+|1f: Instrument |I_DAR |DAR ||INSTRUMENT
+|3: Biobank |BB_DAR |DAR ||BIOBANK
 |===
 
 *Importfil 1d: Statistikk* skal inneholde et ekstra nivå i hierarkiet. Nivået skal angi statistikkår og datasamling. Det er code-verdien på dette nivået som skal være ParentCode for alle underliggende statistikkverdi-rader.
@@ -121,18 +122,18 @@ systemadministrasjon før import. Innholdet i Importfil 2 skal utformes på grun
 Tabell 4: Polyhierarkisk oppbygging av Importfil 2: Kildekodeverk
 [options="header"]
 |===
-|Code |ParentCode |Hierarchy |PreferredTerm |ConceptType
-|KK_KODEVERK*| ||KILDEKODEVERK |GROUPING
-|KK_ALLE* |KK_KODEVERK| |ALLE| GROUPING
-|KK_EIER* |KK_KODEVERK|| EIER| GROUPING
-|KK_KILDE* |KK_KODEVERK ||KILDE |GROUPING
-|KK_<Eier>** |KK_EIER ||<Kortnavn> |GROUPING
+|Code |ParentCode |Hierarchy |PreferredTerm
+|KK_KODEVERK*| ||KILDEKODEVERK
+|KK_ALLE* |KK_KODEVERK| |ALLE
+|KK_EIER* |KK_KODEVERK|| EIER
+|KK_KILDE* |KK_KODEVERK ||KILDE 
+|KK_<Eier>** |KK_EIER ||<Kortnavn>
 5+|Eksempel: Variabelen KJONN_K Tilhører datakilden KK_DAR (Dødsårsaksregisteret) har eieren KK_FHI og inngår også i strukturen «Alle»
-|KK_FHI |KK_EIER|| FHI| GROUPING
-|KK_DAR| KK_FHI|| DØDSÅRSAKSREGISTERET| GROUPING
-|KK_DAR |KK_KILDE|| DØDSÅRSAKSREGISTERET|
-|KK_DAR.KJONN_K |KK_ALLE|| Kjønn|
-|KK_DAR.KJONN_K |KK_DAR|||
+|KK_FHI |KK_EIER|| FHI
+|KK_DAR| KK_FHI|| DØDSÅRSAKSREGISTERET
+|KK_DAR |KK_KILDE|| DØDSÅRSAKSREGISTERET
+|KK_DAR.KJONN_K |KK_ALLE|| Kjønn
+|KK_DAR.KJONN_K |KK_DAR||
 |===
 
 [source]
