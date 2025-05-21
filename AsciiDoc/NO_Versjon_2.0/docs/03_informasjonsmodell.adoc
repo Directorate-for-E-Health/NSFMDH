@@ -129,5 +129,5 @@ variabler kan bli referert til fra samme instrument.
 
 12. Hver prøvesamling refererer til en eller flere Biobanker.
 
-13. Når en variabelgruppe representerer en prøvetype, kan dem referere til statistikk. Referansen er koblet til Prøvesamling.
+13. Når en variabelgruppe representerer en prøvetype, kan den referere til statistikk. Referansen er koblet til Prøvesamling.
 

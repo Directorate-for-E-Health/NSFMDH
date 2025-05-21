@@ -92,7 +92,7 @@ forståelig også for innbyggere. Se eksempler på helsedata.no
 | |15 |BeskrivelseEngelsk |Anbefales |En utførlig beskrivelse på
 engelsk. Skal være forståelig også for innbyggere.
 
-| |16 |AnbefalteBruksomraader |Obligatorisk |En beskrivelse av hvilke
+| |16 |AnbefalteBruksomraader |Valgfri |En beskrivelse av hvilke
 typer formål (eksempelvis forskning, analyse, styringsdata, beredskap
 osv) og faglige temaer (eksempelvis kreft, hjerte og kar, kirurgi osv),
 en datakilde, delkilde og/eller datasamling er egent for.

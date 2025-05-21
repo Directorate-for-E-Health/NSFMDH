@@ -7,7 +7,7 @@ Importfil 3-Biobank brukes til å beskrive Biobanker. Biobanker er her den Admin
 |===
 |*Nr* |*Property* |*Status* |*Beskrivelse*
 
-|1 |Code |Obligatorisk |Standardisert og unik navnestreng for et kodeverk med tilhørende koder. Store bokstaver, uten mellomrom og æ, ø, å. Prefiks for KK for kildekodeverk, kortnavn på datakilden, punktum, variabelnavn, punktum og KodeverkLokalId (som i kilden), f.eks. BB_KILDE.BIOBANK_XN
+|1 |Code |Obligatorisk |Standardisert og unik navnestreng for en Biobank. Store bokstaver, uten mellomrom og æ, ø, å. Prefiks BB for Biobank, Underscore, kortnavn på biobanken, f.eks. BB_HUNT
 
 |2 |ParentCode |Obligatorisk |  
 

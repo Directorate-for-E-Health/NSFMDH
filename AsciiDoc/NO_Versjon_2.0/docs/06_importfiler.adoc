@@ -111,7 +111,8 @@ Tabell 3: Hierarkisk oppbygging av importfilene
 |1d: Statistikk |S_DAR_2024.DAR |S_DAR ||DØDSÅRSAKSREGISTERET 2017
 |1e: Variabelgruppe |G_DAR |DAR ||VARIABELGRUPPE
 |1f: Instrument |I_DAR |DAR ||INSTRUMENT
-|3: Biobank |BB_DAR |DAR ||BIOBANK
+|3: Biobank |FHI | ||Biobanken ved Folkehelseinstituttet
+|3: Biobank |BB_FHI |FHI ||BIOBANK
 |===
 
 *Importfil 1d: Statistikk* skal inneholde et ekstra nivå i hierarkiet. Nivået skal angi statistikkår og datasamling. Det er code-verdien på dette nivået som skal være ParentCode for alle underliggende statistikkverdi-rader.

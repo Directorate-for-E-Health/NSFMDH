@@ -76,7 +76,15 @@ Standardisert vokabular:
 
 2 = Nei
 
-|16 |Gruppetype | Obligatorisk |Definerer om gruppen er en gruppe variabler eller en Prøvetype
+|16 |Gruppetype | Anbefalt |Definerer om gruppen er en gruppe variabler eller en Prøvetype
+
+Standardisert vokabular:
+
+1 = Variabelgruppe
+
+2 = Prøvetype
+
+Hvis ikke gitt, behandles den som 1
 
 |17-N |Mulige tilleggsproperties |Valgfri |Gir mulighet for å legge til
 ytterligere properties ved behov

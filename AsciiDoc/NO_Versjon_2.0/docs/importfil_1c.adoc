@@ -67,13 +67,11 @@ spørreskjema. Standardverdi er 1.
 
 Standardisert vokabular:
 
-____
 1 = Utlevering
 
 2 = Innrapportering
 
 3 = Innrapportering og utlevering
-____
 
 |15 |DatabaseReferanse |Valgfri a|
 API-streng, URL eller unikt navn på klasse, tabell eller view i
@@ -107,11 +105,9 @@ Nøkkeltype.
 
 Standardisert vokabular:
 
-____
 1 = Unik
 
 2 = Duplikat
-____
 
 |20 |FinnesPaaHAP |Obligatorisk a|
 Overføres det data fra den aktuelle VERSJONEN av DATASAMLINGEN til
@@ -119,11 +115,9 @@ Helseanalyseplattformen:
 
 Standardisert vokabular:
 
-____
 1 = Ja
 
 2 = Nei
-____
 
 |21-N |Mulige tilleggsproperties |Valgfri |Gir mulighet for å legge til
 ytterligere properties. +

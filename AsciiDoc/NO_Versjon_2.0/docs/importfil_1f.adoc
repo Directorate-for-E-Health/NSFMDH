@@ -60,11 +60,9 @@ Instrument er tenkt som en egen filtertype, og er ikke en del av klassen
 
 Standardisert vokabular:
 
-____
 1 = Obligatorisk
 
 2 = Valgfri
-____
 
 |16 |Dokumentasjon |Anbefalt |Lenke®®® til opprinnelig
 dokumentasjon/referanser for instrumentet.
