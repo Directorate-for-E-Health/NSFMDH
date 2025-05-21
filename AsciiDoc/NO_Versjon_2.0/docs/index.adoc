@@ -22,8 +22,8 @@ image::./images/fhi-logo-norsk-forkortelse.svg[width=50%, pdfwidth=30vw]
 link:{lang-switch-link}[English version]
 
 *Status*: Siste versjon# +
-*Versjon*: Versjon 1.1 +
-*Oppdatert*: 02/2025  +
+*Versjon*: Versjon 2.0 +
+*Oppdatert*: 05/2025  +
 *Utgitt av*: Folkehelseinstituttet +
 *Kontakt*: service@helsedata.no +
 *Postadresse*: Lovisenberggata 8, 0456 Oslo  +
