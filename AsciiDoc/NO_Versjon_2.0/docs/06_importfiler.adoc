@@ -82,7 +82,7 @@ datasamling.KortNavn + «.» + variabel.KortNavn + «.» + KodeverLokalid
 |Kildekodeverk |Eksempel: KK_HUNT.GENDER.1 Prefix + «_» + datakilde. kortnavn + «.» + variabel.KortNavn + «.» + KodeverLokalid
 |Instrument |Eksempel: I_HUNT.AbbottAXSymx Prefix + «_» + datakilde.code + «.» + instrumentkilde.KortNavn
 |Filter |Som instrument
-|Biobank |Eksempel: BB_HUNT.HUNT_BIOBANK Prefix + «_» + datakilde.KortNavn + «.» + variabelgruppe.KortNavn
+|Biobank |Eksempel: BB_HUNT Prefix + «_» + Biobank.KortNavn 
 |===
 
 
@@ -97,6 +97,8 @@ Importfilene for metadata i HealthTerm er spesifisert i Tabell 5 til Tabell 13. 
 innrapporteringsfilen.
 
 Importfilene skal definere både struktur og innhold i datakilden. Strukturen etableres ved hjelp av mor-barn relasjoner mellom de ulike konseptene som importeres. Rot-noden i hele hierarkiet defineres ved hjelp av 1. linje i importfil 1a: Kildemetadata. Den identifiseres ved en unik kode for kilden, for eksempel DAR. Dette konseptet skal ikke ha noen verdi i ParentCode. Denne koden vil selv være ParentCode for Toppnodene i hver av klassene i kodesystemet. Klassene er Kildemetadata, Versjon, Variabelmetadata, Statistikk, Variabelgruppe og Instrument. Disse toppnodene vil defineres ved hjelp av 1. linje i de enkelte importfilene, med unntak av kildemetadata, der toppnoden defineres av 2. linje i importfil 1a. Toppnodene skal defineres som beskrevet i tabell 3. Code – feltet i toppnoden vil være ParentCode til alle de etterfølgende radene.
+
+Biobankere defineres som frittstående Code-systems. 
 
 
 Tabell 3: Hierarkisk oppbygging av importfilene
