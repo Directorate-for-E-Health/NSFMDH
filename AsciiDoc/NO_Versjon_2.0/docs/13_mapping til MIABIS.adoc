@@ -1,0 +1,223 @@
+= Mapping av properties til MIABIS [[mapping_til_miabis]]
+
+Informasjon om prøvesamlinger og biobanker skal videreformidles til BBMRI-Eric.
+Informasjonen overfores på formatte MIABIS.
+
+**Mapping KILDEMETADATA til MIABIS**
+[width="100%",cols="20%,46%,17%,17%"",options="header",]
+|===
+|Property |Beskrivelse |MIABIS id |MIABIS navn
+
+|KortNavn |Forkortelse av navnet på datakilden, delkilden, datasamlingen eller prøvesamlingen. F.eks. MOBA eller NPR. |MIABIS-COLLECTION-02 |Acronym
+|NavnEngelsk |Engelsk navn på datakilden, delkilden, datasamlingen eller prøvesamlingen. |MIABIS-COLLECTION-03 |Name
+|Beskrivelse |En utførlig beskrivelse. Skal være forståelig også for innbyggere. Se eksempler på helsedata.no	|MIABIS-COLLECTION-06 |Description
+|Hjemmeside	|URL til hjemmeside. |MIABIS-COLLECTION-04 |URL
+|Epost	|E-postadresse for henvendelser om datakilden, delkilden eller datasamlingen. |MIABIS-2.0-07-D |Email
+|Telefonnummer	|Telefonnummer for henvendelser om datakilden, delkilden eller datasamlingen. |MIABIS-2.0-07-C |Phone
+|ProvesamlingID	|PrøvesamlingsID. Tekninsk ID som er gitt fra BBMRI Eric, ved overføring.
+NB! Denne opprettes av BBMRI-Eric ved første gangs eksport, og må etter-registreres. |MIABIS-COLLECTION-01|
+|Kjønn	|Standardisert vokabular (flervalg):
+
+1 = Male
+
+2 = Female
+
+3 = Unknown
+
+4 = Undifferentiated
+
+5 = Not Applicable	
+|MIABIS-COLLECTION-08 |Sex
+|LavesteAlder |Laveste alder på person i prøvesamlingen	|MIABIS-COLLECTION-09 |Age low
+|HøyesteAlder |Høyeste alder på person i prøvesamlingen	|MIABIS-COLLECTION-10 |Age high
+|LavesteAlderEnhet	|Enhet for laveste alder på person i prøvesamlingen
+Standardisert vokabular
+
+1 = Years
+
+2 = Months
+
+3 = Weeks
+
+4 = Days
+
+5 = Gestational weeks 
+|MIABIS-COLLECTION-11 |Age unit
+|HoyesteAlderEnhet	|Enhet for høyeste alder på person i prøvesamlingen
+Standardisert vokabular
+
+1 = Years
+
+2 = Months
+
+3 = Weeks
+
+4 = Days
+
+5 = Gestational weeks 
+|MIABIS-COLLECTION-12 |Age unit
+|DatasettType	|
+Standardisert vokabular
+
+1 = Lifestyle dataset
+
+2 = Environmental dataset
+
+3 = Physiological dataset
+
+4 = Biochemical dataset
+
+5 = Clinical dataset
+
+6 = Psychological dataset
+
+7 = Genomic dataset
+
+8 = Proteomic dataset
+
+9 = Metabolomic dataset
+
+10 = Body (Radiological) image
+
+11 = Whole slide image
+
+12 = Photo image
+
+13 = Genealogical records
+
+14 = Other 
+|MIABIS-COLLECTION-13 |Dataset type
+					
+|LagringsTemperatur	|
+Standardisert vokabular (flervalg):
+
+1 = RT (Room temperature)
+
+2 = 2 °C to 10°C
+
+3 = -18 °C to -35 °C
+
+4 = -60 °C to -85 °C
+
+5 = <-135 °C
+
+6 = Liquid nitrogen vapor-phase
+
+7 = Liquid nitrogen liquid-phase
+
+8 = Other 
+|MIABIS-COLLECTION-15 |Storage temperature
+|Diagnosekoder	|Diagnosekoder gis ved mapset K-DK	|MIABIS-COLLECTION-16 |Disease 
+|Kontekst	|Kontekst for prøveinnsamling
+Standardisert vokabular:
+
+1 = Routine health care setting
+
+2 = Clinical trial
+
+3 = Research study
+
+4 = Public health/population based study
+
+5 = Museum and/or archeological collection
+
+6 = Environment
+
+7 = Unknown
+
+8 = Other 
+|MIABIS-COLLECTION-17 |Sample collection setting
+|StudieDesign	|Studiedesignet som beskriver hvordan/hvorfor prøvene ble samlet inn
+Standardisert vokabular (flervalg):
+
+1 = Case-control
+
+2 = Cross-sectional
+
+3 = Longitudinal cohort
+
+4 = Twin-study
+
+5 = Quality control study
+
+6 = Population-based cohort
+
+7 = Disease-specific cohort
+
+8 = Birth cohort
+
+9 = Microbial collection (if applicable with resistance data)
+
+10 = Reference collection
+
+11 = Rare disease collection
+
+12 = Other
+|	MIABIS-COLLECTION-18 |Collection design
+|BetingelserForBruk	|Betingelser for tilgjengelighet og bruk
+Standardisert vokabular (flervalg):
+
+1 = Commercial use
+
+2 = Collaboration
+
+3 = Specific research use
+
+4 = Genetic data use
+
+5 = Outside EU access
+
+6 = Xenograft
+
+7 = Other animal work
+
+8 = Other 
+|MIABIS-COLLECTION-19 |Use & Access conditions
+|PrøvesamlingsStatus |Status for prøvesamlingen
+Standardisert vokabular:
+
+1 = Active
+
+2 = Ended
+
+3 = Other
+ |MIABIS-COLLECTION-20 |Collection status
+|AntallDonorer	|Antall donorer i prøvesamlingen	|MIABIS-COLLECTION-21 |Total number of subjects
+|InklusjonsKriterier |Standardisert vokabular (flervalg):
+
+1 = Health status
+
+2 = Hospital patient
+
+3 = Use of medication
+
+4 = Gravidity
+
+5 = Age group
+
+6 = Familial status
+
+7 = Sex
+
+8 = Country of residence
+
+9 = Ethnic origin
+
+10 = Population representative sampling
+
+11 = Lifestyle/Exposure
+
+12 = Other	
+|MIABIS-COLLECTION-22 |Inclusion criteria
+|KontakpersonFornavn	|Kontaktpersonens fornavn	|MIABIS-COLLECTION-05-01|
+|KontakpersonEtternavn	|Kontaktpersonens etternavn	|MIABIS-COLLECTION-05-02|
+|KontakpersonEmail	|Kontaktpersonens epost	|MIABIS-COLLECTION-05-03||
+|KontakpersonTelefon	|Kontaktpersonens telefonnummer	|MIABIS-COLLECTION-05-04|
+
+|===
+
+**Mapping BIOBANK til MIABIS**
+
+Mapping av properties i klassen BIOBANK er angitt i tabellen for importfil 4.
+
+
