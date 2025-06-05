@@ -33,7 +33,7 @@ administrative kodeverk.
 
 11. Datasamlinger mappes til respektive VERSJONER som igjen mappes til de variablene som inngår i gjeldende versjon av datasamlingen.
 
-12. BIOBANK importeres som Code System og blir et selvstendig Core Code System. Biobank blir da en uavhengig klasse og kan mappes til med prøvesamlinger fra ulike Kilder
+12. BIOBANK importeres som Extension til et felles selvstendig Core Code System. Biobank blir da en uavhengig klasse og kan mappes til med prøvesamlinger fra ulike Kilder
 
 13. Datasamlinger som representerer Prøvesamlinger mappes til Biobank
 

@@ -75,6 +75,8 @@ include::11_begrepsliste.adoc[]
 
 include::12_klasser_i_logisk_informasjonsmodell.adoc[]
 
+include::13_mapping til MIABIS.adoc[]
+
 
 
 

@@ -131,3 +131,5 @@ variabler kan bli referert til fra samme instrument.
 
 13. Når en variabelgruppe representerer en prøvetype, kan den referere til statistikk. Referansen er koblet til Prøvesamling.
 
+14. En biobank er en selvstendig enhet som kan referere til fra flere prøvesamlinger.
+
